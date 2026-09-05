@@ -1,0 +1,247 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\DesktopC#-12\\Progress\\Sistem-Prakerin\\app_prakerin\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8C575697-465B-4544-835A-6A2DCCE737DB}|app_prakerin.csproj|e:\\desktopc#-12\\progress\\sistem-prakerin\\app_prakerin\\form\\formcrudjurnal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C575697-465B-4544-835A-6A2DCCE737DB}|app_prakerin.csproj|solutionrelative:form\\formcrudjurnal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C575697-465B-4544-835A-6A2DCCE737DB}|app_prakerin.csproj|e:\\desktopc#-12\\progress\\sistem-prakerin\\app_prakerin\\form\\formcrudjurnal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8C575697-465B-4544-835A-6A2DCCE737DB}|app_prakerin.csproj|solutionrelative:form\\formcrudjurnal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C575697-465B-4544-835A-6A2DCCE737DB}|app_prakerin.csproj|e:\\desktopc#-12\\progress\\sistem-prakerin\\app_prakerin\\form\\formcrudjurnal.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C575697-465B-4544-835A-6A2DCCE737DB}|app_prakerin.csproj|solutionrelative:form\\formcrudjurnal.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C575697-465B-4544-835A-6A2DCCE737DB}|app_prakerin.csproj|e:\\desktopc#-12\\progress\\sistem-prakerin\\app_prakerin\\form\\fjurnal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8C575697-465B-4544-835A-6A2DCCE737DB}|app_prakerin.csproj|solutionrelative:form\\fjurnal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C575697-465B-4544-835A-6A2DCCE737DB}|app_prakerin.csproj|e:\\desktopc#-12\\progress\\sistem-prakerin\\app_prakerin\\form\\fjurnal.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C575697-465B-4544-835A-6A2DCCE737DB}|app_prakerin.csproj|solutionrelative:form\\fjurnal.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C575697-465B-4544-835A-6A2DCCE737DB}|app_prakerin.csproj|e:\\desktopc#-12\\progress\\sistem-prakerin\\app_prakerin\\form\\fprakerin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8C575697-465B-4544-835A-6A2DCCE737DB}|app_prakerin.csproj|solutionrelative:form\\fprakerin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C575697-465B-4544-835A-6A2DCCE737DB}|app_prakerin.csproj|E:\\DesktopC#-12\\Progress\\Sistem-Prakerin\\app_prakerin\\form\\fprakerin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C575697-465B-4544-835A-6A2DCCE737DB}|app_prakerin.csproj|solutionrelative:form\\fprakerin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C575697-465B-4544-835A-6A2DCCE737DB}|app_prakerin.csproj|E:\\DesktopC#-12\\Progress\\Sistem-Prakerin\\app_prakerin\\form\\formcrudprakerin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C575697-465B-4544-835A-6A2DCCE737DB}|app_prakerin.csproj|solutionrelative:form\\formcrudprakerin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C575697-465B-4544-835A-6A2DCCE737DB}|app_prakerin.csproj|E:\\DesktopC#-12\\Progress\\Sistem-Prakerin\\app_prakerin\\form\\formcrudprakerin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8C575697-465B-4544-835A-6A2DCCE737DB}|app_prakerin.csproj|solutionrelative:form\\formcrudprakerin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C575697-465B-4544-835A-6A2DCCE737DB}|app_prakerin.csproj|E:\\DesktopC#-12\\Progress\\Sistem-Prakerin\\app_prakerin\\form\\fmaster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8C575697-465B-4544-835A-6A2DCCE737DB}|app_prakerin.csproj|solutionrelative:form\\fmaster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C575697-465B-4544-835A-6A2DCCE737DB}|app_prakerin.csproj|E:\\DesktopC#-12\\Progress\\Sistem-Prakerin\\app_prakerin\\form\\fmaster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C575697-465B-4544-835A-6A2DCCE737DB}|app_prakerin.csproj|solutionrelative:form\\fmaster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C575697-465B-4544-835A-6A2DCCE737DB}|app_prakerin.csproj|E:\\DesktopC#-12\\Progress\\Sistem-Prakerin\\app_prakerin\\form\\formcrudguru.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C575697-465B-4544-835A-6A2DCCE737DB}|app_prakerin.csproj|solutionrelative:form\\formcrudguru.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C575697-465B-4544-835A-6A2DCCE737DB}|app_prakerin.csproj|E:\\DesktopC#-12\\Progress\\Sistem-Prakerin\\app_prakerin\\form\\formcrudperusahaan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C575697-465B-4544-835A-6A2DCCE737DB}|app_prakerin.csproj|solutionrelative:form\\formcrudperusahaan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C575697-465B-4544-835A-6A2DCCE737DB}|app_prakerin.csproj|E:\\DesktopC#-12\\Progress\\Sistem-Prakerin\\app_prakerin\\form\\formcrudguru.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8C575697-465B-4544-835A-6A2DCCE737DB}|app_prakerin.csproj|solutionrelative:form\\formcrudguru.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FPrakerin.cs",
+              "DocumentMoniker": "E:\\DesktopC#-12\\Progress\\Sistem-Prakerin\\app_prakerin\\Form\\FPrakerin.cs",
+              "RelativeDocumentMoniker": "Form\\FPrakerin.cs",
+              "ToolTip": "E:\\DesktopC#-12\\Progress\\Sistem-Prakerin\\app_prakerin\\Form\\FPrakerin.cs",
+              "RelativeToolTip": "Form\\FPrakerin.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAIA6wEUAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-28T09:58:02.71Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FormCRUDPrakerin.cs",
+              "DocumentMoniker": "E:\\DesktopC#-12\\Progress\\Sistem-Prakerin\\app_prakerin\\Form\\FormCRUDPrakerin.cs",
+              "RelativeDocumentMoniker": "Form\\FormCRUDPrakerin.cs",
+              "ToolTip": "E:\\DesktopC#-12\\Progress\\Sistem-Prakerin\\app_prakerin\\Form\\FormCRUDPrakerin.cs",
+              "RelativeToolTip": "Form\\FormCRUDPrakerin.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAgwCYAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-28T09:37:14.649Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FormCRUDJurnal.cs",
+              "DocumentMoniker": "E:\\DesktopC#-12\\Progress\\Sistem-Prakerin\\app_prakerin\\Form\\FormCRUDJurnal.cs",
+              "RelativeDocumentMoniker": "Form\\FormCRUDJurnal.cs",
+              "ToolTip": "E:\\DesktopC#-12\\Progress\\Sistem-Prakerin\\app_prakerin\\Form\\FormCRUDJurnal.cs",
+              "RelativeToolTip": "Form\\FormCRUDJurnal.cs",
+              "ViewState": "AgIAAHQAAAAAAAAAAAAowHcAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-04T13:09:22.934Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormCRUDJurnal.cs [Design]",
+              "DocumentMoniker": "E:\\DesktopC#-12\\Progress\\Sistem-Prakerin\\app_prakerin\\Form\\FormCRUDJurnal.cs",
+              "RelativeDocumentMoniker": "Form\\FormCRUDJurnal.cs",
+              "ToolTip": "E:\\DesktopC#-12\\Progress\\Sistem-Prakerin\\app_prakerin\\Form\\FormCRUDJurnal.cs [Design]",
+              "RelativeToolTip": "Form\\FormCRUDJurnal.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-04T13:07:27.728Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FormCRUDJurnal.Designer.cs",
+              "DocumentMoniker": "E:\\DesktopC#-12\\Progress\\Sistem-Prakerin\\app_prakerin\\Form\\FormCRUDJurnal.Designer.cs",
+              "RelativeDocumentMoniker": "Form\\FormCRUDJurnal.Designer.cs",
+              "ToolTip": "E:\\DesktopC#-12\\Progress\\Sistem-Prakerin\\app_prakerin\\Form\\FormCRUDJurnal.Designer.cs",
+              "RelativeToolTip": "Form\\FormCRUDJurnal.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-04T13:07:15.345Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FJurnal.Designer.cs",
+              "DocumentMoniker": "E:\\DesktopC#-12\\Progress\\Sistem-Prakerin\\app_prakerin\\Form\\FJurnal.Designer.cs",
+              "RelativeDocumentMoniker": "Form\\FJurnal.Designer.cs",
+              "ToolTip": "E:\\DesktopC#-12\\Progress\\Sistem-Prakerin\\app_prakerin\\Form\\FJurnal.Designer.cs",
+              "RelativeToolTip": "Form\\FJurnal.Designer.cs",
+              "ViewState": "AgIAAC0BAAAAAAAAAAAswDoBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-04T12:46:55.485Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FJurnal.cs [Design]",
+              "DocumentMoniker": "E:\\DesktopC#-12\\Progress\\Sistem-Prakerin\\app_prakerin\\Form\\FJurnal.cs",
+              "RelativeDocumentMoniker": "Form\\FJurnal.cs",
+              "ToolTip": "E:\\DesktopC#-12\\Progress\\Sistem-Prakerin\\app_prakerin\\Form\\FJurnal.cs [Design]",
+              "RelativeToolTip": "Form\\FJurnal.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-04T12:46:47.99Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FMaster.cs",
+              "DocumentMoniker": "E:\\DesktopC#-12\\Progress\\Sistem-Prakerin\\app_prakerin\\Form\\FMaster.cs",
+              "RelativeDocumentMoniker": "Form\\FMaster.cs",
+              "ToolTip": "E:\\DesktopC#-12\\Progress\\Sistem-Prakerin\\app_prakerin\\Form\\FMaster.cs",
+              "RelativeToolTip": "Form\\FMaster.cs",
+              "ViewState": "AgIAAGcAAAAAAAAAAAAiwG8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-28T10:22:24.23Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FMaster.cs [Design]",
+              "DocumentMoniker": "E:\\DesktopC#-12\\Progress\\Sistem-Prakerin\\app_prakerin\\Form\\FMaster.cs",
+              "RelativeDocumentMoniker": "Form\\FMaster.cs",
+              "ToolTip": "E:\\A\\Sistem-Prakerin\\app_prakerin\\Form\\FMaster.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\A\\Sistem-Prakerin\\app_prakerin\\Form\\FMaster.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-28T10:05:26.677Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FormCRUDPrakerin.cs [Design]",
+              "DocumentMoniker": "E:\\DesktopC#-12\\Progress\\Sistem-Prakerin\\app_prakerin\\Form\\FormCRUDPrakerin.cs",
+              "RelativeDocumentMoniker": "Form\\FormCRUDPrakerin.cs",
+              "ToolTip": "E:\\A\\Sistem-Prakerin\\app_prakerin\\Form\\FormCRUDPrakerin.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\A\\Sistem-Prakerin\\app_prakerin\\Form\\FormCRUDPrakerin.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-28T09:37:13.419Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FPrakerin.cs [Design]",
+              "DocumentMoniker": "E:\\DesktopC#-12\\Progress\\Sistem-Prakerin\\app_prakerin\\Form\\FPrakerin.cs",
+              "RelativeDocumentMoniker": "Form\\FPrakerin.cs",
+              "ToolTip": "E:\\DesktopC#-12\\Progress\\Sistem-Prakerin\\app_prakerin\\Form\\FPrakerin.cs [Design]",
+              "RelativeToolTip": "Form\\FPrakerin.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-28T09:35:32.96Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "FormCRUDPerusahaan.cs",
+              "DocumentMoniker": "E:\\DesktopC#-12\\Progress\\Sistem-Prakerin\\app_prakerin\\Form\\FormCRUDPerusahaan.cs",
+              "RelativeDocumentMoniker": "Form\\FormCRUDPerusahaan.cs",
+              "ToolTip": "E:\\DesktopC#-12\\Progress\\Sistem-Prakerin\\app_prakerin\\Form\\FormCRUDPerusahaan.cs",
+              "RelativeToolTip": "Form\\FormCRUDPerusahaan.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAIwDQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-28T09:52:55.3Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "FormCRUDGuru.cs",
+              "DocumentMoniker": "E:\\DesktopC#-12\\Progress\\Sistem-Prakerin\\app_prakerin\\Form\\FormCRUDGuru.cs",
+              "RelativeDocumentMoniker": "Form\\FormCRUDGuru.cs",
+              "ToolTip": "E:\\DesktopC#-12\\Progress\\Sistem-Prakerin\\app_prakerin\\Form\\FormCRUDGuru.cs",
+              "RelativeToolTip": "Form\\FormCRUDGuru.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-28T09:37:50.569Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "FormCRUDGuru.cs [Design]",
+              "DocumentMoniker": "E:\\DesktopC#-12\\Progress\\Sistem-Prakerin\\app_prakerin\\Form\\FormCRUDGuru.cs",
+              "RelativeDocumentMoniker": "Form\\FormCRUDGuru.cs",
+              "ToolTip": "E:\\A\\Sistem-Prakerin\\app_prakerin\\Form\\FormCRUDGuru.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\A\\Sistem-Prakerin\\app_prakerin\\Form\\FormCRUDGuru.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-28T09:37:48.926Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
