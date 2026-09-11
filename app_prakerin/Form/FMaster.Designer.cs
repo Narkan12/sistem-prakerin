@@ -83,6 +83,44 @@ namespace app_prakerin
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.PNLStatistik = new System.Windows.Forms.Panel();
+            this.LBLJudulStatistik = new System.Windows.Forms.Label();
+            this.PNLStatRow0 = new System.Windows.Forms.Panel();
+            this.LBLStatLabel0 = new System.Windows.Forms.Label();
+            this.LBLStatValue0 = new System.Windows.Forms.Label();
+            this.PNLStatRow1 = new System.Windows.Forms.Panel();
+            this.LBLStatLabel1 = new System.Windows.Forms.Label();
+            this.LBLStatValue1 = new System.Windows.Forms.Label();
+            this.PNLStatRow2 = new System.Windows.Forms.Panel();
+            this.LBLStatLabel2 = new System.Windows.Forms.Label();
+            this.LBLStatValue2 = new System.Windows.Forms.Label();
+            this.PNLStatRow3 = new System.Windows.Forms.Panel();
+            this.LBLStatLabel3 = new System.Windows.Forms.Label();
+            this.LBLStatValue3 = new System.Windows.Forms.Label();
+            this.PNLStatRow4 = new System.Windows.Forms.Panel();
+            this.LBLStatLabel4 = new System.Windows.Forms.Label();
+            this.LBLStatValue4 = new System.Windows.Forms.Label();
+            this.PNLStatRow5 = new System.Windows.Forms.Panel();
+            this.LBLStatLabel5 = new System.Windows.Forms.Label();
+            this.LBLStatValue5 = new System.Windows.Forms.Label();
+            this.PNLStatRow6 = new System.Windows.Forms.Panel();
+            this.LBLStatLabel6 = new System.Windows.Forms.Label();
+            this.LBLStatValue6 = new System.Windows.Forms.Label();
+            this.PNLStatRow7 = new System.Windows.Forms.Panel();
+            this.LBLStatLabel7 = new System.Windows.Forms.Label();
+            this.LBLStatValue7 = new System.Windows.Forms.Label();
+            this.PNLActivity = new System.Windows.Forms.Panel();
+            this.LBLJudulActivity = new System.Windows.Forms.Label();
+            this.LBLActivity1 = new System.Windows.Forms.Label();
+            this.LBLActivity2 = new System.Windows.Forms.Label();
+            this.LBLActivity3 = new System.Windows.Forms.Label();
+            this.LBLActivity4 = new System.Windows.Forms.Label();
+            this.LBLActivity5 = new System.Windows.Forms.Label();
+            this.LBLActivity6 = new System.Windows.Forms.Label();
+            this.LBLActivity7 = new System.Windows.Forms.Label();
+            this.LBLActivity8 = new System.Windows.Forms.Label();
+            this.LBLActivity9 = new System.Windows.Forms.Label();
+            this.LBLActivity10 = new System.Windows.Forms.Label();
             this.PNLSidebar.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
@@ -107,6 +145,16 @@ namespace app_prakerin
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.CSiswa.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
+            this.PNLStatistik.SuspendLayout();
+            this.PNLStatRow0.SuspendLayout();
+            this.PNLStatRow1.SuspendLayout();
+            this.PNLStatRow2.SuspendLayout();
+            this.PNLStatRow3.SuspendLayout();
+            this.PNLStatRow4.SuspendLayout();
+            this.PNLStatRow5.SuspendLayout();
+            this.PNLStatRow6.SuspendLayout();
+            this.PNLStatRow7.SuspendLayout();
+            this.PNLActivity.SuspendLayout();
             this.SuspendLayout();
             // 
             // PNLSidebar
@@ -720,6 +768,8 @@ namespace app_prakerin
             // 
             // guna2Panel2
             // 
+            this.guna2Panel2.Controls.Add(this.PNLStatistik);
+            this.guna2Panel2.Controls.Add(this.PNLActivity);
             this.guna2Panel2.Controls.Add(this.PNLCard);
             this.guna2Panel2.Controls.Add(this.label4);
             this.guna2Panel2.Controls.Add(this.label5);
@@ -933,6 +983,441 @@ namespace app_prakerin
             this.guna2PictureBox3.TabIndex = 2;
             this.guna2PictureBox3.TabStop = false;
             // 
+            // PNLStatistik
+            // 
+            this.PNLStatistik.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(255)))));
+            this.PNLStatistik.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PNLStatistik.Controls.Add(this.LBLJudulStatistik);
+            this.PNLStatistik.Controls.Add(this.PNLStatRow7);
+            this.PNLStatistik.Controls.Add(this.PNLStatRow6);
+            this.PNLStatistik.Controls.Add(this.PNLStatRow5);
+            this.PNLStatistik.Controls.Add(this.PNLStatRow4);
+            this.PNLStatistik.Controls.Add(this.PNLStatRow3);
+            this.PNLStatistik.Controls.Add(this.PNLStatRow2);
+            this.PNLStatistik.Controls.Add(this.PNLStatRow1);
+            this.PNLStatistik.Controls.Add(this.PNLStatRow0);
+            this.PNLStatistik.Location = new System.Drawing.Point(5, 320);
+            this.PNLStatistik.Name = "PNLStatistik";
+            this.PNLStatistik.Size = new System.Drawing.Size(580, 370);
+            this.PNLStatistik.TabIndex = 17;
+            // 
+            // LBLJudulStatistik
+            // 
+            this.LBLJudulStatistik.AutoSize = false;
+            this.LBLJudulStatistik.Dock = System.Windows.Forms.DockStyle.None;
+            this.LBLJudulStatistik.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLJudulStatistik.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(88)))), ((int)(((byte)(187)))));
+            this.LBLJudulStatistik.Location = new System.Drawing.Point(12, 10);
+            this.LBLJudulStatistik.Name = "LBLJudulStatistik";
+            this.LBLJudulStatistik.Size = new System.Drawing.Size(540, 30);
+            this.LBLJudulStatistik.TabIndex = 0;
+            this.LBLJudulStatistik.Text = "Statistik Terkini";
+            // 
+            // PNLStatRow0
+            // 
+            this.PNLStatRow0.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(255)))));
+            this.PNLStatRow0.Controls.Add(this.LBLStatLabel0);
+            this.PNLStatRow0.Controls.Add(this.LBLStatValue0);
+            this.PNLStatRow0.Location = new System.Drawing.Point(8, 48);
+            this.PNLStatRow0.Name = "PNLStatRow0";
+            this.PNLStatRow0.Size = new System.Drawing.Size(558, 34);
+            this.PNLStatRow0.TabIndex = 1;
+            // 
+            // LBLStatLabel0
+            // 
+            this.LBLStatLabel0.AutoSize = false;
+            this.LBLStatLabel0.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLStatLabel0.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(60)))));
+            this.LBLStatLabel0.Location = new System.Drawing.Point(10, 8);
+            this.LBLStatLabel0.Name = "LBLStatLabel0";
+            this.LBLStatLabel0.Size = new System.Drawing.Size(380, 18);
+            this.LBLStatLabel0.TabIndex = 0;
+            this.LBLStatLabel0.Text = "Total Guru";
+            // 
+            // LBLStatValue0
+            // 
+            this.LBLStatValue0.AutoSize = false;
+            this.LBLStatValue0.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLStatValue0.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(88)))), ((int)(((byte)(187)))));
+            this.LBLStatValue0.Location = new System.Drawing.Point(460, 4);
+            this.LBLStatValue0.Name = "LBLStatValue0";
+            this.LBLStatValue0.Size = new System.Drawing.Size(88, 26);
+            this.LBLStatValue0.TabIndex = 1;
+            this.LBLStatValue0.Text = "?";
+            this.LBLStatValue0.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // PNLStatRow1
+            // 
+            this.PNLStatRow1.BackColor = System.Drawing.Color.White;
+            this.PNLStatRow1.Controls.Add(this.LBLStatLabel1);
+            this.PNLStatRow1.Controls.Add(this.LBLStatValue1);
+            this.PNLStatRow1.Location = new System.Drawing.Point(8, 86);
+            this.PNLStatRow1.Name = "PNLStatRow1";
+            this.PNLStatRow1.Size = new System.Drawing.Size(558, 34);
+            this.PNLStatRow1.TabIndex = 2;
+            // 
+            // LBLStatLabel1
+            // 
+            this.LBLStatLabel1.AutoSize = false;
+            this.LBLStatLabel1.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLStatLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(60)))));
+            this.LBLStatLabel1.Location = new System.Drawing.Point(10, 8);
+            this.LBLStatLabel1.Name = "LBLStatLabel1";
+            this.LBLStatLabel1.Size = new System.Drawing.Size(380, 18);
+            this.LBLStatLabel1.TabIndex = 0;
+            this.LBLStatLabel1.Text = "Total Kelas";
+            // 
+            // LBLStatValue1
+            // 
+            this.LBLStatValue1.AutoSize = false;
+            this.LBLStatValue1.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLStatValue1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(88)))), ((int)(((byte)(187)))));
+            this.LBLStatValue1.Location = new System.Drawing.Point(460, 4);
+            this.LBLStatValue1.Name = "LBLStatValue1";
+            this.LBLStatValue1.Size = new System.Drawing.Size(88, 26);
+            this.LBLStatValue1.TabIndex = 1;
+            this.LBLStatValue1.Text = "?";
+            this.LBLStatValue1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // PNLStatRow2
+            // 
+            this.PNLStatRow2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(255)))));
+            this.PNLStatRow2.Controls.Add(this.LBLStatLabel2);
+            this.PNLStatRow2.Controls.Add(this.LBLStatValue2);
+            this.PNLStatRow2.Location = new System.Drawing.Point(8, 124);
+            this.PNLStatRow2.Name = "PNLStatRow2";
+            this.PNLStatRow2.Size = new System.Drawing.Size(558, 34);
+            this.PNLStatRow2.TabIndex = 3;
+            // 
+            // LBLStatLabel2
+            // 
+            this.LBLStatLabel2.AutoSize = false;
+            this.LBLStatLabel2.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLStatLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(60)))));
+            this.LBLStatLabel2.Location = new System.Drawing.Point(10, 8);
+            this.LBLStatLabel2.Name = "LBLStatLabel2";
+            this.LBLStatLabel2.Size = new System.Drawing.Size(380, 18);
+            this.LBLStatLabel2.TabIndex = 0;
+            this.LBLStatLabel2.Text = "Total Jurusan";
+            // 
+            // LBLStatValue2
+            // 
+            this.LBLStatValue2.AutoSize = false;
+            this.LBLStatValue2.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLStatValue2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(88)))), ((int)(((byte)(187)))));
+            this.LBLStatValue2.Location = new System.Drawing.Point(460, 4);
+            this.LBLStatValue2.Name = "LBLStatValue2";
+            this.LBLStatValue2.Size = new System.Drawing.Size(88, 26);
+            this.LBLStatValue2.TabIndex = 1;
+            this.LBLStatValue2.Text = "?";
+            this.LBLStatValue2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // PNLStatRow3
+            // 
+            this.PNLStatRow3.BackColor = System.Drawing.Color.White;
+            this.PNLStatRow3.Controls.Add(this.LBLStatLabel3);
+            this.PNLStatRow3.Controls.Add(this.LBLStatValue3);
+            this.PNLStatRow3.Location = new System.Drawing.Point(8, 162);
+            this.PNLStatRow3.Name = "PNLStatRow3";
+            this.PNLStatRow3.Size = new System.Drawing.Size(558, 34);
+            this.PNLStatRow3.TabIndex = 4;
+            // 
+            // LBLStatLabel3
+            // 
+            this.LBLStatLabel3.AutoSize = false;
+            this.LBLStatLabel3.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLStatLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(60)))));
+            this.LBLStatLabel3.Location = new System.Drawing.Point(10, 8);
+            this.LBLStatLabel3.Name = "LBLStatLabel3";
+            this.LBLStatLabel3.Size = new System.Drawing.Size(380, 18);
+            this.LBLStatLabel3.TabIndex = 0;
+            this.LBLStatLabel3.Text = "Total Perusahaan";
+            // 
+            // LBLStatValue3
+            // 
+            this.LBLStatValue3.AutoSize = false;
+            this.LBLStatValue3.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLStatValue3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(88)))), ((int)(((byte)(187)))));
+            this.LBLStatValue3.Location = new System.Drawing.Point(460, 4);
+            this.LBLStatValue3.Name = "LBLStatValue3";
+            this.LBLStatValue3.Size = new System.Drawing.Size(88, 26);
+            this.LBLStatValue3.TabIndex = 1;
+            this.LBLStatValue3.Text = "?";
+            this.LBLStatValue3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // PNLStatRow4
+            // 
+            this.PNLStatRow4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(255)))));
+            this.PNLStatRow4.Controls.Add(this.LBLStatLabel4);
+            this.PNLStatRow4.Controls.Add(this.LBLStatValue4);
+            this.PNLStatRow4.Location = new System.Drawing.Point(8, 200);
+            this.PNLStatRow4.Name = "PNLStatRow4";
+            this.PNLStatRow4.Size = new System.Drawing.Size(558, 34);
+            this.PNLStatRow4.TabIndex = 5;
+            // 
+            // LBLStatLabel4
+            // 
+            this.LBLStatLabel4.AutoSize = false;
+            this.LBLStatLabel4.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLStatLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(60)))));
+            this.LBLStatLabel4.Location = new System.Drawing.Point(10, 8);
+            this.LBLStatLabel4.Name = "LBLStatLabel4";
+            this.LBLStatLabel4.Size = new System.Drawing.Size(380, 18);
+            this.LBLStatLabel4.TabIndex = 0;
+            this.LBLStatLabel4.Text = "Prakerin Berlangsung";
+            // 
+            // LBLStatValue4
+            // 
+            this.LBLStatValue4.AutoSize = false;
+            this.LBLStatValue4.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLStatValue4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(88)))), ((int)(((byte)(187)))));
+            this.LBLStatValue4.Location = new System.Drawing.Point(460, 4);
+            this.LBLStatValue4.Name = "LBLStatValue4";
+            this.LBLStatValue4.Size = new System.Drawing.Size(88, 26);
+            this.LBLStatValue4.TabIndex = 1;
+            this.LBLStatValue4.Text = "?";
+            this.LBLStatValue4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // PNLStatRow5
+            // 
+            this.PNLStatRow5.BackColor = System.Drawing.Color.White;
+            this.PNLStatRow5.Controls.Add(this.LBLStatLabel5);
+            this.PNLStatRow5.Controls.Add(this.LBLStatValue5);
+            this.PNLStatRow5.Location = new System.Drawing.Point(8, 238);
+            this.PNLStatRow5.Name = "PNLStatRow5";
+            this.PNLStatRow5.Size = new System.Drawing.Size(558, 34);
+            this.PNLStatRow5.TabIndex = 6;
+            // 
+            // LBLStatLabel5
+            // 
+            this.LBLStatLabel5.AutoSize = false;
+            this.LBLStatLabel5.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLStatLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(60)))));
+            this.LBLStatLabel5.Location = new System.Drawing.Point(10, 8);
+            this.LBLStatLabel5.Name = "LBLStatLabel5";
+            this.LBLStatLabel5.Size = new System.Drawing.Size(380, 18);
+            this.LBLStatLabel5.TabIndex = 0;
+            this.LBLStatLabel5.Text = "Absensi Hari Ini";
+            // 
+            // LBLStatValue5
+            // 
+            this.LBLStatValue5.AutoSize = false;
+            this.LBLStatValue5.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLStatValue5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(88)))), ((int)(((byte)(187)))));
+            this.LBLStatValue5.Location = new System.Drawing.Point(460, 4);
+            this.LBLStatValue5.Name = "LBLStatValue5";
+            this.LBLStatValue5.Size = new System.Drawing.Size(88, 26);
+            this.LBLStatValue5.TabIndex = 1;
+            this.LBLStatValue5.Text = "?";
+            this.LBLStatValue5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // PNLStatRow6
+            // 
+            this.PNLStatRow6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(255)))));
+            this.PNLStatRow6.Controls.Add(this.LBLStatLabel6);
+            this.PNLStatRow6.Controls.Add(this.LBLStatValue6);
+            this.PNLStatRow6.Location = new System.Drawing.Point(8, 276);
+            this.PNLStatRow6.Name = "PNLStatRow6";
+            this.PNLStatRow6.Size = new System.Drawing.Size(558, 34);
+            this.PNLStatRow6.TabIndex = 7;
+            // 
+            // LBLStatLabel6
+            // 
+            this.LBLStatLabel6.AutoSize = false;
+            this.LBLStatLabel6.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLStatLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(60)))));
+            this.LBLStatLabel6.Location = new System.Drawing.Point(10, 8);
+            this.LBLStatLabel6.Name = "LBLStatLabel6";
+            this.LBLStatLabel6.Size = new System.Drawing.Size(380, 18);
+            this.LBLStatLabel6.TabIndex = 0;
+            this.LBLStatLabel6.Text = "Jurnal Menunggu Verifikasi";
+            // 
+            // LBLStatValue6
+            // 
+            this.LBLStatValue6.AutoSize = false;
+            this.LBLStatValue6.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLStatValue6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(88)))), ((int)(((byte)(187)))));
+            this.LBLStatValue6.Location = new System.Drawing.Point(460, 4);
+            this.LBLStatValue6.Name = "LBLStatValue6";
+            this.LBLStatValue6.Size = new System.Drawing.Size(88, 26);
+            this.LBLStatValue6.TabIndex = 1;
+            this.LBLStatValue6.Text = "?";
+            this.LBLStatValue6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // PNLStatRow7
+            // 
+            this.PNLStatRow7.BackColor = System.Drawing.Color.White;
+            this.PNLStatRow7.Controls.Add(this.LBLStatLabel7);
+            this.PNLStatRow7.Controls.Add(this.LBLStatValue7);
+            this.PNLStatRow7.Location = new System.Drawing.Point(8, 314);
+            this.PNLStatRow7.Name = "PNLStatRow7";
+            this.PNLStatRow7.Size = new System.Drawing.Size(558, 34);
+            this.PNLStatRow7.TabIndex = 8;
+            // 
+            // LBLStatLabel7
+            // 
+            this.LBLStatLabel7.AutoSize = false;
+            this.LBLStatLabel7.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLStatLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(60)))));
+            this.LBLStatLabel7.Location = new System.Drawing.Point(10, 8);
+            this.LBLStatLabel7.Name = "LBLStatLabel7";
+            this.LBLStatLabel7.Size = new System.Drawing.Size(380, 18);
+            this.LBLStatLabel7.TabIndex = 0;
+            this.LBLStatLabel7.Text = "Jurnal Ditolak";
+            // 
+            // LBLStatValue7
+            // 
+            this.LBLStatValue7.AutoSize = false;
+            this.LBLStatValue7.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLStatValue7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.LBLStatValue7.Location = new System.Drawing.Point(460, 4);
+            this.LBLStatValue7.Name = "LBLStatValue7";
+            this.LBLStatValue7.Size = new System.Drawing.Size(88, 26);
+            this.LBLStatValue7.TabIndex = 1;
+            this.LBLStatValue7.Text = "?";
+            this.LBLStatValue7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // PNLActivity
+            // 
+            this.PNLActivity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(255)))));
+            this.PNLActivity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PNLActivity.Controls.Add(this.LBLJudulActivity);
+            this.PNLActivity.Controls.Add(this.LBLActivity10);
+            this.PNLActivity.Controls.Add(this.LBLActivity9);
+            this.PNLActivity.Controls.Add(this.LBLActivity8);
+            this.PNLActivity.Controls.Add(this.LBLActivity7);
+            this.PNLActivity.Controls.Add(this.LBLActivity6);
+            this.PNLActivity.Controls.Add(this.LBLActivity5);
+            this.PNLActivity.Controls.Add(this.LBLActivity4);
+            this.PNLActivity.Controls.Add(this.LBLActivity3);
+            this.PNLActivity.Controls.Add(this.LBLActivity2);
+            this.PNLActivity.Controls.Add(this.LBLActivity1);
+            this.PNLActivity.Location = new System.Drawing.Point(600, 320);
+            this.PNLActivity.Name = "PNLActivity";
+            this.PNLActivity.Size = new System.Drawing.Size(580, 370);
+            this.PNLActivity.TabIndex = 18;
+            // 
+            // LBLJudulActivity
+            // 
+            this.LBLJudulActivity.AutoSize = false;
+            this.LBLJudulActivity.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLJudulActivity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(88)))), ((int)(((byte)(187)))));
+            this.LBLJudulActivity.Location = new System.Drawing.Point(12, 10);
+            this.LBLJudulActivity.Name = "LBLJudulActivity";
+            this.LBLJudulActivity.Size = new System.Drawing.Size(540, 30);
+            this.LBLJudulActivity.TabIndex = 0;
+            this.LBLJudulActivity.Text = "Aktivitas Terbaru";
+            // 
+            // LBLActivity1
+            // 
+            this.LBLActivity1.AutoSize = false;
+            this.LBLActivity1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLActivity1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(60)))));
+            this.LBLActivity1.Location = new System.Drawing.Point(12, 50);
+            this.LBLActivity1.Name = "LBLActivity1";
+            this.LBLActivity1.Size = new System.Drawing.Size(548, 26);
+            this.LBLActivity1.TabIndex = 1;
+            this.LBLActivity1.Text = "-";
+            // 
+            // LBLActivity2
+            // 
+            this.LBLActivity2.AutoSize = false;
+            this.LBLActivity2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLActivity2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(60)))));
+            this.LBLActivity2.Location = new System.Drawing.Point(12, 80);
+            this.LBLActivity2.Name = "LBLActivity2";
+            this.LBLActivity2.Size = new System.Drawing.Size(548, 26);
+            this.LBLActivity2.TabIndex = 2;
+            this.LBLActivity2.Text = "-";
+            // 
+            // LBLActivity3
+            // 
+            this.LBLActivity3.AutoSize = false;
+            this.LBLActivity3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLActivity3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(60)))));
+            this.LBLActivity3.Location = new System.Drawing.Point(12, 110);
+            this.LBLActivity3.Name = "LBLActivity3";
+            this.LBLActivity3.Size = new System.Drawing.Size(548, 26);
+            this.LBLActivity3.TabIndex = 3;
+            this.LBLActivity3.Text = "-";
+            // 
+            // LBLActivity4
+            // 
+            this.LBLActivity4.AutoSize = false;
+            this.LBLActivity4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLActivity4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(60)))));
+            this.LBLActivity4.Location = new System.Drawing.Point(12, 140);
+            this.LBLActivity4.Name = "LBLActivity4";
+            this.LBLActivity4.Size = new System.Drawing.Size(548, 26);
+            this.LBLActivity4.TabIndex = 4;
+            this.LBLActivity4.Text = "-";
+            // 
+            // LBLActivity5
+            // 
+            this.LBLActivity5.AutoSize = false;
+            this.LBLActivity5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLActivity5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(60)))));
+            this.LBLActivity5.Location = new System.Drawing.Point(12, 170);
+            this.LBLActivity5.Name = "LBLActivity5";
+            this.LBLActivity5.Size = new System.Drawing.Size(548, 26);
+            this.LBLActivity5.TabIndex = 5;
+            this.LBLActivity5.Text = "-";
+            // 
+            // LBLActivity6
+            // 
+            this.LBLActivity6.AutoSize = false;
+            this.LBLActivity6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLActivity6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(60)))));
+            this.LBLActivity6.Location = new System.Drawing.Point(12, 200);
+            this.LBLActivity6.Name = "LBLActivity6";
+            this.LBLActivity6.Size = new System.Drawing.Size(548, 26);
+            this.LBLActivity6.TabIndex = 6;
+            this.LBLActivity6.Text = "-";
+            // 
+            // LBLActivity7
+            // 
+            this.LBLActivity7.AutoSize = false;
+            this.LBLActivity7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLActivity7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(60)))));
+            this.LBLActivity7.Location = new System.Drawing.Point(12, 230);
+            this.LBLActivity7.Name = "LBLActivity7";
+            this.LBLActivity7.Size = new System.Drawing.Size(548, 26);
+            this.LBLActivity7.TabIndex = 7;
+            this.LBLActivity7.Text = "-";
+            // 
+            // LBLActivity8
+            // 
+            this.LBLActivity8.AutoSize = false;
+            this.LBLActivity8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLActivity8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(60)))));
+            this.LBLActivity8.Location = new System.Drawing.Point(12, 260);
+            this.LBLActivity8.Name = "LBLActivity8";
+            this.LBLActivity8.Size = new System.Drawing.Size(548, 26);
+            this.LBLActivity8.TabIndex = 8;
+            this.LBLActivity8.Text = "-";
+            // 
+            // LBLActivity9
+            // 
+            this.LBLActivity9.AutoSize = false;
+            this.LBLActivity9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLActivity9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(60)))));
+            this.LBLActivity9.Location = new System.Drawing.Point(12, 290);
+            this.LBLActivity9.Name = "LBLActivity9";
+            this.LBLActivity9.Size = new System.Drawing.Size(548, 26);
+            this.LBLActivity9.TabIndex = 9;
+            this.LBLActivity9.Text = "-";
+            // 
+            // LBLActivity10
+            // 
+            this.LBLActivity10.AutoSize = false;
+            this.LBLActivity10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLActivity10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(60)))));
+            this.LBLActivity10.Location = new System.Drawing.Point(12, 320);
+            this.LBLActivity10.Name = "LBLActivity10";
+            this.LBLActivity10.Size = new System.Drawing.Size(548, 26);
+            this.LBLActivity10.TabIndex = 10;
+            this.LBLActivity10.Text = "-";
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -998,6 +1483,16 @@ namespace app_prakerin
             this.CSiswa.ResumeLayout(false);
             this.CSiswa.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
+            this.PNLStatistik.ResumeLayout(false);
+            this.PNLStatRow0.ResumeLayout(false);
+            this.PNLStatRow1.ResumeLayout(false);
+            this.PNLStatRow2.ResumeLayout(false);
+            this.PNLStatRow3.ResumeLayout(false);
+            this.PNLStatRow4.ResumeLayout(false);
+            this.PNLStatRow5.ResumeLayout(false);
+            this.PNLStatRow6.ResumeLayout(false);
+            this.PNLStatRow7.ResumeLayout(false);
+            this.PNLActivity.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1057,5 +1552,43 @@ namespace app_prakerin
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox6;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox5;
         private Guna.UI2.WinForms.Guna2Button guna2Button13;
+        private System.Windows.Forms.Panel PNLStatistik;
+        private System.Windows.Forms.Label LBLJudulStatistik;
+        private System.Windows.Forms.Panel PNLStatRow0;
+        private System.Windows.Forms.Label LBLStatLabel0;
+        private System.Windows.Forms.Label LBLStatValue0;
+        private System.Windows.Forms.Panel PNLStatRow1;
+        private System.Windows.Forms.Label LBLStatLabel1;
+        private System.Windows.Forms.Label LBLStatValue1;
+        private System.Windows.Forms.Panel PNLStatRow2;
+        private System.Windows.Forms.Label LBLStatLabel2;
+        private System.Windows.Forms.Label LBLStatValue2;
+        private System.Windows.Forms.Panel PNLStatRow3;
+        private System.Windows.Forms.Label LBLStatLabel3;
+        private System.Windows.Forms.Label LBLStatValue3;
+        private System.Windows.Forms.Panel PNLStatRow4;
+        private System.Windows.Forms.Label LBLStatLabel4;
+        private System.Windows.Forms.Label LBLStatValue4;
+        private System.Windows.Forms.Panel PNLStatRow5;
+        private System.Windows.Forms.Label LBLStatLabel5;
+        private System.Windows.Forms.Label LBLStatValue5;
+        private System.Windows.Forms.Panel PNLStatRow6;
+        private System.Windows.Forms.Label LBLStatLabel6;
+        private System.Windows.Forms.Label LBLStatValue6;
+        private System.Windows.Forms.Panel PNLStatRow7;
+        private System.Windows.Forms.Label LBLStatLabel7;
+        private System.Windows.Forms.Label LBLStatValue7;
+        private System.Windows.Forms.Panel PNLActivity;
+        private System.Windows.Forms.Label LBLJudulActivity;
+        private System.Windows.Forms.Label LBLActivity1;
+        private System.Windows.Forms.Label LBLActivity2;
+        private System.Windows.Forms.Label LBLActivity3;
+        private System.Windows.Forms.Label LBLActivity4;
+        private System.Windows.Forms.Label LBLActivity5;
+        private System.Windows.Forms.Label LBLActivity6;
+        private System.Windows.Forms.Label LBLActivity7;
+        private System.Windows.Forms.Label LBLActivity8;
+        private System.Windows.Forms.Label LBLActivity9;
+        private System.Windows.Forms.Label LBLActivity10;
     }
 }

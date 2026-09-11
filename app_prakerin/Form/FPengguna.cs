@@ -16,21 +16,36 @@ namespace app_prakerin
 
         private void FPengguna_Load(object sender, EventArgs e)
         {
-            TampilData("");
-            DGVPengguna.Columns["Column2"].Visible = false;
-            DGVPengguna.Columns["Column3"].Visible = false;
-
+            try
+            {
+                btnEdit.Enabled  = false;
+                btnHapus.Enabled = false;
+                TampilData("");
+                DGVPengguna.Columns["Column2"].Visible = false;
+                DGVPengguna.Columns["Column3"].Visible = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Gagal memuat data pengguna.\n\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         public void TampilData(string CariApa)
         {
-            DGVPengguna.Rows.Clear();
-            Koneksi.CRUD($"SELECT * FROM pengguna INNER JOIN role ON role.nama_role = pengguna.role WHERE username LIKE '%{CariApa}%'");
-            int no = 1;
-            foreach (DataRow row in Koneksi.ds.Tables[0].Rows)
+            try
             {
-                DGVPengguna.Rows.Add(no, row["id_pengguna"], row["username"], row["password"], row["role"], row["status"]);
-                no++;
+                DGVPengguna.Rows.Clear();
+                Koneksi.CRUD($"SELECT * FROM pengguna INNER JOIN role ON role.nama_role = pengguna.role WHERE username LIKE '%{CariApa}%'");
+                int no = 1;
+                foreach (DataRow row in Koneksi.ds.Tables[0].Rows)
+                {
+                    DGVPengguna.Rows.Add(no, row["id_pengguna"], row["username"], row["password"], row["role"], row["status"]);
+                    no++;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Gagal menampilkan data pengguna.\n\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -46,20 +61,39 @@ namespace app_prakerin
 
         public void AmbilData(string idp)
         {
-            Koneksi.CRUD($"SELECT * FROM pengguna INNER JOIN role ON role.nama_role = pengguna.role WHERE id_pengguna = '{idp}'");
-            foreach (DataRow item in Koneksi.ds.Tables[0].Rows)
+            try
             {
-                TXTUsername.Text = item["username"].ToString();
-                CMBRole.Text = item["nama_role"].ToString();
-                CMBStatus.Text = item["status"].ToString();
+                Koneksi.CRUD($"SELECT * FROM pengguna INNER JOIN role ON role.nama_role = pengguna.role WHERE id_pengguna = '{idp}'");
+                foreach (DataRow item in Koneksi.ds.Tables[0].Rows)
+                {
+                    TXTUsername.Text = item["username"].ToString();
+                    CMBRole.Text     = item["nama_role"].ToString();
+                    CMBStatus.Text   = item["status"].ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Gagal mengambil data pengguna.\n\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
         private void DGVPengguna_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex < 0) return;
-            idPengguna = DGVPengguna.Rows[e.RowIndex].Cells["Column2"].Value.ToString();
-            AmbilData(idPengguna);
+            try
+            {
+                idPengguna = DGVPengguna.Rows[e.RowIndex].Cells["Column2"].Value?.ToString() ?? "";
+                if (!string.IsNullOrEmpty(idPengguna))
+                {
+                    AmbilData(idPengguna);
+                    btnEdit.Enabled  = true;
+                    btnHapus.Enabled = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Gagal memilih data.\n\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void TXTSearch_TextChanged(object sender, EventArgs e)
@@ -69,10 +103,17 @@ namespace app_prakerin
 
         private void CMBRole_DropDown(object sender, EventArgs e)
         {
-            CMBRole.Items.Clear();
-            Koneksi.CRUD("SELECT nama_role FROM role");
-            foreach (DataRow row in Koneksi.ds.Tables[0].Rows)
-                CMBRole.Items.Add(row["nama_role"].ToString());
+            try
+            {
+                CMBRole.Items.Clear();
+                Koneksi.CRUD("SELECT nama_role FROM role");
+                foreach (DataRow row in Koneksi.ds.Tables[0].Rows)
+                    CMBRole.Items.Add(row["nama_role"].ToString());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Gagal memuat data role.\n\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void CMBStatus_DropDown(object sender, EventArgs e)
@@ -84,14 +125,22 @@ namespace app_prakerin
 
         private void BTNTambah_Click(object sender, EventArgs e)
         {
-            FormCRUDPengguna modal = new FormCRUDPengguna();
-            modal.Judul = "Tambah Data Pengguna";
-
-            if (modal.ShowDialog() == DialogResult.OK)
+            try
             {
-                Koneksi.CRUD($"INSERT INTO pengguna VALUES(null,'{modal.Username}',MD5('{modal.Password}'),'{modal.Role}','{modal.Status}')");
-                MessageBox.Show("Data berhasil ditambahkan!");
-                TampilData("");
+                FormCRUDPengguna modal = new FormCRUDPengguna();
+                modal.Judul = "Tambah Data Pengguna";
+
+                if (modal.ShowDialog() == DialogResult.OK)
+                {
+                    Koneksi.CRUD($"INSERT INTO pengguna VALUES(null,'{modal.Username}',MD5('{modal.Password}'),'{modal.Role}','{modal.Status}')");
+                    MessageBox.Show("Data berhasil ditambahkan!", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    FMaster.CatatAktivitas($"Tambah pengguna: {modal.Username}");
+                    TampilData("");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Gagal menambahkan data pengguna.\n\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -103,21 +152,31 @@ namespace app_prakerin
                 return;
             }
 
-            int rowIdx = DGVPengguna.CurrentCell.RowIndex;
-            FormCRUDPengguna modal = new FormCRUDPengguna();
-            modal.Judul = "Edit Data Pengguna";
-            modal.Username = DGVPengguna.Rows[rowIdx].Cells["colId"].Value.ToString();
-            modal.Password = DGVPengguna.Rows[rowIdx].Cells["Column3"].Value.ToString();
-            modal.Role = DGVPengguna.Rows[rowIdx].Cells["colNama"].Value.ToString();
-            modal.Status = DGVPengguna.Rows[rowIdx].Cells["Column1"].Value.ToString();
-
-            if (modal.ShowDialog() == DialogResult.OK)
+            try
             {
-                Koneksi.CRUD($"UPDATE pengguna SET username='{modal.Username}', password = MD5('{modal.Password}'), role='{modal.Role}', status='{modal.Status}' WHERE id_pengguna='{idPengguna}'");
-                MessageBox.Show("Data berhasil diupdate!");
-                Bersih();
-                TampilData("");
-                idPengguna = "";
+                int rowIdx = DGVPengguna.CurrentCell.RowIndex;
+                FormCRUDPengguna modal = new FormCRUDPengguna();
+                modal.Judul    = "Edit Data Pengguna";
+                modal.Username = DGVPengguna.Rows[rowIdx].Cells["colId"].Value?.ToString() ?? "";
+                modal.Password = DGVPengguna.Rows[rowIdx].Cells["Column3"].Value?.ToString() ?? "";
+                modal.Role     = DGVPengguna.Rows[rowIdx].Cells["colNama"].Value?.ToString() ?? "";
+                modal.Status   = DGVPengguna.Rows[rowIdx].Cells["Column1"].Value?.ToString() ?? "";
+
+                if (modal.ShowDialog() == DialogResult.OK)
+                {
+                    Koneksi.CRUD($"UPDATE pengguna SET username='{modal.Username}', password = MD5('{modal.Password}'), role='{modal.Role}', status='{modal.Status}' WHERE id_pengguna='{idPengguna}'");
+                    MessageBox.Show("Data berhasil diupdate!", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    FMaster.CatatAktivitas($"Edit pengguna: {modal.Username}");
+                    Bersih();
+                    TampilData("");
+                    idPengguna = "";
+                    btnEdit.Enabled  = false;
+                    btnHapus.Enabled = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Gagal mengupdate data pengguna.\n\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -128,13 +187,24 @@ namespace app_prakerin
                 MessageBox.Show("Pilih data terlebih dahulu!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
+
             if (MessageBox.Show("Yakin ingin menghapus?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                Koneksi.CRUD($"DELETE FROM pengguna WHERE id_pengguna='{idPengguna}'");
-                MessageBox.Show("Data berhasil dihapus!");
-                Bersih();
-                TampilData("");
-                idPengguna = "";
+                try
+                {
+                    Koneksi.CRUD($"DELETE FROM pengguna WHERE id_pengguna='{idPengguna}'");
+                    MessageBox.Show("Data berhasil dihapus!", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    FMaster.CatatAktivitas("Hapus data pengguna");
+                    Bersih();
+                    TampilData("");
+                    idPengguna = "";
+                    btnEdit.Enabled  = false;
+                    btnHapus.Enabled = false;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Gagal menghapus data pengguna.\n\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
         }
 

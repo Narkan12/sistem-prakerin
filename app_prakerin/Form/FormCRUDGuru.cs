@@ -7,12 +7,12 @@ namespace app_prakerin
 {
     public partial class FormCRUDGuru : Form
     {
-        public string Nama = "";
-        public string NIP = "";
-        public string NoHP = "";
-        public string Email = "";
+        public string Nama       = "";
+        public string NIP        = "";
+        public string NoHP       = "";
+        public string Email      = "";
         public string IdPengguna = "";
-        public string Judul = "Tambah Data Guru";
+        public string Judul      = "Tambah Data Guru";
 
         public FormCRUDGuru()
         {
@@ -21,35 +21,38 @@ namespace app_prakerin
 
         private void FormCRUDGuru_Load(object sender, EventArgs e)
         {
-            lblJudul.Text = Judul;
-            TXTNama.Text = Nama;
-            TXTNIP.Text = NIP;
-            TXTNoHP.Text = NoHP;
-            TXTEmail.Text = Email;
-
-            Koneksi.CRUD("SELECT id_pengguna, username FROM pengguna");
-            CMBPengguna.Items.Clear();
-            foreach (DataRow row in Koneksi.ds.Tables[0].Rows)
-                CMBPengguna.Items.Add(row["id_pengguna"] + " - " + row["username"]);
-
-            if (!string.IsNullOrEmpty(IdPengguna))
+            try
             {
-                foreach (object item in CMBPengguna.Items)
+                lblJudul.Text  = Judul;
+                TXTNama.Text   = Nama;
+                TXTNIP.Text    = NIP;
+                TXTNoHP.Text   = NoHP;
+                TXTEmail.Text  = Email;
+
+                Koneksi.CRUD("SELECT id_pengguna, username FROM pengguna");
+                CMBPengguna.Items.Clear();
+                foreach (DataRow row in Koneksi.ds.Tables[0].Rows)
+                    CMBPengguna.Items.Add(row["id_pengguna"] + " - " + row["username"]);
+
+                if (!string.IsNullOrEmpty(IdPengguna))
                 {
-                    if (item.ToString().StartsWith(IdPengguna + " - "))
+                    foreach (object item in CMBPengguna.Items)
                     {
-                        CMBPengguna.Text = item.ToString();
-                        break;
+                        if (item.ToString().StartsWith(IdPengguna + " - "))
+                        {
+                            CMBPengguna.Text = item.ToString();
+                            break;
+                        }
                     }
                 }
+
+                Helper.Pindah(TXTNama, TXTNIP, TXTNoHP, TXTEmail, CMBPengguna);
             }
-
-            //Pindah 
-            Helper.Pindah(TXTNama, TXTNIP, TXTNoHP, TXTEmail, CMBPengguna);
+            catch (Exception ex)
+            {
+                MessageBox.Show("Gagal memuat form guru.\n\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
-
-
-
 
         private void BTNSimpan_Click(object sender, EventArgs e)
         {
@@ -58,13 +61,21 @@ namespace app_prakerin
                 MessageBox.Show("Masukan Data yang Lengkap!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            Nama = TXTNama.Text.Trim();
-            NIP = TXTNIP.Text.Trim();
-            NoHP = TXTNoHP.Text.Trim();
-            Email = TXTEmail.Text.Trim();
-            IdPengguna = CMBPengguna.Text.Split(' ')[0];
-            this.DialogResult = DialogResult.OK;
-            this.Close();
+
+            try
+            {
+                Nama       = TXTNama.Text.Trim();
+                NIP        = TXTNIP.Text.Trim();
+                NoHP       = TXTNoHP.Text.Trim();
+                Email      = TXTEmail.Text.Trim();
+                IdPengguna = CMBPengguna.Text.Split(' ')[0];
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Gagal menyimpan data guru.\n\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void BTNBatal_Click(object sender, EventArgs e)

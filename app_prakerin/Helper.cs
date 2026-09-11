@@ -10,7 +10,6 @@ namespace app_prakerin
 {
     class Helper
     {
-        //Kontrol Form
         public static void UntukForm(Form FormApa, Panel PanelApa)
         {
             PanelApa.Controls.Clear();
@@ -21,7 +20,6 @@ namespace app_prakerin
             FormApa.Show();
         }
 
-        //Kontrol Keychar
         public static void Pindah(params Control[] controls)
         {
             for (int i = 0; i < controls.Length - 1; i++)

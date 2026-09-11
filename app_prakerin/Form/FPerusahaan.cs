@@ -16,19 +16,35 @@ namespace app_prakerin
 
         private void FPerusahaan_Load(object sender, EventArgs e)
         {
-            TampilData("");
-            DGVRole.Columns["Column2"].Visible = false;
+            try
+            {
+                btnEdit.Enabled  = false;
+                btnHapus.Enabled = false;
+                TampilData("");
+                DGVRole.Columns["Column2"].Visible = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Gagal memuat data perusahaan.\n\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         public void TampilData(string CariApa)
         {
-            DGVRole.Rows.Clear();
-            Koneksi.CRUD($"SELECT * FROM perusahaan WHERE nama LIKE '%{CariApa}%'");
-            int no = 1;
-            foreach (DataRow row in Koneksi.ds.Tables[0].Rows)
+            try
             {
-                DGVRole.Rows.Add(no, row["id_perusahaan"], row["nama"], row["alamat"], row["no_telp"], row["email"], row["bidang_usaha"]);
-                no++;
+                DGVRole.Rows.Clear();
+                Koneksi.CRUD($"SELECT * FROM perusahaan WHERE nama LIKE '%{CariApa}%'");
+                int no = 1;
+                foreach (DataRow row in Koneksi.ds.Tables[0].Rows)
+                {
+                    DGVRole.Rows.Add(no, row["id_perusahaan"], row["nama"], row["alamat"], row["no_telp"], row["email"], row["bidang_usaha"]);
+                    no++;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Gagal menampilkan data perusahaan.\n\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -43,22 +59,41 @@ namespace app_prakerin
 
         public void AmbilData(string idp)
         {
-            Koneksi.CRUD($"SELECT * FROM perusahaan WHERE id_perusahaan = '{idp}'");
-            foreach (DataRow item in Koneksi.ds.Tables[0].Rows)
+            try
             {
-                TXTNama.Text = item["nama"].ToString();
-                TXTAlamat.Text = item["alamat"].ToString();
-                TXTNoTelp.Text = item["no_telp"].ToString();
-                TXTEmail.Text = item["email"].ToString();
-                TXTBidang.Text = item["bidang_usaha"].ToString();
+                Koneksi.CRUD($"SELECT * FROM perusahaan WHERE id_perusahaan = '{idp}'");
+                foreach (DataRow item in Koneksi.ds.Tables[0].Rows)
+                {
+                    TXTNama.Text   = item["nama"].ToString();
+                    TXTAlamat.Text = item["alamat"].ToString();
+                    TXTNoTelp.Text = item["no_telp"].ToString();
+                    TXTEmail.Text  = item["email"].ToString();
+                    TXTBidang.Text = item["bidang_usaha"].ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Gagal mengambil data perusahaan.\n\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
         private void DGVRole_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex < 0) return;
-            idPerusahaan = DGVRole.Rows[e.RowIndex].Cells["Column2"].Value.ToString();
-            AmbilData(idPerusahaan);
+            try
+            {
+                idPerusahaan = DGVRole.Rows[e.RowIndex].Cells["Column2"].Value?.ToString() ?? "";
+                if (!string.IsNullOrEmpty(idPerusahaan))
+                {
+                    AmbilData(idPerusahaan);
+                    btnEdit.Enabled  = true;
+                    btnHapus.Enabled = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Gagal memilih data.\n\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void TXTSearch_TextChanged(object sender, EventArgs e)
@@ -68,14 +103,22 @@ namespace app_prakerin
 
         private void BTNTambah_Click(object sender, EventArgs e)
         {
-            FormCRUDPerusahaan modal = new FormCRUDPerusahaan();
-            modal.Judul = "Tambah Data Perusahaan";
-
-            if (modal.ShowDialog() == DialogResult.OK)
+            try
             {
-                Koneksi.CRUD($"INSERT INTO perusahaan (nama, alamat, no_telp, email, bidang_usaha) VALUES('{modal.Nama}','{modal.Alamat}','{modal.NoTelp}','{modal.Email}','{modal.BidangUsaha}')");
-                MessageBox.Show("Data berhasil ditambahkan!");
-                TampilData("");
+                FormCRUDPerusahaan modal = new FormCRUDPerusahaan();
+                modal.Judul = "Tambah Data Perusahaan";
+
+                if (modal.ShowDialog() == DialogResult.OK)
+                {
+                    Koneksi.CRUD($"INSERT INTO perusahaan (nama, alamat, no_telp, email, bidang_usaha) VALUES('{modal.Nama}','{modal.Alamat}','{modal.NoTelp}','{modal.Email}','{modal.BidangUsaha}')");
+                    MessageBox.Show("Data berhasil ditambahkan!", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    FMaster.CatatAktivitas($"Tambah perusahaan: {modal.Nama}");
+                    TampilData("");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Gagal menambahkan data perusahaan.\n\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -87,21 +130,31 @@ namespace app_prakerin
                 return;
             }
 
-            FormCRUDPerusahaan modal = new FormCRUDPerusahaan();
-            modal.Judul = "Edit Data Perusahaan";
-            modal.Nama = TXTNama.Text;
-            modal.Alamat = TXTAlamat.Text;
-            modal.NoTelp = TXTNoTelp.Text;
-            modal.Email = TXTEmail.Text;
-            modal.BidangUsaha = TXTBidang.Text;
-
-            if (modal.ShowDialog() == DialogResult.OK)
+            try
             {
-                Koneksi.CRUD($"UPDATE perusahaan SET nama='{modal.Nama}', alamat='{modal.Alamat}', no_telp='{modal.NoTelp}', email='{modal.Email}', bidang_usaha='{modal.BidangUsaha}' WHERE id_perusahaan='{idPerusahaan}'");
-                MessageBox.Show("Data berhasil diupdate!");
-                Bersih();
-                TampilData("");
-                idPerusahaan = "";
+                FormCRUDPerusahaan modal = new FormCRUDPerusahaan();
+                modal.Judul       = "Edit Data Perusahaan";
+                modal.Nama        = TXTNama.Text;
+                modal.Alamat      = TXTAlamat.Text;
+                modal.NoTelp      = TXTNoTelp.Text;
+                modal.Email       = TXTEmail.Text;
+                modal.BidangUsaha = TXTBidang.Text;
+
+                if (modal.ShowDialog() == DialogResult.OK)
+                {
+                    Koneksi.CRUD($"UPDATE perusahaan SET nama='{modal.Nama}', alamat='{modal.Alamat}', no_telp='{modal.NoTelp}', email='{modal.Email}', bidang_usaha='{modal.BidangUsaha}' WHERE id_perusahaan='{idPerusahaan}'");
+                    MessageBox.Show("Data berhasil diupdate!", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    FMaster.CatatAktivitas($"Edit perusahaan: {modal.Nama}");
+                    Bersih();
+                    TampilData("");
+                    idPerusahaan = "";
+                    btnEdit.Enabled  = false;
+                    btnHapus.Enabled = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Gagal mengupdate data perusahaan.\n\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -112,13 +165,24 @@ namespace app_prakerin
                 MessageBox.Show("Pilih data terlebih dahulu!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
+
             if (MessageBox.Show("Yakin ingin menghapus?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                Koneksi.CRUD($"DELETE FROM perusahaan WHERE id_perusahaan='{idPerusahaan}'");
-                MessageBox.Show("Data berhasil dihapus!");
-                Bersih();
-                TampilData("");
-                idPerusahaan = "";
+                try
+                {
+                    Koneksi.CRUD($"DELETE FROM perusahaan WHERE id_perusahaan='{idPerusahaan}'");
+                    MessageBox.Show("Data berhasil dihapus!", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    FMaster.CatatAktivitas("Hapus data perusahaan");
+                    Bersih();
+                    TampilData("");
+                    idPerusahaan = "";
+                    btnEdit.Enabled  = false;
+                    btnHapus.Enabled = false;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Gagal menghapus data perusahaan.\n\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
         }
     }

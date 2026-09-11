@@ -5,9 +5,9 @@ namespace app_prakerin
 {
     public partial class FormCRUDDataRole : Form
     {
-        public string NamaRole = "";
+        public string NamaRole   = "";
         public string Keterangan = "";
-        public string Judul = "Tambah Data Role";
+        public string Judul      = "Tambah Data Role";
 
         public FormCRUDDataRole()
         {
@@ -16,11 +16,17 @@ namespace app_prakerin
 
         private void FormCRUDDataRole_Load(object sender, EventArgs e)
         {
-            lblJudul.Text = Judul;
-            TXTNama.Text = NamaRole;
-            TXTKeterangan.Text = Keterangan;
-
-            Helper.Pindah(TXTNama, TXTKeterangan);
+            try
+            {
+                lblJudul.Text      = Judul;
+                TXTNama.Text       = NamaRole;
+                TXTKeterangan.Text = Keterangan;
+                Helper.Pindah(TXTNama, TXTKeterangan);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Gagal memuat form role.\n\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void BTNSimpan_Click(object sender, EventArgs e)
@@ -30,10 +36,18 @@ namespace app_prakerin
                 MessageBox.Show("Masukan Data yang Lengkap!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            NamaRole = TXTNama.Text.Trim();
-            Keterangan = TXTKeterangan.Text.Trim();
-            this.DialogResult = DialogResult.OK;
-            this.Close();
+
+            try
+            {
+                NamaRole   = TXTNama.Text.Trim();
+                Keterangan = TXTKeterangan.Text.Trim();
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Gagal menyimpan data role.\n\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void BTNBatal_Click(object sender, EventArgs e)

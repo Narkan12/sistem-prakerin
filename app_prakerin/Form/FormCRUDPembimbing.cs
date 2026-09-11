@@ -7,13 +7,13 @@ namespace app_prakerin
 {
     public partial class FormCRUDPembimbing : Form
     {
-        public string Nama = "";
-        public string Jabatan = "";
-        public string NoHP = "";
-        public string Email = "";
-        public string IdPengguna = "";
+        public string Nama         = "";
+        public string Jabatan      = "";
+        public string NoHP         = "";
+        public string Email        = "";
+        public string IdPengguna   = "";
         public string IdPerusahaan = "";
-        public string Judul = "Tambah Data Pembimbing";
+        public string Judul        = "Tambah Data Pembimbing";
 
         public FormCRUDPembimbing()
         {
@@ -22,48 +22,54 @@ namespace app_prakerin
 
         private void FormCRUDPembimbing_Load(object sender, EventArgs e)
         {
-            lblJudul.Text = Judul;
-            TXTNama.Text = Nama;
-            TXTJabatan.Text = Jabatan;
-            TXTNoHP.Text = NoHP;
-            TXTEmail.Text = Email;
-
-            Koneksi.CRUD("SELECT id_pengguna, username FROM pengguna");
-            CMBPengguna.Items.Clear();
-            foreach (DataRow row in Koneksi.ds.Tables[0].Rows)
-                CMBPengguna.Items.Add(row["id_pengguna"] + " - " + row["username"]);
-
-            Koneksi.CRUD("SELECT id_perusahaan, nama FROM perusahaan");
-            CMBPerusahaan.Items.Clear();
-            foreach (DataRow row in Koneksi.ds.Tables[0].Rows)
-                CMBPerusahaan.Items.Add(row["id_perusahaan"] + " - " + row["nama"]);
-
-            if (!string.IsNullOrEmpty(IdPengguna))
+            try
             {
-                foreach (object item in CMBPengguna.Items)
+                lblJudul.Text   = Judul;
+                TXTNama.Text    = Nama;
+                TXTJabatan.Text = Jabatan;
+                TXTNoHP.Text    = NoHP;
+                TXTEmail.Text   = Email;
+
+                Koneksi.CRUD("SELECT id_pengguna, username FROM pengguna");
+                CMBPengguna.Items.Clear();
+                foreach (DataRow row in Koneksi.ds.Tables[0].Rows)
+                    CMBPengguna.Items.Add(row["id_pengguna"] + " - " + row["username"]);
+
+                Koneksi.CRUD("SELECT id_perusahaan, nama FROM perusahaan");
+                CMBPerusahaan.Items.Clear();
+                foreach (DataRow row in Koneksi.ds.Tables[0].Rows)
+                    CMBPerusahaan.Items.Add(row["id_perusahaan"] + " - " + row["nama"]);
+
+                if (!string.IsNullOrEmpty(IdPengguna))
                 {
-                    if (item.ToString().StartsWith(IdPengguna + " - " ))
+                    foreach (object item in CMBPengguna.Items)
                     {
-                        CMBPengguna.Text = item.ToString();
-                        break;
+                        if (item.ToString().StartsWith(IdPengguna + " - "))
+                        {
+                            CMBPengguna.Text = item.ToString();
+                            break;
+                        }
                     }
                 }
-            }
 
-            if (!string.IsNullOrEmpty(IdPerusahaan))
-            {
-                foreach (object item in CMBPerusahaan.Items)
+                if (!string.IsNullOrEmpty(IdPerusahaan))
                 {
-                    if (item.ToString().StartsWith(IdPerusahaan + " - "))
+                    foreach (object item in CMBPerusahaan.Items)
                     {
-                        CMBPerusahaan.Text = item.ToString();
-                        break;
+                        if (item.ToString().StartsWith(IdPerusahaan + " - "))
+                        {
+                            CMBPerusahaan.Text = item.ToString();
+                            break;
+                        }
                     }
                 }
-            }
 
-            //Pindah
-            Helper.Pindah(TXTNama, TXTJabatan, TXTNoHP, TXTEmail, CMBPerusahaan, CMBPengguna);
+                Helper.Pindah(TXTNama, TXTJabatan, TXTNoHP, TXTEmail, CMBPerusahaan, CMBPengguna);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Gagal memuat form pembimbing.\n\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void BTNSimpan_Click(object sender, EventArgs e)
@@ -73,14 +79,22 @@ namespace app_prakerin
                 MessageBox.Show("Masukan Data yang Lengkap!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            Nama = TXTNama.Text.Trim();
-            Jabatan = TXTJabatan.Text.Trim();
-            NoHP = TXTNoHP.Text.Trim();
-            Email = TXTEmail.Text.Trim();
-            IdPengguna = CMBPengguna.Text.Split(' ')[0];
-            IdPerusahaan = CMBPerusahaan.Text.Split(' ')[0];
-            this.DialogResult = DialogResult.OK;
-            this.Close();
+
+            try
+            {
+                Nama         = TXTNama.Text.Trim();
+                Jabatan      = TXTJabatan.Text.Trim();
+                NoHP         = TXTNoHP.Text.Trim();
+                Email        = TXTEmail.Text.Trim();
+                IdPengguna   = CMBPengguna.Text.Split(' ')[0];
+                IdPerusahaan = CMBPerusahaan.Text.Split(' ')[0];
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Gagal menyimpan data pembimbing.\n\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void BTNBatal_Click(object sender, EventArgs e)
