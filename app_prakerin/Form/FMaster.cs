@@ -378,5 +378,10 @@ namespace app_prakerin
         {
             PNLSidebar.Visible = !PNLSidebar.Visible;
         }
+
+        private void LBLActivity1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
