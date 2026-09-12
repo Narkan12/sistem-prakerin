@@ -1,0 +1,233 @@
+=========================================================
+SISTEM INFORMASI JURNAL PRAKERIN
+=========================================================
+
+ROLE PENGGUNA
+
+1. Administrator
+2. Guru Pembimbing
+3. Siswa
+4. Pembimbing Industri
+
+
+=========================================================
+FITUR ADMINISTRATOR
+=========================================================
+
+A. Login
+- Login menggunakan username dan password.
+- Logout.
+- Mengubah password akun.
+
+B. Dashboard
+- Menampilkan jumlah siswa.
+- Menampilkan jumlah guru pembimbing.
+- Menampilkan jumlah perusahaan.
+- Menampilkan jumlah pembimbing industri.
+- Menampilkan jumlah penempatan PKL.
+- Menampilkan jumlah jurnal.
+- Menampilkan jumlah pengumuman.
+
+C. Manajemen User
+- Menambah user.
+- Mengubah user.
+- Menghapus user.
+- Mengaktifkan akun.
+- Menonaktifkan akun.
+- Mencari user.
+
+D. Manajemen Siswa
+- Menambah data siswa.
+- Mengubah data siswa.
+- Menghapus data siswa.
+- Melihat detail siswa.
+- Mencari siswa.
+
+E. Manajemen Guru
+- Menambah data guru.
+- Mengubah data guru.
+- Menghapus data guru.
+- Melihat detail guru.
+- Mencari guru.
+
+F. Manajemen Perusahaan
+- Menambah perusahaan.
+- Mengubah perusahaan.
+- Menghapus perusahaan.
+- Melihat detail perusahaan.
+- Mencari perusahaan.
+
+G. Manajemen Pembimbing Industri
+- Menambah pembimbing industri.
+- Mengubah pembimbing industri.
+- Menghapus pembimbing industri.
+- Melihat detail pembimbing.
+- Mencari pembimbing.
+
+H. Penempatan PKL
+- Menentukan perusahaan siswa.
+- Menentukan guru pembimbing.
+- Menentukan pembimbing industri.
+- Menentukan tanggal mulai PKL.
+- Menentukan tanggal selesai PKL.
+- Mengubah data penempatan.
+- Menghapus penempatan.
+- Melihat seluruh penempatan.
+
+I. Pengumuman
+- Menambah pengumuman.
+- Mengubah pengumuman.
+- Menghapus pengumuman.
+- Melihat seluruh pengumuman.
+
+J. Laporan
+- Laporan data siswa.
+- Laporan data guru.
+- Laporan perusahaan.
+- Laporan penempatan.
+- Laporan jurnal.
+- Laporan nilai.
+
+
+=========================================================
+FITUR SISWA
+=========================================================
+
+A. Login
+- Login.
+- Logout.
+- Mengubah password.
+
+B. Dashboard
+- Melihat informasi PKL.
+- Melihat status jurnal.
+- Melihat jumlah jurnal yang telah dibuat.
+- Melihat pengumuman terbaru.
+
+C. Profil
+- Melihat data pribadi.
+- Mengubah nomor HP.
+- Mengubah alamat.
+
+D. Data Penempatan
+- Melihat perusahaan.
+- Melihat guru pembimbing.
+- Melihat pembimbing industri.
+- Melihat tanggal mulai PKL.
+- Melihat tanggal selesai PKL.
+
+E. Jurnal Harian
+- Menambah jurnal.
+- Mengubah jurnal sebelum diverifikasi.
+- Menghapus jurnal sebelum diverifikasi.
+- Upload foto kegiatan.
+- Melihat daftar jurnal.
+- Melihat detail jurnal.
+
+F. Status Verifikasi
+- Melihat status jurnal.
+- Melihat komentar guru.
+- Mengetahui jurnal disetujui atau direvisi.
+
+G. Nilai
+- Melihat nilai PKL.
+- Melihat catatan guru.
+
+H. Pengumuman
+- Melihat seluruh pengumuman.
+
+
+=========================================================
+FITUR GURU PEMBIMBING
+=========================================================
+
+A. Login
+- Login.
+- Logout.
+- Mengubah password.
+
+B. Dashboard
+- Melihat jumlah siswa bimbingan.
+- Melihat jumlah jurnal yang belum diverifikasi.
+- Melihat jumlah jurnal yang telah diverifikasi.
+
+C. Data Siswa
+- Melihat daftar siswa bimbingan.
+- Melihat detail siswa.
+
+D. Monitoring Jurnal
+- Melihat seluruh jurnal siswa.
+- Mencari jurnal.
+- Melihat foto dokumentasi.
+- Melihat aktivitas harian.
+
+E. Verifikasi Jurnal
+- Menyetujui jurnal.
+- Memberikan revisi.
+- Memberikan komentar.
+- Melihat riwayat verifikasi.
+
+F. Penilaian
+- Memberikan nilai.
+- Mengubah nilai.
+- Memberikan catatan.
+
+G. Laporan
+- Melihat laporan jurnal.
+- Melihat laporan nilai.
+
+
+=========================================================
+FITUR PEMBIMBING INDUSTRI
+=========================================================
+
+A. Login
+- Login.
+- Logout.
+- Mengubah password.
+
+B. Dashboard
+- Melihat jumlah siswa yang dibimbing.
+- Melihat informasi perusahaan.
+
+C. Data Siswa
+- Melihat daftar siswa PKL.
+- Melihat informasi penempatan.
+
+D. Penilaian
+- Memberikan nilai siswa.
+- Mengubah nilai.
+- Memberikan catatan kepada siswa.
+
+E. Riwayat
+- Melihat daftar nilai yang telah diberikan.
+
+
+=========================================================
+FITUR UMUM SISTEM
+=========================================================
+
+- Login Multi Role.
+- Dashboard sesuai role.
+- CRUD Data Master.
+- CRUD Jurnal.
+- Upload Foto Dokumentasi.
+- Verifikasi Jurnal.
+- Penilaian PKL.
+- Pengumuman.
+- Pencarian Data.
+- Validasi Login.
+- Ganti Password.
+- Cetak Laporan.
+- Logout.
+
+
+=========================================================
+STATUS JURNAL
+=========================================================
+
+1. Menunggu Verifikasi
+2. Disetujui
+3. Revisi
+
+
