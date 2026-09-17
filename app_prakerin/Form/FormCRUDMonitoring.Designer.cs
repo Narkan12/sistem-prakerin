@@ -41,7 +41,7 @@ namespace app_prakerin
             // 
             // guna2Panel1
             // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(30, 88, 187);
+            this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(68, 126, 225);
             this.guna2Panel1.Controls.Add(this.lblJudul);
             this.guna2Panel1.Controls.Add(this.lblSub);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -75,7 +75,7 @@ namespace app_prakerin
                 8.25F,
                 System.Drawing.FontStyle.Bold
             );
-            this.lblSub.ForeColor = System.Drawing.Color.FromArgb(200, 220, 255);
+            this.lblSub.ForeColor = System.Drawing.Color.White;
             this.lblSub.Location = new System.Drawing.Point(22, 46);
             this.lblSub.Name = "lblSub";
             this.lblSub.Size = new System.Drawing.Size(254, 13);
@@ -101,13 +101,13 @@ namespace app_prakerin
             // CMBPrakerin
             // 
             this.CMBPrakerin.BackColor = System.Drawing.Color.White;
-            this.CMBPrakerin.BorderColor = System.Drawing.Color.FromArgb(203, 213, 225);
+            this.CMBPrakerin.BorderColor = System.Drawing.Color.FromArgb(180, 195, 215);
             this.CMBPrakerin.BorderRadius = 4;
             this.CMBPrakerin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CMBPrakerin.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.CMBPrakerin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CMBPrakerin.FocusedColor = System.Drawing.Color.FromArgb(30, 88, 187);
-            this.CMBPrakerin.FocusedState.BorderColor = System.Drawing.Color.FromArgb(30, 88, 187);
+            this.CMBPrakerin.FocusedColor = System.Drawing.Color.FromArgb(41, 128, 185);
+            this.CMBPrakerin.FocusedState.BorderColor = System.Drawing.Color.FromArgb(41, 128, 185);
             this.CMBPrakerin.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.CMBPrakerin.ForeColor = System.Drawing.Color.Black;
             this.CMBPrakerin.ItemHeight = 22;
@@ -135,13 +135,13 @@ namespace app_prakerin
             // CMBGuru
             // 
             this.CMBGuru.BackColor = System.Drawing.Color.White;
-            this.CMBGuru.BorderColor = System.Drawing.Color.FromArgb(203, 213, 225);
+            this.CMBGuru.BorderColor = System.Drawing.Color.FromArgb(180, 195, 215);
             this.CMBGuru.BorderRadius = 4;
             this.CMBGuru.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CMBGuru.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.CMBGuru.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CMBGuru.FocusedColor = System.Drawing.Color.FromArgb(30, 88, 187);
-            this.CMBGuru.FocusedState.BorderColor = System.Drawing.Color.FromArgb(30, 88, 187);
+            this.CMBGuru.FocusedColor = System.Drawing.Color.FromArgb(41, 128, 185);
+            this.CMBGuru.FocusedState.BorderColor = System.Drawing.Color.FromArgb(41, 128, 185);
             this.CMBGuru.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.CMBGuru.ForeColor = System.Drawing.Color.Black;
             this.CMBGuru.ItemHeight = 22;
@@ -168,7 +168,7 @@ namespace app_prakerin
             // 
             // DTTanggal
             // 
-            this.DTTanggal.BorderColor = System.Drawing.Color.FromArgb(203, 213, 225);
+            this.DTTanggal.BorderColor = System.Drawing.Color.FromArgb(180, 195, 215);
             this.DTTanggal.BorderRadius = 4;
             this.DTTanggal.Checked = true;
             this.DTTanggal.FillColor = System.Drawing.Color.White;
@@ -203,13 +203,13 @@ namespace app_prakerin
             // TXTCatatan
             // 
             this.TXTCatatan.Animated = true;
-            this.TXTCatatan.BorderColor = System.Drawing.Color.FromArgb(203, 213, 225);
-            this.TXTCatatan.BorderRadius = 6;
+            this.TXTCatatan.BorderColor = System.Drawing.Color.FromArgb(180, 195, 215);
+            this.TXTCatatan.BorderRadius = 4;
             this.TXTCatatan.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.TXTCatatan.DefaultText = "";
-            this.TXTCatatan.FocusedState.BorderColor = System.Drawing.Color.FromArgb(30, 88, 187);
+            this.TXTCatatan.FocusedState.BorderColor = System.Drawing.Color.FromArgb(41, 128, 185);
             this.TXTCatatan.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.TXTCatatan.ForeColor = System.Drawing.Color.FromArgb(45, 55, 72);
+            this.TXTCatatan.ForeColor = System.Drawing.Color.Black;
             this.TXTCatatan.Location = new System.Drawing.Point(298, 242);
             this.TXTCatatan.Multiline = true;
             this.TXTCatatan.PlaceholderText = "Masukan catatan hasil monitoring...";
@@ -234,7 +234,7 @@ namespace app_prakerin
             // 
             // guna2Panel2
             // 
-            this.guna2Panel2.BorderColor = System.Drawing.Color.FromArgb(203, 213, 225);
+            this.guna2Panel2.BorderColor = System.Drawing.Color.FromArgb(180, 195, 215);
             this.guna2Panel2.BorderThickness = 1;
             this.guna2Panel2.Controls.Add(this.PBFoto);
             this.guna2Panel2.Location = new System.Drawing.Point(583, 110);
@@ -274,10 +274,10 @@ namespace app_prakerin
             // TXTFoto
             // 
             this.TXTFoto.Animated = true;
-            this.TXTFoto.BorderColor = System.Drawing.Color.FromArgb(203, 213, 225);
+            this.TXTFoto.BorderColor = System.Drawing.Color.FromArgb(180, 195, 215);
             this.TXTFoto.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.TXTFoto.DefaultText = "";
-            this.TXTFoto.FocusedState.BorderColor = System.Drawing.Color.FromArgb(30, 88, 187);
+            this.TXTFoto.FocusedState.BorderColor = System.Drawing.Color.FromArgb(41, 128, 185);
             this.TXTFoto.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TXTFoto.ForeColor = System.Drawing.Color.Black;
             this.TXTFoto.Location = new System.Drawing.Point(583, 350);
@@ -290,12 +290,11 @@ namespace app_prakerin
             // 
             // BTNSimpan
             // 
-            this.BTNSimpan.BorderRadius = 8;
+            this.BTNSimpan.BorderRadius = 5;
             this.BTNSimpan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BTNSimpan.FillColor = System.Drawing.Color.FromArgb(30, 88, 187);
-            this.BTNSimpan.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.BTNSimpan.FillColor = System.Drawing.Color.FromArgb(24, 90, 212);
+            this.BTNSimpan.Font = new System.Drawing.Font("Segoe UI", 8.5F);
             this.BTNSimpan.ForeColor = System.Drawing.Color.White;
-            this.BTNSimpan.HoverState.FillColor = System.Drawing.Color.FromArgb(21, 74, 150);
             this.BTNSimpan.Location = new System.Drawing.Point(415, 350);
             this.BTNSimpan.Name = "BTNSimpan";
             this.BTNSimpan.Size = new System.Drawing.Size(140, 38);
@@ -305,14 +304,12 @@ namespace app_prakerin
             // 
             // BTNBatal
             // 
-            this.BTNBatal.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(213)))), ((int)(((byte)(225)))));
-            this.BTNBatal.BorderRadius = 8;
+            this.BTNBatal.BorderRadius = 5;
             this.BTNBatal.BorderThickness = 1;
             this.BTNBatal.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BTNBatal.FillColor = System.Drawing.Color.White;
-            this.BTNBatal.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.BTNBatal.ForeColor = System.Drawing.Color.FromArgb(75, 85, 99);
-            this.BTNBatal.HoverState.FillColor = System.Drawing.Color.FromArgb(245, 247, 251);
+            this.BTNBatal.FillColor = System.Drawing.Color.FromArgb(235, 238, 245);
+            this.BTNBatal.Font = new System.Drawing.Font("Segoe UI", 8.5F);
+            this.BTNBatal.ForeColor = System.Drawing.Color.Black;
             this.BTNBatal.Location = new System.Drawing.Point(25, 350);
             this.BTNBatal.Name = "BTNBatal";
             this.BTNBatal.Size = new System.Drawing.Size(120, 38);
