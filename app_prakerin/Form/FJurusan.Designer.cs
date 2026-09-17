@@ -1,4 +1,4 @@
-﻿namespace app_prakerin
+namespace app_prakerin
 {
     partial class FJurusan
     {
@@ -54,6 +54,7 @@
             this.btnHapus.Size = new System.Drawing.Size(80, 30);
             this.btnHapus.TabIndex = 4;
             this.btnHapus.Text = "Hapus";
+            this.btnHapus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnHapus.Click += new System.EventHandler(this.btnHapus_Click);
             // 
             // btnEdit
@@ -68,6 +69,7 @@
             this.btnEdit.Size = new System.Drawing.Size(80, 30);
             this.btnEdit.TabIndex = 3;
             this.btnEdit.Text = "Edit";
+            this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // BTNTambah
@@ -82,6 +84,7 @@
             this.BTNTambah.Size = new System.Drawing.Size(90, 30);
             this.BTNTambah.TabIndex = 2;
             this.BTNTambah.Text = "Tambah";
+            this.BTNTambah.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BTNTambah.Click += new System.EventHandler(this.BTNTambah_Click);
             // 
             // TXTSearch

@@ -1,4 +1,4 @@
-﻿
+
 namespace app_prakerin
 {
     partial class FMaster
