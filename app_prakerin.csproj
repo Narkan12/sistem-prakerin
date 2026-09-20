@@ -84,11 +84,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Config\Koneksi.cs" />
-    <Compile Include="Form\FLaporan.cs">
+    <Compile Include="Form\FLaporanPresensi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\FLaporan.Designer.cs">
-      <DependentUpon>FLaporan.cs</DependentUpon>
+    <Compile Include="Form\FLaporanPresensi.Designer.cs">
+      <DependentUpon>FLaporanPresensi.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\FAbsensi.cs">
       <SubType>Form</SubType>
@@ -267,8 +267,8 @@
     <Compile Include="UCAlert.Designer.cs">
       <DependentUpon>UCAlert.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form\FLaporan.resx">
-      <DependentUpon>FLaporan.cs</DependentUpon>
+    <EmbeddedResource Include="Form\FLaporanPresensi.resx">
+      <DependentUpon>FLaporanPresensi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FAbsensi.resx">
       <DependentUpon>FAbsensi.cs</DependentUpon>

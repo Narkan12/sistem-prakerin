@@ -374,14 +374,46 @@ namespace app_prakerin
             }
         }
 
+        private void guna2Button15_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                CatatAktivitas("Membuka halaman Penilaian");
+                FPenilaian FPen = new FPenilaian();
+                TampilForm(FPen);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Gagal membuka halaman Penilaian.\n\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void guna2Button16_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                CatatAktivitas("Membuka halaman Monitoring");
+                FMonitoring FM = new FMonitoring();
+                TampilForm(FM);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Gagal membuka halaman Monitoring.\n\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
         private void PMenu_Click(object sender, EventArgs e)
         {
             PNLSidebar.Visible = !PNLSidebar.Visible;
         }
 
+        private void FDashboard_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void LBLActivity1_Click(object sender, EventArgs e)
         {
-
         }
     }
 }

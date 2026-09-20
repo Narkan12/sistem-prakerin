@@ -224,5 +224,11 @@ namespace app_prakerin
         private void CMBJK_DropDown(object sender, EventArgs e)
         {
         }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            TampilData("");
+            TXTSearch.Text = "";
+        }
     }
 }

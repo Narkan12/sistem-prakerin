@@ -50,8 +50,6 @@ namespace app_prakerin
 
                 if (Role == "Siswa")
                     BTNDM.Visible = false;
-                    guna2Button10.Visible = false;
-                    guna2Button13.Visible = false;
     
                 if (!string.IsNullOrEmpty(Username))
                     CatatAktivitas($"Login sebagai {Username}");
@@ -369,6 +367,22 @@ namespace app_prakerin
             {
 
                 MessageBox.Show("Gagal membuka halaman Monitoring.\n\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void guna2Button15_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                CatatAktivitas("Membuka halaman penilaian");
+                FPenilaian Fpen = new FPenilaian();
+                TampilForm(Fpen);
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Gagal membuka halaman Penilaian.\n\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

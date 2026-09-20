@@ -215,5 +215,11 @@ namespace app_prakerin
                 }
             }
         }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            TampilData();
+            TXTSearch.Text = "";
+        }
     }
 }

@@ -220,5 +220,11 @@ namespace app_prakerin
         private void CMBRole_SelectedIndexChanged(object sender, EventArgs e)
         {
         }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            TampilData("");
+            TXTSearch.Text = "";
+        }
     }
 }
