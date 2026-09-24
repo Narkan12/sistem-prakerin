@@ -5,9 +5,9 @@ using app_prakerin.Config;
 
 namespace app_prakerin
 {
-    public partial class FLaporan : Form
+    public partial class FlaporanPresensi : Form
     {
-        public FLaporan()
+        public FlaporanPresensi()
         {
             InitializeComponent();
 

@@ -55,6 +55,9 @@
             this.guna2Button13 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button14 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button15 = new Guna.UI2.WinForms.Guna2Button();
+            this.BTNL = new Guna.UI2.WinForms.Guna2Button();
+            this.PNLDropdown2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.guna2Button16 = new Guna.UI2.WinForms.Guna2Button();
             this.PNLHeader = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2PictureBox6 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -140,6 +143,7 @@
             this.guna2Panel4.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.PNLDropdown.SuspendLayout();
+            this.PNLDropdown2.SuspendLayout();
             this.PNLHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
@@ -222,7 +226,7 @@
             this.guna2Button6.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button6.ImageOffset = new System.Drawing.Point(-5, 0);
             this.guna2Button6.ImageSize = new System.Drawing.Size(22, 22);
-            this.guna2Button6.Location = new System.Drawing.Point(17, 12);
+            this.guna2Button6.Location = new System.Drawing.Point(17, 24);
             this.guna2Button6.Name = "guna2Button6";
             this.guna2Button6.Size = new System.Drawing.Size(208, 44);
             this.guna2Button6.TabIndex = 34;
@@ -305,6 +309,8 @@
             this.flowLayoutPanel2.Controls.Add(this.guna2Button13);
             this.flowLayoutPanel2.Controls.Add(this.guna2Button14);
             this.flowLayoutPanel2.Controls.Add(this.guna2Button15);
+            this.flowLayoutPanel2.Controls.Add(this.BTNL);
+            this.flowLayoutPanel2.Controls.Add(this.PNLDropdown2);
             this.flowLayoutPanel2.Location = new System.Drawing.Point(14, 108);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(234, 670);
@@ -735,6 +741,73 @@
             this.guna2Button15.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button15.UseTransparentBackground = true;
             this.guna2Button15.Click += new System.EventHandler(this.guna2Button15_Click);
+            // 
+            // BTNL
+            // 
+            this.BTNL.BackColor = System.Drawing.Color.Transparent;
+            this.BTNL.BorderRadius = 8;
+            this.BTNL.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BTNL.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.BTNL.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.BTNL.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.BTNL.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.BTNL.FillColor = System.Drawing.Color.Transparent;
+            this.BTNL.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.BTNL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
+            this.BTNL.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(63)))), ((int)(((byte)(143)))));
+            this.BTNL.HoverState.ForeColor = System.Drawing.Color.White;
+            this.BTNL.Image = ((System.Drawing.Image)(resources.GetObject("BTNL.Image")));
+            this.BTNL.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.BTNL.ImageOffset = new System.Drawing.Point(-5, -2);
+            this.BTNL.Location = new System.Drawing.Point(3, 638);
+            this.BTNL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BTNL.Name = "BTNL";
+            this.BTNL.Size = new System.Drawing.Size(208, 42);
+            this.BTNL.TabIndex = 46;
+            this.BTNL.Text = "Laporan";
+            this.BTNL.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.BTNL.UseTransparentBackground = true;
+            this.BTNL.Click += new System.EventHandler(this.BTNL_Click);
+            // 
+            // PNLDropdown2
+            // 
+            this.PNLDropdown2.BackColor = System.Drawing.Color.Transparent;
+            this.PNLDropdown2.Controls.Add(this.guna2Button16);
+            this.PNLDropdown2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.PNLDropdown2.Location = new System.Drawing.Point(3, 684);
+            this.PNLDropdown2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PNLDropdown2.Name = "PNLDropdown2";
+            this.PNLDropdown2.Padding = new System.Windows.Forms.Padding(3);
+            this.PNLDropdown2.Size = new System.Drawing.Size(208, 52);
+            this.PNLDropdown2.TabIndex = 47;
+            this.PNLDropdown2.Visible = false;
+            this.PNLDropdown2.WrapContents = false;
+            // 
+            // guna2Button16
+            // 
+            this.guna2Button16.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button16.BorderRadius = 8;
+            this.guna2Button16.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2Button16.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button16.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button16.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button16.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button16.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button16.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.guna2Button16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
+            this.guna2Button16.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(63)))), ((int)(((byte)(143)))));
+            this.guna2Button16.HoverState.ForeColor = System.Drawing.Color.White;
+            this.guna2Button16.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button16.ImageOffset = new System.Drawing.Point(-5, 0);
+            this.guna2Button16.Location = new System.Drawing.Point(6, 5);
+            this.guna2Button16.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Button16.Name = "guna2Button16";
+            this.guna2Button16.Size = new System.Drawing.Size(208, 42);
+            this.guna2Button16.TabIndex = 46;
+            this.guna2Button16.Text = "Laporan Absensi";
+            this.guna2Button16.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button16.UseTransparentBackground = true;
+            this.guna2Button16.Click += new System.EventHandler(this.guna2Button16_Click);
             // 
             // PNLHeader
             // 
@@ -1792,6 +1865,7 @@
             this.guna2Panel4.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
             this.PNLDropdown.ResumeLayout(false);
+            this.PNLDropdown2.ResumeLayout(false);
             this.PNLHeader.ResumeLayout(false);
             this.PNLHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).EndInit();
@@ -1944,5 +2018,8 @@
         private System.Windows.Forms.Label LBLTotSiswa;
         private Guna.UI2.WinForms.Guna2Panel PNLIconSiswa;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
+        private Guna.UI2.WinForms.Guna2Button BTNL;
+        private System.Windows.Forms.FlowLayoutPanel PNLDropdown2;
+        private Guna.UI2.WinForms.Guna2Button guna2Button16;
     }
 }

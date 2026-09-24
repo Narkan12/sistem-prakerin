@@ -200,6 +200,11 @@ namespace app_prakerin
             PNLDropdown.Visible = !PNLDropdown.Visible;
         }
 
+        private void BTNL_Click(object sender, EventArgs e)
+        {
+            PNLDropdown2.Visible = !PNLDropdown2.Visible;
+        }
+
         private void guna2Button3_Click(object sender, EventArgs e)
         {
             try
@@ -383,6 +388,22 @@ namespace app_prakerin
             {
 
                 MessageBox.Show("Gagal membuka halaman Penilaian.\n\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void guna2Button16_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                CatatAktivitas("Membuka halaman laporan absensi");
+                FlaporanPresensi Flappre = new FlaporanPresensi();
+                TampilForm(Flappre);
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Gagal membuka halaman Laporan Absensi.\n\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
