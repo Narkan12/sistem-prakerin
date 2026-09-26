@@ -104,7 +104,7 @@
             this.lblPageIcon.Name = "lblPageIcon";
             this.lblPageIcon.Size = new System.Drawing.Size(40, 40);
             this.lblPageIcon.TabIndex = 0;
-            this.lblPageIcon.Text = "\uE787";
+            this.lblPageIcon.Text = "";
             this.lblPageIcon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblBreadcrumb
@@ -115,9 +115,9 @@
             this.lblBreadcrumb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
             this.lblBreadcrumb.Location = new System.Drawing.Point(106, 22);
             this.lblBreadcrumb.Name = "lblBreadcrumb";
-            this.lblBreadcrumb.Size = new System.Drawing.Size(113, 15);
+            this.lblBreadcrumb.Size = new System.Drawing.Size(107, 15);
             this.lblBreadcrumb.TabIndex = 2;
-            this.lblBreadcrumb.Text = "Prakerin  \u203A  Absensi";
+            this.lblBreadcrumb.Text = "Prakerin  ›  Absensi";
             // 
             // lblPageTitle
             // 
@@ -127,7 +127,7 @@
             this.lblPageTitle.ForeColor = System.Drawing.Color.White;
             this.lblPageTitle.Location = new System.Drawing.Point(102, 40);
             this.lblPageTitle.Name = "lblPageTitle";
-            this.lblPageTitle.Size = new System.Drawing.Size(115, 37);
+            this.lblPageTitle.Size = new System.Drawing.Size(112, 37);
             this.lblPageTitle.TabIndex = 0;
             this.lblPageTitle.Text = "Absensi";
             // 
@@ -139,7 +139,7 @@
             this.lblPageSub.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(219)))), ((int)(((byte)(254)))));
             this.lblPageSub.Location = new System.Drawing.Point(106, 80);
             this.lblPageSub.Name = "lblPageSub";
-            this.lblPageSub.Size = new System.Drawing.Size(225, 17);
+            this.lblPageSub.Size = new System.Drawing.Size(239, 17);
             this.lblPageSub.TabIndex = 1;
             this.lblPageSub.Text = "Rekap kehadiran siswa selama Prakerin.";
             // 
@@ -261,7 +261,7 @@
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(96, 40);
             this.btnEdit.TabIndex = 2;
-            this.btnEdit.Text = "\u270E  Edit";
+            this.btnEdit.Text = "✎  Edit";
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnHapus
@@ -280,7 +280,7 @@
             this.btnHapus.Name = "btnHapus";
             this.btnHapus.Size = new System.Drawing.Size(100, 40);
             this.btnHapus.TabIndex = 3;
-            this.btnHapus.Text = "\u2715  Hapus";
+            this.btnHapus.Text = "✕  Hapus";
             this.btnHapus.Click += new System.EventHandler(this.btnHapus_Click);
             // 
             // btnRefresh
@@ -299,7 +299,7 @@
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(112, 40);
             this.btnRefresh.TabIndex = 4;
-            this.btnRefresh.Text = "\u21BB  Refresh";
+            this.btnRefresh.Text = "↻  Refresh";
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // lblTitle

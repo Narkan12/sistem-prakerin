@@ -2,6 +2,7 @@
 using System.Data;
 using System.Windows.Forms;
 using app_prakerin.Config;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace app_prakerin
 {
@@ -225,12 +226,166 @@ namespace app_prakerin
 
         private void btnCetak_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(
-                "Data laporan siap untuk dicetak.",
-                "Cetak Laporan",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information
-            );
+            if (DGVLaporan.Rows.Count == 0)
+            {
+                MessageBox.Show(
+                    "Tidak ada data yang dapat diekspor.",
+                    "Informasi",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information
+                );
+                return;
+            }
+
+            SaveFileDialog saveFile = new SaveFileDialog();
+            saveFile.Filter = "Excel Files|*.xlsx";
+            saveFile.Title = "Simpan Laporan Excel";
+            saveFile.FileName = "Laporan_Praktek_Kerja_Lapangan.xlsx";
+
+            if (saveFile.ShowDialog() != DialogResult.OK)
+                return;
+
+            Excel.Application excelApp = null;
+            Excel.Workbook workbook = null;
+            Excel.Worksheet worksheet = null;
+
+            try
+            {
+                excelApp = new Excel.Application();
+                workbook = excelApp.Workbooks.Add();
+                worksheet = workbook.ActiveSheet;
+
+                worksheet.Name = "Laporan";
+
+                int jumlahKolom = 0;
+
+                foreach (DataGridViewColumn column in DGVLaporan.Columns)
+                {
+                    if (column.Visible)
+                        jumlahKolom++;
+                }
+
+                // JUDUL
+                worksheet.Cells[1, 1] = "LAPORAN DATA PRAKERIN";
+
+                Excel.Range judul = worksheet.Range[
+                    worksheet.Cells[1, 1],
+                    worksheet.Cells[1, jumlahKolom]
+                ];
+
+                judul.Merge();
+                judul.Font.Bold = true;
+                judul.Font.Size = 16;
+                judul.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
+
+                // HEADER
+                int kolom = 1;
+
+                foreach (DataGridViewColumn column in DGVLaporan.Columns)
+                {
+                    if (column.Visible)
+                    {
+                        worksheet.Cells[3, kolom] = column.HeaderText;
+                        kolom++;
+                    }
+                }
+
+                Excel.Range header = worksheet.Range[
+                    worksheet.Cells[3, 1],
+                    worksheet.Cells[3, jumlahKolom]
+                ];
+
+                header.Font.Bold = true;
+                header.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
+                header.VerticalAlignment = Excel.XlVAlign.xlVAlignCenter;
+                header.Borders.LineStyle = Excel.XlLineStyle.xlContinuous;
+
+                // DATA
+                int baris = 4;
+
+                foreach (DataGridViewRow row in DGVLaporan.Rows)
+                {
+                    if (!row.IsNewRow)
+                    {
+                        kolom = 1;
+
+                        foreach (DataGridViewColumn column in DGVLaporan.Columns)
+                        {
+                            if (column.Visible)
+                            {
+                                object value = row.Cells[column.Index].Value;
+
+                                worksheet.Cells[baris, kolom] =
+                                    value == null ? "" : value.ToString();
+
+                                kolom++;
+                            }
+                        }
+
+                        baris++;
+                    }
+                }
+
+                // BORDER DATA
+                Excel.Range seluruhData = worksheet.Range[
+                    worksheet.Cells[3, 1],
+                    worksheet.Cells[baris - 1, jumlahKolom]
+                ];
+
+                seluruhData.Borders.LineStyle =
+                    Excel.XlLineStyle.xlContinuous;
+
+                // ATUR LEBAR KOLOM
+                worksheet.Columns.AutoFit();
+
+                // Batasi lebar kolom
+                for (int i = 1; i <= jumlahKolom; i++)
+                {
+                    if (worksheet.Columns[i].ColumnWidth > 35)
+                        worksheet.Columns[i].ColumnWidth = 35;
+                }
+
+                // Simpan
+                workbook.SaveAs(saveFile.FileName);
+
+                MessageBox.Show(
+                    "Laporan berhasil diekspor ke Excel.",
+                    "Berhasil",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information
+                );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(
+                    "Gagal mengekspor laporan:\n\n" + ex.Message,
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                );
+            }
+            finally
+            {
+                if (workbook != null)
+                    workbook.Close(false);
+
+                if (excelApp != null)
+                    excelApp.Quit();
+
+                if (worksheet != null)
+                    System.Runtime.InteropServices.Marshal.ReleaseComObject(worksheet);
+
+                if (workbook != null)
+                    System.Runtime.InteropServices.Marshal.ReleaseComObject(workbook);
+
+                if (excelApp != null)
+                    System.Runtime.InteropServices.Marshal.ReleaseComObject(excelApp);
+            }
+        }
+
+        private void panelFilter_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
