@@ -116,7 +116,7 @@ namespace app_prakerin
             this.TXTSearch.BorderRadius = 8;
             this.TXTSearch.FillColor = System.Drawing.Color.FromArgb(248, 250, 252);
             this.TXTSearch.BorderColor = System.Drawing.Color.FromArgb(203, 213, 225);
-            this.TXTSearch.FocusedBorderColor = System.Drawing.Color.FromArgb(59, 130, 246);
+            this.TXTSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(59, 130, 246);
             this.TXTSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TXTSearch.IconLeft = ((System.Drawing.Image)(resources.GetObject("TXTSearch.IconLeft")));
             this.TXTSearch.Location = new System.Drawing.Point(20, 14);

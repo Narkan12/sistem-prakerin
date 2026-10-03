@@ -18,7 +18,7 @@ namespace app_prakerin
         {
             try
             {
-                btnEdit.Enabled  = false;
+                btnEdit.Enabled = false;
                 btnHapus.Enabled = false;
                 TampilData("");
                 DGVPengguna.Columns["Column2"].Visible = false;
@@ -35,7 +35,10 @@ namespace app_prakerin
             try
             {
                 DGVPengguna.Rows.Clear();
-                Koneksi.CRUD($"SELECT * FROM pengguna INNER JOIN role ON role.nama_role = pengguna.role WHERE username LIKE '%{CariApa}%'");
+                Koneksi.CRUD("SELECT p.id_pengguna, p.username, p.password, p.id_role, r.nama_role AS role, p.status " +
+                             "FROM pengguna p " +
+                             "INNER JOIN role r ON r.id_role = p.id_role " +
+                             $"WHERE p.username LIKE '%{CariApa}%'");
                 int no = 1;
                 foreach (DataRow row in Koneksi.ds.Tables[0].Rows)
                 {
@@ -63,12 +66,15 @@ namespace app_prakerin
         {
             try
             {
-                Koneksi.CRUD($"SELECT * FROM pengguna INNER JOIN role ON role.nama_role = pengguna.role WHERE id_pengguna = '{idp}'");
+                Koneksi.CRUD("SELECT p.*, r.nama_role " +
+                             "FROM pengguna p " +
+                             "INNER JOIN role r ON r.id_role = p.id_role " +
+                             $"WHERE p.id_pengguna = '{idp}'");
                 foreach (DataRow item in Koneksi.ds.Tables[0].Rows)
                 {
                     TXTUsername.Text = item["username"].ToString();
-                    CMBRole.Text     = item["nama_role"].ToString();
-                    CMBStatus.Text   = item["status"].ToString();
+                    CMBRole.Text = item["nama_role"].ToString();
+                    CMBStatus.Text = item["status"].ToString();
                 }
             }
             catch (Exception ex)
@@ -86,7 +92,7 @@ namespace app_prakerin
                 if (!string.IsNullOrEmpty(idPengguna))
                 {
                     AmbilData(idPengguna);
-                    btnEdit.Enabled  = true;
+                    btnEdit.Enabled = true;
                     btnHapus.Enabled = true;
                 }
             }
@@ -132,7 +138,10 @@ namespace app_prakerin
 
                 if (modal.ShowDialog() == DialogResult.OK)
                 {
-                    Koneksi.CRUD($"INSERT INTO pengguna VALUES(null,'{modal.Username}',MD5('{modal.Password}'),'{modal.Role}','{modal.Status}')");
+                    Koneksi.CRUD("INSERT INTO pengguna (username, password, id_role, status) " +
+                                 $"VALUES ('{modal.Username}', MD5('{modal.Password}'), " +
+                                 $"(SELECT id_role FROM role WHERE nama_role = '{modal.Role}' LIMIT 1), " +
+                                 $"'{modal.Status}')");
                     MessageBox.Show("Data berhasil ditambahkan!", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     FMaster.CatatAktivitas($"Tambah pengguna: {modal.Username}");
                     TampilData("");
@@ -154,23 +163,43 @@ namespace app_prakerin
 
             try
             {
-                int rowIdx = DGVPengguna.CurrentCell.RowIndex;
                 FormCRUDPengguna modal = new FormCRUDPengguna();
-                modal.Judul    = "Edit Data Pengguna";
-                modal.Username = DGVPengguna.Rows[rowIdx].Cells["colId"].Value?.ToString() ?? "";
-                modal.Password = DGVPengguna.Rows[rowIdx].Cells["Column3"].Value?.ToString() ?? "";
-                modal.Role     = DGVPengguna.Rows[rowIdx].Cells["colNama"].Value?.ToString() ?? "";
-                modal.Status   = DGVPengguna.Rows[rowIdx].Cells["Column1"].Value?.ToString() ?? "";
+                modal.Judul = "Edit Data Pengguna";
+
+                // Isi modal dari database (bukan dari grid)
+                Koneksi.CRUD("SELECT p.username, r.nama_role, p.status " +
+                             "FROM pengguna p " +
+                             "INNER JOIN role r ON r.id_role = p.id_role " +
+                             $"WHERE p.id_pengguna = '{idPengguna}'");
+
+                if (Koneksi.ds.Tables[0].Rows.Count > 0)
+                {
+                    DataRow row = Koneksi.ds.Tables[0].Rows[0];
+                    modal.Username = row["username"].ToString();
+                    modal.Password = "";   // dikosongkan agar hash lama tidak di-MD5 ulang
+                    modal.Role = row["nama_role"].ToString();
+                    modal.Status = row["status"].ToString();
+                }
 
                 if (modal.ShowDialog() == DialogResult.OK)
                 {
-                    Koneksi.CRUD($"UPDATE pengguna SET username='{modal.Username}', password = MD5('{modal.Password}'), role='{modal.Role}', status='{modal.Status}' WHERE id_pengguna='{idPengguna}'");
+                    // Password hanya diubah jika diisi
+                    string setPassword = string.IsNullOrEmpty(modal.Password)
+                        ? ""
+                        : $"password = MD5('{modal.Password}'), ";
+
+                    Koneksi.CRUD("UPDATE pengguna SET " +
+                                 $"username = '{modal.Username}', " +
+                                 setPassword +
+                                 $"id_role = (SELECT id_role FROM role WHERE nama_role = '{modal.Role}' LIMIT 1), " +
+                                 $"status = '{modal.Status}' " +
+                                 $"WHERE id_pengguna = '{idPengguna}'");
                     MessageBox.Show("Data berhasil diupdate!", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     FMaster.CatatAktivitas($"Edit pengguna: {modal.Username}");
                     Bersih();
                     TampilData("");
                     idPengguna = "";
-                    btnEdit.Enabled  = false;
+                    btnEdit.Enabled = false;
                     btnHapus.Enabled = false;
                 }
             }
@@ -198,7 +227,7 @@ namespace app_prakerin
                     Bersih();
                     TampilData("");
                     idPengguna = "";
-                    btnEdit.Enabled  = false;
+                    btnEdit.Enabled = false;
                     btnHapus.Enabled = false;
                 }
                 catch (Exception ex)
@@ -224,9 +253,9 @@ namespace app_prakerin
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             TampilData("");
-            TXTSearch.Text   = "";
-            idPengguna       = "";
-            btnEdit.Enabled  = false;
+            TXTSearch.Text = "";
+            idPengguna = "";
+            btnEdit.Enabled = false;
             btnHapus.Enabled = false;
             Bersih();
         }

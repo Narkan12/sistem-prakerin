@@ -48,8 +48,6 @@ namespace app_prakerin
                 MuatStatistikDashboard();
                 MuatInfoTambahan();
 
-                if (Role == "Siswa")
-                    BTNDM.Visible = false;
     
                 if (!string.IsNullOrEmpty(Username))
                     CatatAktivitas($"Login sebagai {Username}");
@@ -393,6 +391,7 @@ namespace app_prakerin
 
         private void guna2Button16_Click(object sender, EventArgs e)
         {
+            
             try
             {
                 CatatAktivitas("Membuka halaman laporan absensi");
@@ -404,6 +403,70 @@ namespace app_prakerin
             {
 
                 MessageBox.Show("Gagal membuka halaman Laporan Absensi.\n\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void guna2Button17_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                CatatAktivitas("Membuka halaman laporan monitoring");
+                FLaporanMonitoring Flapmon = new FLaporanMonitoring();
+                TampilForm(Flapmon);
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Gagal membuka halaman Laporan Monitoring.\n\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void guna2Button18_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                CatatAktivitas("Membuka halaman laporan prakerin");
+                FLaporanPrakerin Flapra = new FLaporanPrakerin();
+                TampilForm(Flapra);
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Gagal membuka halaman Laporan Prakerin.\n\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void guna2Button19_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                CatatAktivitas("Membuka halaman laporan jurnal");
+                FLaporanJurnal Flapjur = new FLaporanJurnal();
+                TampilForm(Flapjur);
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Gagal membuka halaman Laporan Jurnal.\n\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void guna2Button20_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                CatatAktivitas("Membuka halaman laporan penilaian");
+                FLaporanPenilaian Flappen = new FLaporanPenilaian();
+                TampilForm(Flappen);
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Gagal membuka halaman Laporan Penilaian.\n\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

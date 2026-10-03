@@ -36,7 +36,7 @@ namespace app_prakerin
             {
                 DGVRole.Rows.Clear();
 
-                Koneksi.CRUD($"SELECT * FROM monitoring WHERE id_monitoring LIKE '%{CariApa}%' OR id_prakerin LIKE '%{CariApa}%' OR id_guru LIKE '%{CariApa}%' OR tanggal LIKE '%{CariApa}%' OR catatan LIKE '%{CariApa}%'");
+                Koneksi.CRUD($"SELECT monitoring.id_monitoring, monitoring.id_prakerin, monitoring.id_guru, siswa.nama AS nama_siswa, guru.nama AS guru_pembimbing, monitoring.tanggal, monitoring.catatan, monitoring.foto FROM monitoring INNER JOIN guru ON guru.id_guru = monitoring.id_guru INNER JOIN prakerin ON prakerin.id_prakerin = monitoring.id_prakerin INNER JOIN siswa ON siswa.id_siswa = prakerin.id_siswa WHERE monitoring.id_monitoring LIKE '%{CariApa}%' OR monitoring.id_prakerin LIKE '%{CariApa}%' OR monitoring.id_guru LIKE '%{CariApa}%' OR monitoring.tanggal LIKE '%{CariApa}%' OR monitoring.catatan LIKE '%{CariApa}%' OR siswa.nama LIKE '%{CariApa}%' OR guru.nama LIKE '%{CariApa}%';");
 
                 int no = 1;
 
@@ -68,6 +68,8 @@ namespace app_prakerin
                         row["id_monitoring"],
                         row["id_prakerin"],
                         row["id_guru"],
+                        row["nama_siswa"],
+                        row["guru_pembimbing"],
                         row["tanggal"],
                         row["catatan"],
                         foto

@@ -1,0 +1,288 @@
+﻿interactive rebase in progress; onto fd0db1c
+Last command done (1 command done):
+   pick 3a69052 Update 10 - 02/10/2026 (Menambahkan Jenis Pencetakan Laporan)
+No commands remaining.
+You are currently rebasing branch 'master' on 'fd0db1c'.
+  (fix conflicts and then run "git rebase --continue")
+  (use "git rebase --skip" to skip this patch)
+  (use "git rebase --abort" to check out the original branch)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   Form/FLaporanJurnal.Designer.cs
+	new file:   Form/FLaporanJurnal.cs
+	new file:   Form/FLaporanJurnal.resx
+	new file:   Form/FLaporanMonitoring.Designer.cs
+	new file:   Form/FLaporanMonitoring.cs
+	new file:   Form/FLaporanMonitoring.resx
+	new file:   Form/FLaporanPenilaian.Designer.cs
+	new file:   Form/FLaporanPenilaian.cs
+	new file:   Form/FLaporanPenilaian.resx
+	new file:   Form/FLaporanPrakerin.Designer.cs
+	new file:   Form/FLaporanPrakerin.cs
+	new file:   Form/FLaporanPrakerin.resx
+	modified:   Form/FMonitoring.resx
+	new file:   Report/RPresensi.cs
+	new file:   Report/RPresensi.rpt
+	new file:   app_prakerin/packages/BouncyCastle.Cryptography.2.6.2/.signature.p7s
+	new file:   app_prakerin/packages/BouncyCastle.Cryptography.2.6.2/BouncyCastle.Cryptography.2.6.2.nupkg
+	new file:   app_prakerin/packages/BouncyCastle.Cryptography.2.6.2/LICENSE.md
+	new file:   app_prakerin/packages/BouncyCastle.Cryptography.2.6.2/README.md
+	new file:   app_prakerin/packages/BouncyCastle.Cryptography.2.6.2/lib/net461/BouncyCastle.Cryptography.dll
+	new file:   app_prakerin/packages/BouncyCastle.Cryptography.2.6.2/lib/net461/BouncyCastle.Cryptography.xml
+	new file:   app_prakerin/packages/BouncyCastle.Cryptography.2.6.2/lib/net6.0/BouncyCastle.Cryptography.dll
+	new file:   app_prakerin/packages/BouncyCastle.Cryptography.2.6.2/lib/net6.0/BouncyCastle.Cryptography.xml
+	new file:   app_prakerin/packages/BouncyCastle.Cryptography.2.6.2/lib/netstandard2.0/BouncyCastle.Cryptography.dll
+	new file:   app_prakerin/packages/BouncyCastle.Cryptography.2.6.2/lib/netstandard2.0/BouncyCastle.Cryptography.xml
+	new file:   app_prakerin/packages/BouncyCastle.Cryptography.2.6.2/packageIcon.png
+	new file:   app_prakerin/packages/Google.Protobuf.3.35.0/.signature.p7s
+	new file:   app_prakerin/packages/Google.Protobuf.3.35.0/Google.Protobuf.3.35.0.nupkg
+	new file:   app_prakerin/packages/Google.Protobuf.3.35.0/lib/net45/Google.Protobuf.dll
+	new file:   app_prakerin/packages/Google.Protobuf.3.35.0/lib/net45/Google.Protobuf.pdb
+	new file:   app_prakerin/packages/Google.Protobuf.3.35.0/lib/net45/Google.Protobuf.xml
+	new file:   app_prakerin/packages/Google.Protobuf.3.35.0/lib/net5.0/Google.Protobuf.dll
+	new file:   app_prakerin/packages/Google.Protobuf.3.35.0/lib/net5.0/Google.Protobuf.pdb
+	new file:   app_prakerin/packages/Google.Protobuf.3.35.0/lib/net5.0/Google.Protobuf.xml
+	new file:   app_prakerin/packages/Google.Protobuf.3.35.0/lib/netstandard1.1/Google.Protobuf.dll
+	new file:   app_prakerin/packages/Google.Protobuf.3.35.0/lib/netstandard1.1/Google.Protobuf.pdb
+	new file:   app_prakerin/packages/Google.Protobuf.3.35.0/lib/netstandard1.1/Google.Protobuf.xml
+	new file:   app_prakerin/packages/Google.Protobuf.3.35.0/lib/netstandard2.0/Google.Protobuf.dll
+	new file:   app_prakerin/packages/Google.Protobuf.3.35.0/lib/netstandard2.0/Google.Protobuf.pdb
+	new file:   app_prakerin/packages/Google.Protobuf.3.35.0/lib/netstandard2.0/Google.Protobuf.xml
+	new file:   app_prakerin/packages/K4os.Compression.LZ4.1.3.8/.signature.p7s
+	new file:   app_prakerin/packages/K4os.Compression.LZ4.1.3.8/K4os.Compression.LZ4.1.3.8.nupkg
+	new file:   app_prakerin/packages/K4os.Compression.LZ4.1.3.8/lib/net462/K4os.Compression.LZ4.dll
+	new file:   app_prakerin/packages/K4os.Compression.LZ4.1.3.8/lib/net462/K4os.Compression.LZ4.xml
+	new file:   app_prakerin/packages/K4os.Compression.LZ4.1.3.8/lib/net5.0/K4os.Compression.LZ4.dll
+	new file:   app_prakerin/packages/K4os.Compression.LZ4.1.3.8/lib/net5.0/K4os.Compression.LZ4.xml
+	new file:   app_prakerin/packages/K4os.Compression.LZ4.1.3.8/lib/net6.0/K4os.Compression.LZ4.dll
+	new file:   app_prakerin/packages/K4os.Compression.LZ4.1.3.8/lib/net6.0/K4os.Compression.LZ4.xml
+	new file:   app_prakerin/packages/K4os.Compression.LZ4.1.3.8/lib/netstandard2.0/K4os.Compression.LZ4.dll
+	new file:   app_prakerin/packages/K4os.Compression.LZ4.1.3.8/lib/netstandard2.0/K4os.Compression.LZ4.xml
+	new file:   app_prakerin/packages/K4os.Compression.LZ4.1.3.8/lib/netstandard2.1/K4os.Compression.LZ4.dll
+	new file:   app_prakerin/packages/K4os.Compression.LZ4.1.3.8/lib/netstandard2.1/K4os.Compression.LZ4.xml
+	new file:   app_prakerin/packages/K4os.Compression.LZ4.Streams.1.3.8/.signature.p7s
+	new file:   app_prakerin/packages/K4os.Compression.LZ4.Streams.1.3.8/K4os.Compression.LZ4.Streams.1.3.8.nupkg
+	new file:   app_prakerin/packages/K4os.Compression.LZ4.Streams.1.3.8/lib/net462/K4os.Compression.LZ4.Streams.dll
+	new file:   app_prakerin/packages/K4os.Compression.LZ4.Streams.1.3.8/lib/net462/K4os.Compression.LZ4.Streams.xml
+	new file:   app_prakerin/packages/K4os.Compression.LZ4.Streams.1.3.8/lib/net5.0/K4os.Compression.LZ4.Streams.dll
+	new file:   app_prakerin/packages/K4os.Compression.LZ4.Streams.1.3.8/lib/net5.0/K4os.Compression.LZ4.Streams.xml
+	new file:   app_prakerin/packages/K4os.Compression.LZ4.Streams.1.3.8/lib/net6.0/K4os.Compression.LZ4.Streams.dll
+	new file:   app_prakerin/packages/K4os.Compression.LZ4.Streams.1.3.8/lib/net6.0/K4os.Compression.LZ4.Streams.xml
+	new file:   app_prakerin/packages/K4os.Compression.LZ4.Streams.1.3.8/lib/netstandard2.0/K4os.Compression.LZ4.Streams.dll
+	new file:   app_prakerin/packages/K4os.Compression.LZ4.Streams.1.3.8/lib/netstandard2.0/K4os.Compression.LZ4.Streams.xml
+	new file:   app_prakerin/packages/K4os.Compression.LZ4.Streams.1.3.8/lib/netstandard2.1/K4os.Compression.LZ4.Streams.dll
+	new file:   app_prakerin/packages/K4os.Compression.LZ4.Streams.1.3.8/lib/netstandard2.1/K4os.Compression.LZ4.Streams.xml
+	new file:   app_prakerin/packages/K4os.Hash.xxHash.1.0.8/.signature.p7s
+	new file:   app_prakerin/packages/K4os.Hash.xxHash.1.0.8/K4os.Hash.xxHash.1.0.8.nupkg
+	new file:   app_prakerin/packages/K4os.Hash.xxHash.1.0.8/lib/net462/K4os.Hash.xxHash.dll
+	new file:   app_prakerin/packages/K4os.Hash.xxHash.1.0.8/lib/net462/K4os.Hash.xxHash.xml
+	new file:   app_prakerin/packages/K4os.Hash.xxHash.1.0.8/lib/net5.0/K4os.Hash.xxHash.dll
+	new file:   app_prakerin/packages/K4os.Hash.xxHash.1.0.8/lib/net5.0/K4os.Hash.xxHash.xml
+	new file:   app_prakerin/packages/K4os.Hash.xxHash.1.0.8/lib/net6.0/K4os.Hash.xxHash.dll
+	new file:   app_prakerin/packages/K4os.Hash.xxHash.1.0.8/lib/net6.0/K4os.Hash.xxHash.xml
+	new file:   app_prakerin/packages/K4os.Hash.xxHash.1.0.8/lib/netstandard2.0/K4os.Hash.xxHash.dll
+	new file:   app_prakerin/packages/K4os.Hash.xxHash.1.0.8/lib/netstandard2.0/K4os.Hash.xxHash.xml
+	new file:   app_prakerin/packages/K4os.Hash.xxHash.1.0.8/lib/netstandard2.1/K4os.Hash.xxHash.dll
+	new file:   app_prakerin/packages/K4os.Hash.xxHash.1.0.8/lib/netstandard2.1/K4os.Hash.xxHash.xml
+	new file:   app_prakerin/packages/MySql.Data.26.7.0/.signature.p7s
+	new file:   app_prakerin/packages/MySql.Data.26.7.0/CONTRIBUTING.md
+	new file:   app_prakerin/packages/MySql.Data.26.7.0/LICENSE
+	new file:   app_prakerin/packages/MySql.Data.26.7.0/MySql.Data.26.7.0.nupkg
+	new file:   app_prakerin/packages/MySql.Data.26.7.0/README
+	new file:   app_prakerin/packages/MySql.Data.26.7.0/README.md
+	new file:   app_prakerin/packages/MySql.Data.26.7.0/lib/net10.0/MySql.Data.dll
+	new file:   app_prakerin/packages/MySql.Data.26.7.0/lib/net10.0/MySql.Data.xml
+	new file:   app_prakerin/packages/MySql.Data.26.7.0/lib/net462/MySql.Data.dll
+	new file:   app_prakerin/packages/MySql.Data.26.7.0/lib/net462/MySql.Data.xml
+	new file:   app_prakerin/packages/MySql.Data.26.7.0/lib/net48/MySql.Data.dll
+	new file:   app_prakerin/packages/MySql.Data.26.7.0/lib/net48/MySql.Data.xml
+	new file:   app_prakerin/packages/MySql.Data.26.7.0/lib/net8.0/MySql.Data.dll
+	new file:   app_prakerin/packages/MySql.Data.26.7.0/lib/net8.0/MySql.Data.xml
+	new file:   app_prakerin/packages/MySql.Data.26.7.0/lib/net9.0/MySql.Data.dll
+	new file:   app_prakerin/packages/MySql.Data.26.7.0/lib/net9.0/MySql.Data.xml
+	new file:   app_prakerin/packages/MySql.Data.26.7.0/lib/netstandard2.0/MySql.Data.dll
+	new file:   app_prakerin/packages/MySql.Data.26.7.0/lib/netstandard2.0/MySql.Data.xml
+	new file:   app_prakerin/packages/MySql.Data.26.7.0/lib/netstandard2.1/MySql.Data.dll
+	new file:   app_prakerin/packages/MySql.Data.26.7.0/lib/netstandard2.1/MySql.Data.xml
+	new file:   app_prakerin/packages/MySql.Data.26.7.0/logo-mysql-170x115.png
+	new file:   app_prakerin/packages/MySql.Data.26.7.0/runtimes/win-x64/native/comerr64.dll
+	new file:   app_prakerin/packages/MySql.Data.26.7.0/runtimes/win-x64/native/gssapi64.dll
+	new file:   app_prakerin/packages/MySql.Data.26.7.0/runtimes/win-x64/native/k5sprt64.dll
+	new file:   app_prakerin/packages/MySql.Data.26.7.0/runtimes/win-x64/native/krb5_64.dll
+	new file:   app_prakerin/packages/MySql.Data.26.7.0/runtimes/win-x64/native/krbcc64.dll
+	new file:   app_prakerin/packages/System.Buffers.4.6.0/.signature.p7s
+	new file:   app_prakerin/packages/System.Buffers.4.6.0/Icon.png
+	new file:   app_prakerin/packages/System.Buffers.4.6.0/PACKAGE.md
+	new file:   app_prakerin/packages/System.Buffers.4.6.0/System.Buffers.4.6.0.nupkg
+	new file:   app_prakerin/packages/System.Buffers.4.6.0/buildTransitive/net461/System.Buffers.targets
+	new file:   app_prakerin/packages/System.Buffers.4.6.0/buildTransitive/net462/_._
+	new file:   app_prakerin/packages/System.Buffers.4.6.0/lib/net462/System.Buffers.dll
+	new file:   app_prakerin/packages/System.Buffers.4.6.0/lib/net462/System.Buffers.xml
+	new file:   app_prakerin/packages/System.Buffers.4.6.0/lib/netcoreapp2.1/_._
+	new file:   app_prakerin/packages/System.Buffers.4.6.0/lib/netstandard2.0/System.Buffers.dll
+	new file:   app_prakerin/packages/System.Buffers.4.6.0/lib/netstandard2.0/System.Buffers.xml
+	new file:   app_prakerin/packages/System.Configuration.ConfigurationManager.10.0.8/.signature.p7s
+	new file:   app_prakerin/packages/System.Configuration.ConfigurationManager.10.0.8/Icon.png
+	new file:   app_prakerin/packages/System.Configuration.ConfigurationManager.10.0.8/PACKAGE.md
+	new file:   app_prakerin/packages/System.Configuration.ConfigurationManager.10.0.8/System.Configuration.ConfigurationManager.10.0.8.nupkg
+	new file:   app_prakerin/packages/System.Configuration.ConfigurationManager.10.0.8/THIRD-PARTY-NOTICES.TXT
+	new file:   app_prakerin/packages/System.Configuration.ConfigurationManager.10.0.8/buildTransitive/net461/System.Configuration.ConfigurationManager.targets
+	new file:   app_prakerin/packages/System.Configuration.ConfigurationManager.10.0.8/buildTransitive/net462/_._
+	new file:   app_prakerin/packages/System.Configuration.ConfigurationManager.10.0.8/buildTransitive/net8.0/_._
+	new file:   app_prakerin/packages/System.Configuration.ConfigurationManager.10.0.8/buildTransitive/netcoreapp2.0/System.Configuration.ConfigurationManager.targets
+	new file:   app_prakerin/packages/System.Configuration.ConfigurationManager.10.0.8/lib/net10.0/System.Configuration.ConfigurationManager.dll
+	new file:   app_prakerin/packages/System.Configuration.ConfigurationManager.10.0.8/lib/net10.0/System.Configuration.ConfigurationManager.xml
+	new file:   app_prakerin/packages/System.Configuration.ConfigurationManager.10.0.8/lib/net462/System.Configuration.ConfigurationManager.dll
+	new file:   app_prakerin/packages/System.Configuration.ConfigurationManager.10.0.8/lib/net462/System.Configuration.ConfigurationManager.xml
+	new file:   app_prakerin/packages/System.Configuration.ConfigurationManager.10.0.8/lib/net8.0/System.Configuration.ConfigurationManager.dll
+	new file:   app_prakerin/packages/System.Configuration.ConfigurationManager.10.0.8/lib/net8.0/System.Configuration.ConfigurationManager.xml
+	new file:   app_prakerin/packages/System.Configuration.ConfigurationManager.10.0.8/lib/net9.0/System.Configuration.ConfigurationManager.dll
+	new file:   app_prakerin/packages/System.Configuration.ConfigurationManager.10.0.8/lib/net9.0/System.Configuration.ConfigurationManager.xml
+	new file:   app_prakerin/packages/System.Configuration.ConfigurationManager.10.0.8/lib/netstandard2.0/System.Configuration.ConfigurationManager.dll
+	new file:   app_prakerin/packages/System.Configuration.ConfigurationManager.10.0.8/lib/netstandard2.0/System.Configuration.ConfigurationManager.xml
+	new file:   app_prakerin/packages/System.Configuration.ConfigurationManager.10.0.8/useSharedDesignerContext.txt
+	new file:   app_prakerin/packages/System.IO.Pipelines.5.0.2/.signature.p7s
+	new file:   app_prakerin/packages/System.IO.Pipelines.5.0.2/Icon.png
+	new file:   app_prakerin/packages/System.IO.Pipelines.5.0.2/LICENSE.TXT
+	new file:   app_prakerin/packages/System.IO.Pipelines.5.0.2/System.IO.Pipelines.5.0.2.nupkg
+	new file:   app_prakerin/packages/System.IO.Pipelines.5.0.2/THIRD-PARTY-NOTICES.TXT
+	new file:   app_prakerin/packages/System.IO.Pipelines.5.0.2/lib/net461/System.IO.Pipelines.dll
+	new file:   app_prakerin/packages/System.IO.Pipelines.5.0.2/lib/net461/System.IO.Pipelines.xml
+	new file:   app_prakerin/packages/System.IO.Pipelines.5.0.2/lib/netcoreapp3.0/System.IO.Pipelines.dll
+	new file:   app_prakerin/packages/System.IO.Pipelines.5.0.2/lib/netcoreapp3.0/System.IO.Pipelines.xml
+	new file:   app_prakerin/packages/System.IO.Pipelines.5.0.2/lib/netstandard1.3/System.IO.Pipelines.dll
+	new file:   app_prakerin/packages/System.IO.Pipelines.5.0.2/lib/netstandard1.3/System.IO.Pipelines.xml
+	new file:   app_prakerin/packages/System.IO.Pipelines.5.0.2/lib/netstandard2.0/System.IO.Pipelines.dll
+	new file:   app_prakerin/packages/System.IO.Pipelines.5.0.2/lib/netstandard2.0/System.IO.Pipelines.xml
+	new file:   app_prakerin/packages/System.IO.Pipelines.5.0.2/ref/netcoreapp2.0/System.IO.Pipelines.dll
+	new file:   app_prakerin/packages/System.IO.Pipelines.5.0.2/ref/netcoreapp2.0/System.IO.Pipelines.xml
+	new file:   app_prakerin/packages/System.IO.Pipelines.5.0.2/useSharedDesignerContext.txt
+	new file:   app_prakerin/packages/System.IO.Pipelines.5.0.2/version.txt
+	new file:   app_prakerin/packages/System.Memory.4.6.0/.signature.p7s
+	new file:   app_prakerin/packages/System.Memory.4.6.0/Icon.png
+	new file:   app_prakerin/packages/System.Memory.4.6.0/PACKAGE.md
+	new file:   app_prakerin/packages/System.Memory.4.6.0/System.Memory.4.6.0.nupkg
+	new file:   app_prakerin/packages/System.Memory.4.6.0/buildTransitive/net461/System.Memory.targets
+	new file:   app_prakerin/packages/System.Memory.4.6.0/buildTransitive/net462/_._
+	new file:   app_prakerin/packages/System.Memory.4.6.0/lib/net462/System.Memory.dll
+	new file:   app_prakerin/packages/System.Memory.4.6.0/lib/net462/System.Memory.xml
+	new file:   app_prakerin/packages/System.Memory.4.6.0/lib/netcoreapp2.1/_._
+	new file:   app_prakerin/packages/System.Memory.4.6.0/lib/netstandard2.0/System.Memory.dll
+	new file:   app_prakerin/packages/System.Memory.4.6.0/lib/netstandard2.0/System.Memory.xml
+	new file:   app_prakerin/packages/System.Numerics.Vectors.4.6.0/.signature.p7s
+	new file:   app_prakerin/packages/System.Numerics.Vectors.4.6.0/Icon.png
+	new file:   app_prakerin/packages/System.Numerics.Vectors.4.6.0/PACKAGE.md
+	new file:   app_prakerin/packages/System.Numerics.Vectors.4.6.0/System.Numerics.Vectors.4.6.0.nupkg
+	new file:   app_prakerin/packages/System.Numerics.Vectors.4.6.0/buildTransitive/net461/System.Numerics.Vectors.targets
+	new file:   app_prakerin/packages/System.Numerics.Vectors.4.6.0/buildTransitive/net462/_._
+	new file:   app_prakerin/packages/System.Numerics.Vectors.4.6.0/lib/net462/System.Numerics.Vectors.dll
+	new file:   app_prakerin/packages/System.Numerics.Vectors.4.6.0/lib/net462/System.Numerics.Vectors.xml
+	new file:   app_prakerin/packages/System.Numerics.Vectors.4.6.0/lib/netcoreapp2.0/_._
+	new file:   app_prakerin/packages/System.Numerics.Vectors.4.6.0/lib/netstandard2.0/System.Numerics.Vectors.dll
+	new file:   app_prakerin/packages/System.Numerics.Vectors.4.6.0/lib/netstandard2.0/System.Numerics.Vectors.xml
+	new file:   app_prakerin/packages/ZstdSharp.Port.0.8.8/.signature.p7s
+	new file:   app_prakerin/packages/ZstdSharp.Port.0.8.8/ZstdSharp.Port.0.8.8.nupkg
+	new file:   app_prakerin/packages/ZstdSharp.Port.0.8.8/lib/net462/ZstdSharp.dll
+	new file:   app_prakerin/packages/ZstdSharp.Port.0.8.8/lib/net5.0/ZstdSharp.dll
+	new file:   app_prakerin/packages/ZstdSharp.Port.0.8.8/lib/net6.0/ZstdSharp.dll
+	new file:   app_prakerin/packages/ZstdSharp.Port.0.8.8/lib/net7.0/ZstdSharp.dll
+	new file:   app_prakerin/packages/ZstdSharp.Port.0.8.8/lib/net8.0/ZstdSharp.dll
+	new file:   app_prakerin/packages/ZstdSharp.Port.0.8.8/lib/net9.0/ZstdSharp.dll
+	new file:   app_prakerin/packages/ZstdSharp.Port.0.8.8/lib/netcoreapp3.1/ZstdSharp.dll
+	new file:   app_prakerin/packages/ZstdSharp.Port.0.8.8/lib/netstandard2.0/ZstdSharp.dll
+	new file:   app_prakerin/packages/ZstdSharp.Port.0.8.8/lib/netstandard2.1/ZstdSharp.dll
+	new file:   packages/BouncyCastle.1.8.9/.signature.p7s
+	new file:   packages/BouncyCastle.1.8.9/BouncyCastle.1.8.9.nupkg
+	new file:   packages/BouncyCastle.1.8.9/README.md
+	new file:   packages/BouncyCastle.1.8.9/lib/BouncyCastle.Crypto.dll
+	new file:   packages/iTextSharp.5.5.13.3/.signature.p7s
+	new file:   packages/iTextSharp.5.5.13.3/LICENSE.md
+	new file:   packages/iTextSharp.5.5.13.3/gnu-agpl-v3.0.md
+	new file:   packages/iTextSharp.5.5.13.3/iTextSharp.5.5.13.3.nupkg
+	new file:   packages/iTextSharp.5.5.13.3/lib/iTextSharp.xml
+	new file:   packages/iTextSharp.5.5.13.3/lib/itextsharp.dll
+	new file:   packages/iTextSharp.5.5.13.3/notice.txt
+
+Unmerged paths:
+  (use "git restore --staged <file>..." to unstage)
+  (use "git add <file>..." to mark resolution)
+	both added:      Form/FLaporanPresensi.Designer.cs
+	both added:      Form/FLaporanPresensi.cs
+	both added:      Form/FLaporanPresensi.resx
+	both added:      Form/FMaster.Designer.cs
+	both added:      Form/FMaster.cs
+	both added:      Form/FMaster.resx
+	both added:      Form/FMonitoring.Designer.cs
+	both added:      Form/FMonitoring.cs
+	both added:      Form/FPenilaian.Designer.cs
+	both added:      Form/FPenilaian.cs
+	both added:      Form/FPenilaian.resx
+	both added:      Form/FormCRUDAbsensi.Designer.cs
+	both added:      Form/FormCRUDGuru.Designer.cs
+	both added:      Form/FormCRUDJurnal.Designer.cs
+	both added:      Form/FormCRUDJurusan.Designer.cs
+	both added:      Form/FormCRUDMonitoring.Designer.cs
+	both added:      Form/FormCRUDPembimbing.Designer.cs
+	both added:      Form/FormCRUDPengguna.Designer.cs
+	both added:      Form/FormCRUDPenilaian.Designer.cs
+	both added:      Form/FormCRUDPenilaian.cs
+	both added:      Form/FormCRUDPerusahaan.Designer.cs
+	both added:      Form/FormCRUDPrakerin.Designer.cs
+	both added:      Form/FormCRUDRole.Designer.cs
+	both added:      Helper.cs
+	both added:      app_prakerin.csproj
+	both added:      app_prakerin/App.config
+	both added:      app_prakerin/Form/FMonitoring.Designer.cs
+	both added:      app_prakerin/Form/FMonitoring.cs
+	both added:      app_prakerin/Form/FMonitoring.resx
+	both added:      app_prakerin/Form/FormCRUDMonitoring.Designer.cs
+	both added:      app_prakerin/Form/FormCRUDMonitoring.cs
+	both added:      app_prakerin/Form/FormCRUDMonitoring.resx
+	both added:      app_prakerin/app_prakerin.csproj
+	both added:      app_prakerin/packages.config
+	both added:      packages.config
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   .vs/app_prakerin/v16/.suo
+	modified:   Form/FMonitoring.resx
+	modified:   Report/RAbsensi.rpt
+	modified:   app_prakerin/Form/FJurusan.Designer.cs
+	modified:   app_prakerin/Form/FKelas.Designer.cs
+	modified:   app_prakerin/Form/FPembimbing.Designer.cs
+	modified:   app_prakerin/Form/FPerusahaan.Designer.cs
+	modified:   bin/Debug/Microsoft.Bcl.AsyncInterfaces.xml
+	modified:   bin/Debug/Microsoft.Extensions.DependencyInjection.Abstractions.xml
+	modified:   bin/Debug/Microsoft.Extensions.Logging.Abstractions.xml
+	modified:   bin/Debug/System.Buffers.xml
+	modified:   bin/Debug/System.Diagnostics.DiagnosticSource.xml
+	modified:   bin/Debug/System.Memory.xml
+	modified:   bin/Debug/System.Numerics.Vectors.xml
+	modified:   bin/Debug/System.Runtime.CompilerServices.Unsafe.xml
+	modified:   bin/Debug/System.Threading.Tasks.Extensions.xml
+	modified:   bin/Debug/app_prakerin.exe
+	modified:   bin/Debug/app_prakerin.pdb
+	modified:   obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+	modified:   obj/Debug/app_prakerin.FMonitoring.resources
+	modified:   obj/Debug/app_prakerin.csproj.AssemblyReference.cache
+	modified:   obj/Debug/app_prakerin.csproj.CoreCompileInputs.cache
+	modified:   obj/Debug/app_prakerin.csproj.FileListAbsolute.txt
+	modified:   obj/Debug/app_prakerin.csproj.GenerateResource.cache
+	modified:   obj/Debug/app_prakerin.exe
+	modified:   obj/Debug/app_prakerin.pdb
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	UpgradeLog.htm
+	UpgradeLog2.htm
+	UpgradeLog3.htm
+	build_output.txt
+	build_output2.txt
+	git_status.txt
+	resolve_conflicts.py
+	resolve_conflicts_run.py
+	resolve_output.txt
+	run_resolve.bat
+

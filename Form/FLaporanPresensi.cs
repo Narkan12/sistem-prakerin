@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Data;
+using System.Drawing;
 using System.Windows.Forms;
 using app_prakerin.Config;
-using Excel = Microsoft.Office.Interop.Excel;
 
 namespace app_prakerin
 {
     public partial class FlaporanPresensi : Form
     {
+        const string JUDUL_LAPORAN = "LAPORAN DATA PRESENSI PRAKERIN";
+
         public FlaporanPresensi()
         {
             InitializeComponent();
@@ -56,11 +58,11 @@ namespace app_prakerin
                 string tanggalMulai = dtpMulai.Value.ToString("yyyy-MM-dd");
                 string tanggalSelesai = dtpSelesai.Value.ToString("yyyy-MM-dd");
 
-                string query = "SELECT absensi.id_absensi, absensi.id_prakerin, siswa.nis, siswa.nama, absensi.tanggal, absensi.jam_masuk, absensi.jam_keluar, absensi.status FROM absensi INNER JOIN prakerin ON absensi.id_prakerin = prakerin.id_prakerin INNER JOIN siswa ON prakerin.id_siswa = siswa.id_siswa WHERE absensi.tanggal BETWEEN '" + tanggalMulai + "' AND '" + tanggalSelesai + "' ";
+                string query = "SELECT absensi.id_absensi, absensi.id_prakerin, siswa.nis, siswa.nama AS nama_siswa, perusahaan.nama AS nama_perusahaan, absensi.tanggal, absensi.jam_masuk, absensi.jam_keluar, absensi.status FROM absensi INNER JOIN prakerin ON absensi.id_prakerin = prakerin.id_prakerin INNER JOIN siswa ON prakerin.id_siswa = siswa.id_siswa INNER JOIN perusahaan on perusahaan.id_perusahaan = prakerin.id_perusahaan WHERE absensi.tanggal BETWEEN '" + tanggalMulai + "' AND '" + tanggalSelesai + "' ";
 
                 if (!string.IsNullOrEmpty(search))
                 {
-                    query += "AND (siswa.nama LIKE '%" + search + "%' OR siswa.nis LIKE '%" + search + "%') ";
+                    query += "AND (siswa.nama LIKE '%" + search + "%' OR siswa.nis LIKE '%" + search + "%') AND (perusahaan.nama LIKE '%" + search + "%')";
                 }
 
                 if (!string.IsNullOrEmpty(status))
@@ -104,7 +106,8 @@ namespace app_prakerin
                         row["id_absensi"].ToString(),
                         row["id_prakerin"].ToString(),
                         row["nis"].ToString(),
-                        row["nama"].ToString(),
+                        row["nama_siswa"].ToString(),
+                        row["nama_perusahaan"].ToString(),
                         tanggal,
                         jamMasuk,
                         jamKeluar,
@@ -224,7 +227,48 @@ namespace app_prakerin
             TampilData();
         }
 
-        private void btnCetak_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Mengambil isi DGVLaporan (hanya kolom yang Visible) menjadi DataTable,
+        /// supaya bisa dipakai ulang oleh semua metode ekspor di Helper (CSV/Excel/PDF/Print/Preview).
+        /// </summary>
+        private DataTable AmbilDataTabel()
+        {
+            DataTable dt = new DataTable();
+
+            foreach (DataGridViewColumn kolom in DGVLaporan.Columns)
+            {
+                if (kolom.Visible)
+                {
+                    dt.Columns.Add(kolom.HeaderText);
+                }
+            }
+
+            foreach (DataGridViewRow row in DGVLaporan.Rows)
+            {
+                if (row.IsNewRow) continue;
+
+                DataRow dr = dt.NewRow();
+                int kolomKe = 0;
+
+                foreach (DataGridViewColumn kolom in DGVLaporan.Columns)
+                {
+                    if (kolom.Visible)
+                    {
+                        dr[kolomKe] = row.Cells[kolom.Index].Value?.ToString() ?? "";
+                        kolomKe++;
+                    }
+                }
+
+                dt.Rows.Add(dr);
+            }
+
+            return dt;
+        }
+
+        /// <summary>
+        /// Dipanggil oleh semua tombol ekspor/cetak: memastikan ada data di tabel.
+        /// </summary>
+        private bool AdaData()
         {
             if (DGVLaporan.Rows.Count == 0)
             {
@@ -234,119 +278,29 @@ namespace app_prakerin
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information
                 );
-                return;
+
+                return false;
             }
 
-            SaveFileDialog saveFile = new SaveFileDialog();
-            saveFile.Filter = "Excel Files|*.xlsx";
-            saveFile.Title = "Simpan Laporan Excel";
-            saveFile.FileName = "Laporan_Praktek_Kerja_Lapangan.xlsx";
+            return true;
+        }
 
-            if (saveFile.ShowDialog() != DialogResult.OK)
-                return;
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+            if (!AdaData()) return;
 
-            Excel.Application excelApp = null;
-            Excel.Workbook workbook = null;
-            Excel.Worksheet worksheet = null;
+            SaveFileDialog saveFile = new SaveFileDialog
+            {
+                Filter = "Excel Files|*.xlsx",
+                Title = "Simpan Laporan Excel",
+                FileName = "Laporan_Presensi_Prakerin.xlsx"
+            };
+
+            if (saveFile.ShowDialog() != DialogResult.OK) return;
 
             try
             {
-                excelApp = new Excel.Application();
-                workbook = excelApp.Workbooks.Add();
-                worksheet = workbook.ActiveSheet;
-
-                worksheet.Name = "Laporan";
-
-                int jumlahKolom = 0;
-
-                foreach (DataGridViewColumn column in DGVLaporan.Columns)
-                {
-                    if (column.Visible)
-                        jumlahKolom++;
-                }
-
-                // JUDUL
-                worksheet.Cells[1, 1] = "LAPORAN DATA PRAKERIN";
-
-                Excel.Range judul = worksheet.Range[
-                    worksheet.Cells[1, 1],
-                    worksheet.Cells[1, jumlahKolom]
-                ];
-
-                judul.Merge();
-                judul.Font.Bold = true;
-                judul.Font.Size = 16;
-                judul.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
-
-                // HEADER
-                int kolom = 1;
-
-                foreach (DataGridViewColumn column in DGVLaporan.Columns)
-                {
-                    if (column.Visible)
-                    {
-                        worksheet.Cells[3, kolom] = column.HeaderText;
-                        kolom++;
-                    }
-                }
-
-                Excel.Range header = worksheet.Range[
-                    worksheet.Cells[3, 1],
-                    worksheet.Cells[3, jumlahKolom]
-                ];
-
-                header.Font.Bold = true;
-                header.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
-                header.VerticalAlignment = Excel.XlVAlign.xlVAlignCenter;
-                header.Borders.LineStyle = Excel.XlLineStyle.xlContinuous;
-
-                // DATA
-                int baris = 4;
-
-                foreach (DataGridViewRow row in DGVLaporan.Rows)
-                {
-                    if (!row.IsNewRow)
-                    {
-                        kolom = 1;
-
-                        foreach (DataGridViewColumn column in DGVLaporan.Columns)
-                        {
-                            if (column.Visible)
-                            {
-                                object value = row.Cells[column.Index].Value;
-
-                                worksheet.Cells[baris, kolom] =
-                                    value == null ? "" : value.ToString();
-
-                                kolom++;
-                            }
-                        }
-
-                        baris++;
-                    }
-                }
-
-                // BORDER DATA
-                Excel.Range seluruhData = worksheet.Range[
-                    worksheet.Cells[3, 1],
-                    worksheet.Cells[baris - 1, jumlahKolom]
-                ];
-
-                seluruhData.Borders.LineStyle =
-                    Excel.XlLineStyle.xlContinuous;
-
-                // ATUR LEBAR KOLOM
-                worksheet.Columns.AutoFit();
-
-                // Batasi lebar kolom
-                for (int i = 1; i <= jumlahKolom; i++)
-                {
-                    if (worksheet.Columns[i].ColumnWidth > 35)
-                        worksheet.Columns[i].ColumnWidth = 35;
-                }
-
-                // Simpan
-                workbook.SaveAs(saveFile.FileName);
+                Helper.Excel(AmbilDataTabel(), saveFile.FileName, JUDUL_LAPORAN);
 
                 MessageBox.Show(
                     "Laporan berhasil diekspor ke Excel.",
@@ -358,28 +312,119 @@ namespace app_prakerin
             catch (Exception ex)
             {
                 MessageBox.Show(
-                    "Gagal mengekspor laporan:\n\n" + ex.Message,
+                    "Gagal mengekspor ke Excel.\n\n" + ex.Message,
                     "Error",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error
                 );
             }
-            finally
+        }
+
+        private void btnCsv_Click(object sender, EventArgs e)
+        {
+            if (!AdaData()) return;
+
+            SaveFileDialog saveFile = new SaveFileDialog
             {
-                if (workbook != null)
-                    workbook.Close(false);
+                Filter = "CSV Files|*.csv",
+                Title = "Simpan Laporan CSV",
+                FileName = "Laporan_Presensi_Prakerin.csv"
+            };
 
-                if (excelApp != null)
-                    excelApp.Quit();
+            if (saveFile.ShowDialog() != DialogResult.OK) return;
 
-                if (worksheet != null)
-                    System.Runtime.InteropServices.Marshal.ReleaseComObject(worksheet);
+            try
+            {
+                Helper.CSV(AmbilDataTabel(), saveFile.FileName);
 
-                if (workbook != null)
-                    System.Runtime.InteropServices.Marshal.ReleaseComObject(workbook);
+                MessageBox.Show(
+                    "Laporan berhasil diekspor ke CSV.",
+                    "Berhasil",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information
+                );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(
+                    "Gagal mengekspor ke CSV.\n\n" + ex.Message,
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                );
+            }
+        }
 
-                if (excelApp != null)
-                    System.Runtime.InteropServices.Marshal.ReleaseComObject(excelApp);
+        private void btnPdf_Click(object sender, EventArgs e)
+        {
+            if (!AdaData()) return;
+
+            SaveFileDialog saveFile = new SaveFileDialog
+            {
+                Filter = "PDF Files|*.pdf",
+                Title = "Simpan Laporan PDF",
+                FileName = "Laporan_Presensi_Prakerin.pdf"
+            };
+
+            if (saveFile.ShowDialog() != DialogResult.OK) return;
+
+            try
+            {
+                Helper.PDF(AmbilDataTabel(), saveFile.FileName, JUDUL_LAPORAN);
+
+                MessageBox.Show(
+                    "Laporan berhasil diekspor ke PDF.",
+                    "Berhasil",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information
+                );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(
+                    "Gagal mengekspor ke PDF.\n\n" + ex.Message,
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                );
+            }
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            if (!AdaData()) return;
+
+            try
+            {
+                Helper.Print(AmbilDataTabel(), JUDUL_LAPORAN);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(
+                    "Gagal mencetak laporan.\n\n" + ex.Message,
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                );
+            }
+        }
+
+        private void btnPreview_Click(object sender, EventArgs e)
+        {
+            if (!AdaData()) return;
+
+            try
+            {
+                Helper.Preview(AmbilDataTabel(), JUDUL_LAPORAN, this);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(
+                    "Gagal membuka pratinjau cetak.\n\n" + ex.Message,
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                );
             }
         }
 

@@ -54,13 +54,16 @@
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNamaSiswa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNamaPerusahaan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPembimbing = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlPageHeader.SuspendLayout();
             this.pnlPageIcon.SuspendLayout();
             this.panelTop.SuspendLayout();
@@ -101,11 +104,11 @@
             this.lblPageIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(130)))), ((int)(((byte)(246)))));
             this.lblPageIcon.Font = new System.Drawing.Font("Segoe MDL2 Assets", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPageIcon.ForeColor = System.Drawing.Color.White;
-            this.lblPageIcon.Location = new System.Drawing.Point(9, 8);
+            this.lblPageIcon.Location = new System.Drawing.Point(8, 8);
             this.lblPageIcon.Name = "lblPageIcon";
             this.lblPageIcon.Size = new System.Drawing.Size(40, 40);
             this.lblPageIcon.TabIndex = 0;
-            this.lblPageIcon.Text = "";
+            this.lblPageIcon.Text = "\uE734";
             this.lblPageIcon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblBreadcrumb
@@ -116,9 +119,9 @@
             this.lblBreadcrumb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
             this.lblBreadcrumb.Location = new System.Drawing.Point(106, 22);
             this.lblBreadcrumb.Name = "lblBreadcrumb";
-            this.lblBreadcrumb.Size = new System.Drawing.Size(114, 15);
+            this.lblBreadcrumb.Size = new System.Drawing.Size(124, 15);
             this.lblBreadcrumb.TabIndex = 2;
-            this.lblBreadcrumb.Text = "Prakerin  ›  Penilaian";
+            this.lblBreadcrumb.Text = "Prakerin  \u203A  Penilaian";
             // 
             // lblPageTitle
             // 
@@ -128,7 +131,7 @@
             this.lblPageTitle.ForeColor = System.Drawing.Color.White;
             this.lblPageTitle.Location = new System.Drawing.Point(102, 40);
             this.lblPageTitle.Name = "lblPageTitle";
-            this.lblPageTitle.Size = new System.Drawing.Size(127, 37);
+            this.lblPageTitle.Size = new System.Drawing.Size(128, 37);
             this.lblPageTitle.TabIndex = 0;
             this.lblPageTitle.Text = "Penilaian";
             // 
@@ -140,9 +143,8 @@
             this.lblPageSub.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(219)))), ((int)(((byte)(254)))));
             this.lblPageSub.Location = new System.Drawing.Point(106, 80);
             this.lblPageSub.Name = "lblPageSub";
-            this.lblPageSub.Size = new System.Drawing.Size(295, 17);
-            this.lblPageSub.TabIndex = 1;
-            this.lblPageSub.Text = "Nilai akhir dari pembimbing industri dan sekolah.";
+            this.lblPageSub.Size = new System.Drawing.Size(292, 17);
+            this.lblPageSub.Text = "Nilai akhir & predikat dari pembimbing industri dan sekolah.";
             // 
             // pnlPageDot1
             // 
@@ -211,7 +213,7 @@
             this.TXTSearch.Location = new System.Drawing.Point(16, 14);
             this.TXTSearch.Name = "TXTSearch";
             this.TXTSearch.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
-            this.TXTSearch.PlaceholderText = "Cari data penilaian...";
+            this.TXTSearch.PlaceholderText = "Cari nama siswa, perusahaan, atau predikat...";
             this.TXTSearch.SelectedText = "";
             this.TXTSearch.Size = new System.Drawing.Size(320, 40);
             this.TXTSearch.TabIndex = 0;
@@ -261,7 +263,7 @@
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(96, 40);
             this.btnEdit.TabIndex = 2;
-            this.btnEdit.Text = "✎  Edit";
+            this.btnEdit.Text = "\u270E  Edit";
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnHapus
@@ -280,7 +282,7 @@
             this.btnHapus.Name = "btnHapus";
             this.btnHapus.Size = new System.Drawing.Size(100, 40);
             this.btnHapus.TabIndex = 3;
-            this.btnHapus.Text = "✕  Hapus";
+            this.btnHapus.Text = "\u2715  Hapus";
             this.btnHapus.Click += new System.EventHandler(this.btnHapus_Click);
             // 
             // btnRefresh
@@ -299,7 +301,7 @@
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(112, 40);
             this.btnRefresh.TabIndex = 4;
-            this.btnRefresh.Text = "↻  Refresh";
+            this.btnRefresh.Text = "\u21BB  Refresh";
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // lblTitle
@@ -360,13 +362,16 @@
             this.dataGridViewTextBoxColumn1,
             this.Column2,
             this.Column8,
+            this.colNamaSiswa,
+            this.colNamaPerusahaan,
+            this.colPembimbing,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.Column3,
             this.Column4,
             this.Column5,
             this.Column6,
-            this.Column7});
+            this.colStatus});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10F);
@@ -409,9 +414,34 @@
             // Column8
             // 
             this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column8.HeaderText = "ID Prakerin";
+            this.Column8.HeaderText = "ID_Prakerin";
             this.Column8.Name = "Column8";
             this.Column8.ReadOnly = true;
+            this.Column8.Width = 100;
+            // 
+            // colNamaSiswa
+            // 
+            this.colNamaSiswa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colNamaSiswa.HeaderText = "Nama Siswa";
+            this.colNamaSiswa.Name = "colNamaSiswa";
+            this.colNamaSiswa.ReadOnly = true;
+            this.colNamaSiswa.Width = 150;
+            // 
+            // colNamaPerusahaan
+            // 
+            this.colNamaPerusahaan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colNamaPerusahaan.HeaderText = "Nama Perusahaan";
+            this.colNamaPerusahaan.Name = "colNamaPerusahaan";
+            this.colNamaPerusahaan.ReadOnly = true;
+            this.colNamaPerusahaan.Width = 160;
+            // 
+            // colPembimbing
+            // 
+            this.colPembimbing.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colPembimbing.HeaderText = "Pembimbing Perusahaan";
+            this.colPembimbing.Name = "colPembimbing";
+            this.colPembimbing.ReadOnly = true;
+            this.colPembimbing.Width = 170;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -427,6 +457,7 @@
             this.dataGridViewTextBoxColumn3.HeaderText = "Kerja Sama";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 100;
             // 
             // Column3
             // 
@@ -458,13 +489,14 @@
             this.Column6.HeaderText = "Nilai Akhir";
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
+            this.Column6.Width = 100;
             // 
-            // Column7
+            // colStatus
             // 
-            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column7.HeaderText = "Catatan";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
+            this.colStatus.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colStatus.HeaderText = "Status / Predikat";
+            this.colStatus.Name = "colStatus";
+            this.colStatus.ReadOnly = true;
             // 
             // FPenilaian
             // 
@@ -516,12 +548,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNamaSiswa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNamaPerusahaan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPembimbing;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colStatus;
     }
 }

@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlPageHeader = new Guna.UI2.WinForms.Guna2Panel();
             this.pnlPageIcon = new Guna.UI2.WinForms.Guna2Panel();
             this.lblPageIcon = new System.Windows.Forms.Label();
@@ -83,19 +84,27 @@
             this.pnlSpacer2 = new System.Windows.Forms.Panel();
             this.panelData = new Guna.UI2.WinForms.Guna2Panel();
             this.DGVLaporan = new System.Windows.Forms.DataGridView();
+            this.flpAksi = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnRefresh = new Guna.UI2.WinForms.Guna2Button();
+            this.pnlAksiDivider = new System.Windows.Forms.Panel();
+            this.btnExcel = new Guna.UI2.WinForms.Guna2Button();
+            this.btnCsv = new Guna.UI2.WinForms.Guna2Button();
+            this.btnPdf = new Guna.UI2.WinForms.Guna2Button();
+            this.btnPrint = new Guna.UI2.WinForms.Guna2Button();
+            this.btnPreview = new Guna.UI2.WinForms.Guna2Button();
+            this.lblDataSubtitle = new System.Windows.Forms.Label();
+            this.lblDataTitle = new System.Windows.Forms.Label();
             this.colNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colIdAbsensi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colIdPrakerin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNIS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNama = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTanggal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colJamMasuk = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colJamKeluar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnCetak = new Guna.UI2.WinForms.Guna2Button();
-            this.btnRefresh = new Guna.UI2.WinForms.Guna2Button();
-            this.lblDataSubtitle = new System.Windows.Forms.Label();
-            this.lblDataTitle = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pnlPageHeader.SuspendLayout();
             this.pnlPageIcon.SuspendLayout();
             this.panelFilter.SuspendLayout();
@@ -112,6 +121,7 @@
             this.pnlAlfaIcon.SuspendLayout();
             this.panelData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVLaporan)).BeginInit();
+            this.flpAksi.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlPageHeader
@@ -151,7 +161,7 @@
             this.lblPageIcon.Name = "lblPageIcon";
             this.lblPageIcon.Size = new System.Drawing.Size(40, 40);
             this.lblPageIcon.TabIndex = 0;
-            this.lblPageIcon.Text = "";
+            this.lblPageIcon.Text = "\uE8A5";
             this.lblPageIcon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblBreadcrumb
@@ -162,9 +172,9 @@
             this.lblBreadcrumb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
             this.lblBreadcrumb.Location = new System.Drawing.Point(106, 22);
             this.lblBreadcrumb.Name = "lblBreadcrumb";
-            this.lblBreadcrumb.Size = new System.Drawing.Size(109, 15);
+            this.lblBreadcrumb.Size = new System.Drawing.Size(137, 20);
             this.lblBreadcrumb.TabIndex = 2;
-            this.lblBreadcrumb.Text = "Laporan  ›  Presensi";
+            this.lblBreadcrumb.Text = "Laporan  \u203A  Presensi";
             // 
             // lblPageTitle
             // 
@@ -174,7 +184,7 @@
             this.lblPageTitle.ForeColor = System.Drawing.Color.White;
             this.lblPageTitle.Location = new System.Drawing.Point(102, 40);
             this.lblPageTitle.Name = "lblPageTitle";
-            this.lblPageTitle.Size = new System.Drawing.Size(224, 37);
+            this.lblPageTitle.Size = new System.Drawing.Size(283, 46);
             this.lblPageTitle.TabIndex = 0;
             this.lblPageTitle.Text = "Laporan Presensi";
             // 
@@ -186,7 +196,7 @@
             this.lblPageSub.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(219)))), ((int)(((byte)(254)))));
             this.lblPageSub.Location = new System.Drawing.Point(106, 80);
             this.lblPageSub.Name = "lblPageSub";
-            this.lblPageSub.Size = new System.Drawing.Size(411, 17);
+            this.lblPageSub.Size = new System.Drawing.Size(491, 21);
             this.lblPageSub.TabIndex = 1;
             this.lblPageSub.Text = "Rekapitulasi kehadiran siswa selama kegiatan Praktik Kerja Lapangan.";
             // 
@@ -256,7 +266,7 @@
             this.lblFilterTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
             this.lblFilterTitle.Location = new System.Drawing.Point(20, 14);
             this.lblFilterTitle.Name = "lblFilterTitle";
-            this.lblFilterTitle.Size = new System.Drawing.Size(104, 20);
+            this.lblFilterTitle.Size = new System.Drawing.Size(130, 25);
             this.lblFilterTitle.TabIndex = 11;
             this.lblFilterTitle.Text = "Filter Laporan";
             // 
@@ -268,7 +278,7 @@
             this.lblCari.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(85)))), ((int)(((byte)(105)))));
             this.lblCari.Location = new System.Drawing.Point(22, 46);
             this.lblCari.Name = "lblCari";
-            this.lblCari.Size = new System.Drawing.Size(60, 15);
+            this.lblCari.Size = new System.Drawing.Size(77, 20);
             this.lblCari.TabIndex = 10;
             this.lblCari.Text = "Cari Siswa";
             // 
@@ -280,7 +290,7 @@
             this.lblTanggalMulai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(85)))), ((int)(((byte)(105)))));
             this.lblTanggalMulai.Location = new System.Drawing.Point(318, 46);
             this.lblTanggalMulai.Name = "lblTanggalMulai";
-            this.lblTanggalMulai.Size = new System.Drawing.Size(82, 15);
+            this.lblTanggalMulai.Size = new System.Drawing.Size(106, 20);
             this.lblTanggalMulai.TabIndex = 9;
             this.lblTanggalMulai.Text = "Tanggal Mulai";
             // 
@@ -292,7 +302,7 @@
             this.lblTanggalSelesai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(85)))), ((int)(((byte)(105)))));
             this.lblTanggalSelesai.Location = new System.Drawing.Point(474, 46);
             this.lblTanggalSelesai.Name = "lblTanggalSelesai";
-            this.lblTanggalSelesai.Size = new System.Drawing.Size(88, 15);
+            this.lblTanggalSelesai.Size = new System.Drawing.Size(113, 20);
             this.lblTanggalSelesai.TabIndex = 8;
             this.lblTanggalSelesai.Text = "Tanggal Selesai";
             // 
@@ -304,7 +314,7 @@
             this.lblStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(85)))), ((int)(((byte)(105)))));
             this.lblStatus.Location = new System.Drawing.Point(630, 46);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(40, 15);
+            this.lblStatus.Size = new System.Drawing.Size(50, 20);
             this.lblStatus.TabIndex = 7;
             this.lblStatus.Text = "Status";
             // 
@@ -321,6 +331,7 @@
             this.txtSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
             this.txtSearch.Location = new System.Drawing.Point(20, 68);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
             this.txtSearch.PlaceholderText = "Nama siswa / NIS...";
@@ -416,7 +427,7 @@
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(95, 40);
             this.btnReset.TabIndex = 6;
-            this.btnReset.Text = "↺  Reset";
+            this.btnReset.Text = "\u21BA  Reset";
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // lblTitle
@@ -484,7 +495,7 @@
             this.lblTotalTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(116)))), ((int)(((byte)(139)))));
             this.lblTotalTitle.Location = new System.Drawing.Point(18, 16);
             this.lblTotalTitle.Name = "lblTotalTitle";
-            this.lblTotalTitle.Size = new System.Drawing.Size(76, 15);
+            this.lblTotalTitle.Size = new System.Drawing.Size(97, 20);
             this.lblTotalTitle.TabIndex = 0;
             this.lblTotalTitle.Text = "Total Absensi";
             // 
@@ -496,7 +507,7 @@
             this.lblTotalValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(99)))), ((int)(((byte)(235)))));
             this.lblTotalValue.Location = new System.Drawing.Point(16, 36);
             this.lblTotalValue.Name = "lblTotalValue";
-            this.lblTotalValue.Size = new System.Drawing.Size(32, 37);
+            this.lblTotalValue.Size = new System.Drawing.Size(39, 46);
             this.lblTotalValue.TabIndex = 1;
             this.lblTotalValue.Text = "0";
             // 
@@ -521,7 +532,7 @@
             this.lblTotalIcon.Name = "lblTotalIcon";
             this.lblTotalIcon.Size = new System.Drawing.Size(32, 32);
             this.lblTotalIcon.TabIndex = 0;
-            this.lblTotalIcon.Text = "";
+            this.lblTotalIcon.Text = "\uE8FD";
             this.lblTotalIcon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // cardHadir
@@ -549,7 +560,7 @@
             this.lblHadirTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(116)))), ((int)(((byte)(139)))));
             this.lblHadirTitle.Location = new System.Drawing.Point(18, 16);
             this.lblHadirTitle.Name = "lblHadirTitle";
-            this.lblHadirTitle.Size = new System.Drawing.Size(36, 15);
+            this.lblHadirTitle.Size = new System.Drawing.Size(46, 20);
             this.lblHadirTitle.TabIndex = 0;
             this.lblHadirTitle.Text = "Hadir";
             // 
@@ -561,7 +572,7 @@
             this.lblHadirValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(163)))), ((int)(((byte)(74)))));
             this.lblHadirValue.Location = new System.Drawing.Point(16, 36);
             this.lblHadirValue.Name = "lblHadirValue";
-            this.lblHadirValue.Size = new System.Drawing.Size(32, 37);
+            this.lblHadirValue.Size = new System.Drawing.Size(39, 46);
             this.lblHadirValue.TabIndex = 1;
             this.lblHadirValue.Text = "0";
             // 
@@ -586,7 +597,7 @@
             this.lblHadirIcon.Name = "lblHadirIcon";
             this.lblHadirIcon.Size = new System.Drawing.Size(32, 32);
             this.lblHadirIcon.TabIndex = 0;
-            this.lblHadirIcon.Text = "";
+            this.lblHadirIcon.Text = "\uE73E";
             this.lblHadirIcon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // cardIzin
@@ -614,7 +625,7 @@
             this.lblIzinTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(116)))), ((int)(((byte)(139)))));
             this.lblIzinTitle.Location = new System.Drawing.Point(18, 16);
             this.lblIzinTitle.Name = "lblIzinTitle";
-            this.lblIzinTitle.Size = new System.Drawing.Size(25, 15);
+            this.lblIzinTitle.Size = new System.Drawing.Size(32, 20);
             this.lblIzinTitle.TabIndex = 0;
             this.lblIzinTitle.Text = "Izin";
             // 
@@ -626,7 +637,7 @@
             this.lblIzinValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(119)))), ((int)(((byte)(6)))));
             this.lblIzinValue.Location = new System.Drawing.Point(16, 36);
             this.lblIzinValue.Name = "lblIzinValue";
-            this.lblIzinValue.Size = new System.Drawing.Size(32, 37);
+            this.lblIzinValue.Size = new System.Drawing.Size(39, 46);
             this.lblIzinValue.TabIndex = 1;
             this.lblIzinValue.Text = "0";
             // 
@@ -651,7 +662,7 @@
             this.lblIzinIcon.Name = "lblIzinIcon";
             this.lblIzinIcon.Size = new System.Drawing.Size(32, 32);
             this.lblIzinIcon.TabIndex = 0;
-            this.lblIzinIcon.Text = "";
+            this.lblIzinIcon.Text = "\uE787";
             this.lblIzinIcon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // cardSakit
@@ -679,7 +690,7 @@
             this.lblSakitTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(116)))), ((int)(((byte)(139)))));
             this.lblSakitTitle.Location = new System.Drawing.Point(18, 16);
             this.lblSakitTitle.Name = "lblSakitTitle";
-            this.lblSakitTitle.Size = new System.Drawing.Size(32, 15);
+            this.lblSakitTitle.Size = new System.Drawing.Size(41, 20);
             this.lblSakitTitle.TabIndex = 0;
             this.lblSakitTitle.Text = "Sakit";
             // 
@@ -691,7 +702,7 @@
             this.lblSakitValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(88)))), ((int)(((byte)(12)))));
             this.lblSakitValue.Location = new System.Drawing.Point(16, 36);
             this.lblSakitValue.Name = "lblSakitValue";
-            this.lblSakitValue.Size = new System.Drawing.Size(32, 37);
+            this.lblSakitValue.Size = new System.Drawing.Size(39, 46);
             this.lblSakitValue.TabIndex = 1;
             this.lblSakitValue.Text = "0";
             // 
@@ -716,7 +727,7 @@
             this.lblSakitIcon.Name = "lblSakitIcon";
             this.lblSakitIcon.Size = new System.Drawing.Size(32, 32);
             this.lblSakitIcon.TabIndex = 0;
-            this.lblSakitIcon.Text = "";
+            this.lblSakitIcon.Text = "\uE7BA";
             this.lblSakitIcon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // cardAlfa
@@ -744,7 +755,7 @@
             this.lblAlfaTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(116)))), ((int)(((byte)(139)))));
             this.lblAlfaTitle.Location = new System.Drawing.Point(18, 16);
             this.lblAlfaTitle.Name = "lblAlfaTitle";
-            this.lblAlfaTitle.Size = new System.Drawing.Size(28, 15);
+            this.lblAlfaTitle.Size = new System.Drawing.Size(36, 20);
             this.lblAlfaTitle.TabIndex = 0;
             this.lblAlfaTitle.Text = "Alfa";
             // 
@@ -756,7 +767,7 @@
             this.lblAlfaValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.lblAlfaValue.Location = new System.Drawing.Point(16, 36);
             this.lblAlfaValue.Name = "lblAlfaValue";
-            this.lblAlfaValue.Size = new System.Drawing.Size(32, 37);
+            this.lblAlfaValue.Size = new System.Drawing.Size(39, 46);
             this.lblAlfaValue.TabIndex = 1;
             this.lblAlfaValue.Text = "0";
             // 
@@ -781,7 +792,7 @@
             this.lblAlfaIcon.Name = "lblAlfaIcon";
             this.lblAlfaIcon.Size = new System.Drawing.Size(32, 32);
             this.lblAlfaIcon.TabIndex = 0;
-            this.lblAlfaIcon.Text = "";
+            this.lblAlfaIcon.Text = "\uE711";
             this.lblAlfaIcon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnlSpacer2
@@ -800,8 +811,7 @@
             this.panelData.BorderRadius = 14;
             this.panelData.BorderThickness = 1;
             this.panelData.Controls.Add(this.DGVLaporan);
-            this.panelData.Controls.Add(this.btnCetak);
-            this.panelData.Controls.Add(this.btnRefresh);
+            this.panelData.Controls.Add(this.flpAksi);
             this.panelData.Controls.Add(this.lblDataSubtitle);
             this.panelData.Controls.Add(this.lblDataTitle);
             this.panelData.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -817,22 +827,22 @@
             this.DGVLaporan.AllowUserToAddRows = false;
             this.DGVLaporan.AllowUserToDeleteRows = false;
             this.DGVLaporan.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
-            this.DGVLaporan.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.DGVLaporan.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.DGVLaporan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DGVLaporan.BackgroundColor = System.Drawing.Color.White;
             this.DGVLaporan.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DGVLaporan.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DGVLaporan.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(64)))), ((int)(((byte)(175)))));
-            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(14, 0, 12, 0);
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(64)))), ((int)(((byte)(175)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGVLaporan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(64)))), ((int)(((byte)(175)))));
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(14, 0, 12, 0);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(64)))), ((int)(((byte)(175)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGVLaporan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.DGVLaporan.ColumnHeadersHeight = 44;
             this.DGVLaporan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.DGVLaporan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -841,19 +851,20 @@
             this.colIdPrakerin,
             this.colNIS,
             this.colNama,
+            this.Column1,
             this.colTanggal,
             this.colJamMasuk,
             this.colJamKeluar,
             this.colStatus});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
-            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(14, 0, 12, 0);
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(58)))), ((int)(((byte)(138)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGVLaporan.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(14, 0, 12, 0);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(58)))), ((int)(((byte)(138)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGVLaporan.DefaultCellStyle = dataGridViewCellStyle3;
             this.DGVLaporan.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DGVLaporan.EnableHeadersVisualStyles = false;
             this.DGVLaporan.Font = new System.Drawing.Font("Segoe UI", 10F);
@@ -863,100 +874,34 @@
             this.DGVLaporan.Name = "DGVLaporan";
             this.DGVLaporan.ReadOnly = true;
             this.DGVLaporan.RowHeadersVisible = false;
+            this.DGVLaporan.RowHeadersWidth = 51;
             this.DGVLaporan.RowTemplate.Height = 44;
             this.DGVLaporan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGVLaporan.Size = new System.Drawing.Size(1043, 222);
             this.DGVLaporan.TabIndex = 0;
             // 
-            // colNo
+            // flpAksi
             // 
-            this.colNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.colNo.HeaderText = "No";
-            this.colNo.Name = "colNo";
-            this.colNo.ReadOnly = true;
-            this.colNo.Width = 64;
-            // 
-            // colIdAbsensi
-            // 
-            this.colIdAbsensi.HeaderText = "ID Absensi";
-            this.colIdAbsensi.Name = "colIdAbsensi";
-            this.colIdAbsensi.ReadOnly = true;
-            this.colIdAbsensi.Visible = false;
-            // 
-            // colIdPrakerin
-            // 
-            this.colIdPrakerin.HeaderText = "ID Prakerin";
-            this.colIdPrakerin.Name = "colIdPrakerin";
-            this.colIdPrakerin.ReadOnly = true;
-            this.colIdPrakerin.Visible = false;
-            // 
-            // colNIS
-            // 
-            this.colNIS.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.colNIS.HeaderText = "NIS";
-            this.colNIS.Name = "colNIS";
-            this.colNIS.ReadOnly = true;
-            this.colNIS.Width = 130;
-            // 
-            // colNama
-            // 
-            this.colNama.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colNama.HeaderText = "Nama Siswa";
-            this.colNama.Name = "colNama";
-            this.colNama.ReadOnly = true;
-            // 
-            // colTanggal
-            // 
-            this.colTanggal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.colTanggal.HeaderText = "Tanggal";
-            this.colTanggal.Name = "colTanggal";
-            this.colTanggal.ReadOnly = true;
-            this.colTanggal.Width = 150;
-            // 
-            // colJamMasuk
-            // 
-            this.colJamMasuk.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.colJamMasuk.HeaderText = "Jam Masuk";
-            this.colJamMasuk.Name = "colJamMasuk";
-            this.colJamMasuk.ReadOnly = true;
-            this.colJamMasuk.Width = 130;
-            // 
-            // colJamKeluar
-            // 
-            this.colJamKeluar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.colJamKeluar.HeaderText = "Jam Keluar";
-            this.colJamKeluar.Name = "colJamKeluar";
-            this.colJamKeluar.ReadOnly = true;
-            this.colJamKeluar.Width = 130;
-            // 
-            // colStatus
-            // 
-            this.colStatus.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.colStatus.HeaderText = "Status";
-            this.colStatus.Name = "colStatus";
-            this.colStatus.ReadOnly = true;
-            this.colStatus.Width = 130;
-            // 
-            // btnCetak
-            // 
-            this.btnCetak.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCetak.BackColor = System.Drawing.Color.White;
-            this.btnCetak.BorderRadius = 10;
-            this.btnCetak.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCetak.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(163)))), ((int)(((byte)(74)))));
-            this.btnCetak.Font = new System.Drawing.Font("Segoe UI Semibold", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCetak.ForeColor = System.Drawing.Color.White;
-            this.btnCetak.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(128)))), ((int)(((byte)(61)))));
-            this.btnCetak.Location = new System.Drawing.Point(935, 16);
-            this.btnCetak.Name = "btnCetak";
-            this.btnCetak.Size = new System.Drawing.Size(112, 40);
-            this.btnCetak.TabIndex = 8;
-            this.btnCetak.Text = "Cetak";
-            this.btnCetak.Click += new System.EventHandler(this.btnCetak_Click);
+            this.flpAksi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.flpAksi.AutoSize = true;
+            this.flpAksi.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.flpAksi.BackColor = System.Drawing.Color.White;
+            this.flpAksi.Controls.Add(this.btnRefresh);
+            this.flpAksi.Controls.Add(this.pnlAksiDivider);
+            this.flpAksi.Controls.Add(this.btnExcel);
+            this.flpAksi.Controls.Add(this.btnCsv);
+            this.flpAksi.Controls.Add(this.btnPdf);
+            this.flpAksi.Controls.Add(this.btnPrint);
+            this.flpAksi.Controls.Add(this.btnPreview);
+            this.flpAksi.Location = new System.Drawing.Point(338, 16);
+            this.flpAksi.Margin = new System.Windows.Forms.Padding(0);
+            this.flpAksi.Name = "flpAksi";
+            this.flpAksi.Size = new System.Drawing.Size(709, 40);
+            this.flpAksi.TabIndex = 8;
+            this.flpAksi.WrapContents = false;
             // 
             // btnRefresh
             // 
-            this.btnRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRefresh.BackColor = System.Drawing.Color.White;
             this.btnRefresh.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(213)))), ((int)(((byte)(225)))));
             this.btnRefresh.BorderRadius = 10;
@@ -966,12 +911,106 @@
             this.btnRefresh.Font = new System.Drawing.Font("Segoe UI Semibold", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefresh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(65)))), ((int)(((byte)(85)))));
             this.btnRefresh.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
-            this.btnRefresh.Location = new System.Drawing.Point(815, 16);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(0, 0, 12, 0);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(112, 40);
-            this.btnRefresh.TabIndex = 9;
-            this.btnRefresh.Text = "↻  Refresh";
+            this.btnRefresh.Size = new System.Drawing.Size(108, 40);
+            this.btnRefresh.TabIndex = 0;
+            this.btnRefresh.Text = "\u21BB  Refresh";
+            this.toolTip1.SetToolTip(this.btnRefresh, "Muat ulang data dan reset filter");
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // pnlAksiDivider
+            // 
+            this.pnlAksiDivider.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
+            this.pnlAksiDivider.Margin = new System.Windows.Forms.Padding(0, 8, 12, 8);
+            this.pnlAksiDivider.Name = "pnlAksiDivider";
+            this.pnlAksiDivider.Size = new System.Drawing.Size(1, 24);
+            this.pnlAksiDivider.TabIndex = 1;
+            // 
+            // btnExcel
+            // 
+            this.btnExcel.BackColor = System.Drawing.Color.White;
+            this.btnExcel.BorderRadius = 10;
+            this.btnExcel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExcel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(163)))), ((int)(((byte)(74)))));
+            this.btnExcel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcel.ForeColor = System.Drawing.Color.White;
+            this.btnExcel.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(128)))), ((int)(((byte)(61)))));
+            this.btnExcel.Margin = new System.Windows.Forms.Padding(0, 0, 8, 0);
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.Size = new System.Drawing.Size(108, 40);
+            this.btnExcel.TabIndex = 2;
+            this.btnExcel.Text = "Excel";
+            this.toolTip1.SetToolTip(this.btnExcel, "Ekspor ke Excel (.xlsx)");
+            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
+            // 
+            // btnCsv
+            // 
+            this.btnCsv.BackColor = System.Drawing.Color.White;
+            this.btnCsv.BorderRadius = 10;
+            this.btnCsv.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCsv.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(148)))), ((int)(((byte)(136)))));
+            this.btnCsv.Font = new System.Drawing.Font("Segoe UI Semibold", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCsv.ForeColor = System.Drawing.Color.White;
+            this.btnCsv.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(118)))), ((int)(((byte)(110)))));
+            this.btnCsv.Margin = new System.Windows.Forms.Padding(0, 0, 8, 0);
+            this.btnCsv.Name = "btnCsv";
+            this.btnCsv.Size = new System.Drawing.Size(100, 40);
+            this.btnCsv.TabIndex = 3;
+            this.btnCsv.Text = "CSV";
+            this.toolTip1.SetToolTip(this.btnCsv, "Ekspor ke CSV (.csv)");
+            this.btnCsv.Click += new System.EventHandler(this.btnCsv_Click);
+            // 
+            // btnPdf
+            // 
+            this.btnPdf.BackColor = System.Drawing.Color.White;
+            this.btnPdf.BorderRadius = 10;
+            this.btnPdf.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPdf.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.btnPdf.Font = new System.Drawing.Font("Segoe UI Semibold", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPdf.ForeColor = System.Drawing.Color.White;
+            this.btnPdf.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.btnPdf.Margin = new System.Windows.Forms.Padding(0, 0, 8, 0);
+            this.btnPdf.Name = "btnPdf";
+            this.btnPdf.Size = new System.Drawing.Size(100, 40);
+            this.btnPdf.TabIndex = 4;
+            this.btnPdf.Text = "PDF";
+            this.toolTip1.SetToolTip(this.btnPdf, "Ekspor ke PDF (.pdf)");
+            this.btnPdf.Click += new System.EventHandler(this.btnPdf_Click);
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.BackColor = System.Drawing.Color.White;
+            this.btnPrint.BorderRadius = 10;
+            this.btnPrint.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPrint.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(85)))), ((int)(((byte)(105)))));
+            this.btnPrint.Font = new System.Drawing.Font("Segoe UI Semibold", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrint.ForeColor = System.Drawing.Color.White;
+            this.btnPrint.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(65)))), ((int)(((byte)(85)))));
+            this.btnPrint.Margin = new System.Windows.Forms.Padding(0, 0, 8, 0);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(108, 40);
+            this.btnPrint.TabIndex = 5;
+            this.btnPrint.Text = "Cetak";
+            this.toolTip1.SetToolTip(this.btnPrint, "Cetak langsung ke printer");
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
+            // btnPreview
+            // 
+            this.btnPreview.BackColor = System.Drawing.Color.White;
+            this.btnPreview.BorderRadius = 10;
+            this.btnPreview.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPreview.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(102)))), ((int)(((byte)(241)))));
+            this.btnPreview.Font = new System.Drawing.Font("Segoe UI Semibold", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPreview.ForeColor = System.Drawing.Color.White;
+            this.btnPreview.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(70)))), ((int)(((byte)(229)))));
+            this.btnPreview.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.btnPreview.Name = "btnPreview";
+            this.btnPreview.Size = new System.Drawing.Size(128, 40);
+            this.btnPreview.TabIndex = 6;
+            this.btnPreview.Text = "Pratinjau";
+            this.toolTip1.SetToolTip(this.btnPreview, "Lihat pratinjau sebelum mencetak");
+            this.btnPreview.Click += new System.EventHandler(this.btnPreview_Click);
             // 
             // lblDataSubtitle
             // 
@@ -981,7 +1020,7 @@
             this.lblDataSubtitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
             this.lblDataSubtitle.Location = new System.Drawing.Point(21, 40);
             this.lblDataSubtitle.Name = "lblDataSubtitle";
-            this.lblDataSubtitle.Size = new System.Drawing.Size(234, 15);
+            this.lblDataSubtitle.Size = new System.Drawing.Size(296, 20);
             this.lblDataSubtitle.TabIndex = 10;
             this.lblDataSubtitle.Text = "Daftar rekapitulasi kehadiran siswa Prakerin";
             // 
@@ -993,9 +1032,94 @@
             this.lblDataTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
             this.lblDataTitle.Location = new System.Drawing.Point(20, 16);
             this.lblDataTitle.Name = "lblDataTitle";
-            this.lblDataTitle.Size = new System.Drawing.Size(106, 21);
+            this.lblDataTitle.Size = new System.Drawing.Size(132, 28);
             this.lblDataTitle.TabIndex = 11;
             this.lblDataTitle.Text = "Data Laporan";
+            // 
+            // colNo
+            // 
+            this.colNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colNo.HeaderText = "No";
+            this.colNo.MinimumWidth = 6;
+            this.colNo.Name = "colNo";
+            this.colNo.ReadOnly = true;
+            this.colNo.Width = 64;
+            // 
+            // colIdAbsensi
+            // 
+            this.colIdAbsensi.HeaderText = "ID Absensi";
+            this.colIdAbsensi.MinimumWidth = 6;
+            this.colIdAbsensi.Name = "colIdAbsensi";
+            this.colIdAbsensi.ReadOnly = true;
+            this.colIdAbsensi.Visible = false;
+            // 
+            // colIdPrakerin
+            // 
+            this.colIdPrakerin.HeaderText = "ID Prakerin";
+            this.colIdPrakerin.MinimumWidth = 6;
+            this.colIdPrakerin.Name = "colIdPrakerin";
+            this.colIdPrakerin.ReadOnly = true;
+            this.colIdPrakerin.Visible = false;
+            // 
+            // colNIS
+            // 
+            this.colNIS.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colNIS.HeaderText = "NIS";
+            this.colNIS.MinimumWidth = 6;
+            this.colNIS.Name = "colNIS";
+            this.colNIS.ReadOnly = true;
+            this.colNIS.Width = 130;
+            // 
+            // colNama
+            // 
+            this.colNama.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colNama.HeaderText = "Nama Siswa";
+            this.colNama.MinimumWidth = 6;
+            this.colNama.Name = "colNama";
+            this.colNama.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Nama Perusahaan";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // colTanggal
+            // 
+            this.colTanggal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colTanggal.HeaderText = "Tanggal";
+            this.colTanggal.MinimumWidth = 6;
+            this.colTanggal.Name = "colTanggal";
+            this.colTanggal.ReadOnly = true;
+            this.colTanggal.Width = 150;
+            // 
+            // colJamMasuk
+            // 
+            this.colJamMasuk.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colJamMasuk.HeaderText = "Jam Masuk";
+            this.colJamMasuk.MinimumWidth = 6;
+            this.colJamMasuk.Name = "colJamMasuk";
+            this.colJamMasuk.ReadOnly = true;
+            this.colJamMasuk.Width = 130;
+            // 
+            // colJamKeluar
+            // 
+            this.colJamKeluar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colJamKeluar.HeaderText = "Jam Keluar";
+            this.colJamKeluar.MinimumWidth = 6;
+            this.colJamKeluar.Name = "colJamKeluar";
+            this.colJamKeluar.ReadOnly = true;
+            this.colJamKeluar.Width = 130;
+            // 
+            // colStatus
+            // 
+            this.colStatus.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colStatus.HeaderText = "Status";
+            this.colStatus.MinimumWidth = 6;
+            this.colStatus.Name = "colStatus";
+            this.colStatus.ReadOnly = true;
+            this.colStatus.Width = 130;
             // 
             // FlaporanPresensi
             // 
@@ -1034,6 +1158,8 @@
             this.cardAlfa.ResumeLayout(false);
             this.cardAlfa.PerformLayout();
             this.pnlAlfaIcon.ResumeLayout(false);
+            this.flpAksi.ResumeLayout(false);
+            this.flpAksi.PerformLayout();
             this.panelData.ResumeLayout(false);
             this.panelData.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVLaporan)).EndInit();
@@ -1103,17 +1229,26 @@
         private Guna.UI2.WinForms.Guna2Panel panelData;
         private System.Windows.Forms.Label lblDataTitle;
         private System.Windows.Forms.Label lblDataSubtitle;
+        private System.Windows.Forms.FlowLayoutPanel flpAksi;
         private Guna.UI2.WinForms.Guna2Button btnRefresh;
-        private Guna.UI2.WinForms.Guna2Button btnCetak;
+        private System.Windows.Forms.Panel pnlAksiDivider;
+        private Guna.UI2.WinForms.Guna2Button btnExcel;
+        private Guna.UI2.WinForms.Guna2Button btnCsv;
+        private Guna.UI2.WinForms.Guna2Button btnPdf;
+        private Guna.UI2.WinForms.Guna2Button btnPrint;
+        private Guna.UI2.WinForms.Guna2Button btnPreview;
         private System.Windows.Forms.DataGridView DGVLaporan;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn colIdAbsensi;
         private System.Windows.Forms.DataGridViewTextBoxColumn colIdPrakerin;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNIS;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNama;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTanggal;
         private System.Windows.Forms.DataGridViewTextBoxColumn colJamMasuk;
         private System.Windows.Forms.DataGridViewTextBoxColumn colJamKeluar;
         private System.Windows.Forms.DataGridViewTextBoxColumn colStatus;
+
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

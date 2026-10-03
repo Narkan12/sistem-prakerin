@@ -22,6 +22,7 @@ namespace app_prakerin
                 btnHapus.Enabled = false;
                 TampilData("");
                 DGVPenilaian.Columns["Column2"].Visible = false;
+                DGVPenilaian.Columns["Column8"].Visible = false;
             }
             catch (Exception ex)
             {
@@ -35,7 +36,7 @@ namespace app_prakerin
             {
                 DGVPenilaian.Rows.Clear();
 
-                Koneksi.CRUD($"SELECT * FROM penilaian WHERE id_penilaian LIKE '%{CariApa}%' OR id_prakerin LIKE '%{CariApa}%' OR nilai_akhir LIKE '%{CariApa}%' OR catatan LIKE '%{CariApa}%'");
+                Koneksi.CRUD($"SELECT p.id_penilaian, p.id_prakerin, s.nama AS nama_siswa, per.nama AS nama_perusahaan, pb.nama AS nama_pembimbing, p.disiplin, p.kerjasama, p.tanggung_jawab, p.inisiatif, p.keahlian, p.nilai_akhir, p.status FROM penilaian p INNER JOIN prakerin pr ON p.id_prakerin = pr.id_prakerin INNER JOIN siswa s ON pr.id_siswa = s.id_siswa INNER JOIN perusahaan per ON pr.id_perusahaan = per.id_perusahaan LEFT JOIN pembimbing pb ON pr.id_pembimbing = pb.id_pembimbing;");
 
                 int no = 1;
 
@@ -45,13 +46,16 @@ namespace app_prakerin
                         no,
                         row["id_penilaian"],
                         row["id_prakerin"],
+                        row["nama_siswa"],
+                        row["nama_perusahaan"],
+                        row["nama_pembimbing"],
                         row["disiplin"],
                         row["kerjasama"],
                         row["tanggung_jawab"],
                         row["inisiatif"],
                         row["keahlian"],
                         row["nilai_akhir"],
-                        row["catatan"]
+                        row["status"]
                     );
 
                     no++;
@@ -118,7 +122,7 @@ namespace app_prakerin
 
                 if (modal.ShowDialog() == DialogResult.OK)
                 {
-                    Koneksi.CRUD($"INSERT INTO penilaian (id_prakerin, disiplin, kerjasama, tanggung_jawab, inisiatif, keahlian, nilai_akhir, catatan) VALUES('{modal.IdPrakerin}','{modal.Disiplin}','{modal.Kerjasama}','{modal.TanggungJawab}','{modal.Inisiatif}','{modal.Keahlian}','{modal.NilaiAkhir}','{modal.Catatan}')");
+                    Koneksi.CRUD($"INSERT INTO penilaian (id_prakerin, disiplin, kerjasama, tanggung_jawab, inisiatif, keahlian, nilai_akhir, status) VALUES('{modal.IdPrakerin}','{modal.Disiplin}','{modal.Kerjasama}','{modal.TanggungJawab}','{modal.Inisiatif}','{modal.Keahlian}','{modal.NilaiAkhir}','{modal.Status}')");
                     MessageBox.Show("Data berhasil ditambahkan!", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     FMaster.CatatAktivitas($"Tambah penilaian: {modal.IdPrakerin}");
                     TampilData("");
@@ -156,12 +160,12 @@ namespace app_prakerin
                     modal.Inisiatif = row["inisiatif"].ToString();
                     modal.Keahlian = row["keahlian"].ToString();
                     modal.NilaiAkhir = row["nilai_akhir"].ToString();
-                    modal.Catatan = row["catatan"].ToString();
+                    modal.Status = row["status"].ToString();
                 }
 
                 if (modal.ShowDialog() == DialogResult.OK)
                 {
-                    Koneksi.CRUD($"UPDATE penilaian SET id_prakerin='{modal.IdPrakerin}', disiplin='{modal.Disiplin}', kerjasama='{modal.Kerjasama}', tanggung_jawab='{modal.TanggungJawab}', inisiatif='{modal.Inisiatif}', keahlian='{modal.Keahlian}', nilai_akhir='{modal.NilaiAkhir}', catatan='{modal.Catatan}' WHERE id_penilaian='{idPenilaian}'");
+                    Koneksi.CRUD($"UPDATE penilaian SET id_prakerin='{modal.IdPrakerin}', disiplin='{modal.Disiplin}', kerjasama='{modal.Kerjasama}', tanggung_jawab='{modal.TanggungJawab}', inisiatif='{modal.Inisiatif}', keahlian='{modal.Keahlian}', nilai_akhir='{modal.NilaiAkhir}', status='{modal.Status}' WHERE id_penilaian='{idPenilaian}'");
                     MessageBox.Show("Data berhasil diupdate!", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     FMaster.CatatAktivitas($"Edit penilaian: {modal.IdPrakerin}");
                     Bersih();
@@ -208,9 +212,9 @@ namespace app_prakerin
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             TampilData("");
-            TXTSearch.Text   = "";
-            idPenilaian      = "";
-            btnEdit.Enabled  = false;
+            TXTSearch.Text = "";
+            idPenilaian = "";
+            btnEdit.Enabled = false;
             btnHapus.Enabled = false;
         }
     }

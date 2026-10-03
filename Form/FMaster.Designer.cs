@@ -58,6 +58,7 @@
             this.BTNL = new Guna.UI2.WinForms.Guna2Button();
             this.PNLDropdown2 = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Button16 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button17 = new Guna.UI2.WinForms.Guna2Button();
             this.PNLHeader = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2PictureBox6 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -136,6 +137,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.PNLHeroDot1 = new Guna.UI2.WinForms.Guna2Panel();
             this.PNLHeroDot2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Button18 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button19 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button20 = new Guna.UI2.WinForms.Guna2Button();
             this.PNLSidebar.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
@@ -773,12 +777,16 @@
             // 
             this.PNLDropdown2.BackColor = System.Drawing.Color.Transparent;
             this.PNLDropdown2.Controls.Add(this.guna2Button16);
+            this.PNLDropdown2.Controls.Add(this.guna2Button17);
+            this.PNLDropdown2.Controls.Add(this.guna2Button18);
+            this.PNLDropdown2.Controls.Add(this.guna2Button19);
+            this.PNLDropdown2.Controls.Add(this.guna2Button20);
             this.PNLDropdown2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.PNLDropdown2.Location = new System.Drawing.Point(3, 684);
             this.PNLDropdown2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PNLDropdown2.Name = "PNLDropdown2";
             this.PNLDropdown2.Padding = new System.Windows.Forms.Padding(3);
-            this.PNLDropdown2.Size = new System.Drawing.Size(208, 52);
+            this.PNLDropdown2.Size = new System.Drawing.Size(208, 239);
             this.PNLDropdown2.TabIndex = 47;
             this.PNLDropdown2.Visible = false;
             this.PNLDropdown2.WrapContents = false;
@@ -808,6 +816,32 @@
             this.guna2Button16.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button16.UseTransparentBackground = true;
             this.guna2Button16.Click += new System.EventHandler(this.guna2Button16_Click);
+            // 
+            // guna2Button17
+            // 
+            this.guna2Button17.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button17.BorderRadius = 8;
+            this.guna2Button17.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2Button17.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button17.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button17.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button17.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button17.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button17.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.guna2Button17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
+            this.guna2Button17.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(63)))), ((int)(((byte)(143)))));
+            this.guna2Button17.HoverState.ForeColor = System.Drawing.Color.White;
+            this.guna2Button17.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button17.ImageOffset = new System.Drawing.Point(-5, 0);
+            this.guna2Button17.Location = new System.Drawing.Point(6, 51);
+            this.guna2Button17.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Button17.Name = "guna2Button17";
+            this.guna2Button17.Size = new System.Drawing.Size(208, 42);
+            this.guna2Button17.TabIndex = 47;
+            this.guna2Button17.Text = "Laporan Monitoring";
+            this.guna2Button17.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button17.UseTransparentBackground = true;
+            this.guna2Button17.Click += new System.EventHandler(this.guna2Button17_Click);
             // 
             // PNLHeader
             // 
@@ -1844,6 +1878,84 @@
             this.PNLHeroDot2.Size = new System.Drawing.Size(44, 44);
             this.PNLHeroDot2.TabIndex = 2;
             // 
+            // guna2Button18
+            // 
+            this.guna2Button18.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button18.BorderRadius = 8;
+            this.guna2Button18.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2Button18.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button18.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button18.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button18.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button18.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button18.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.guna2Button18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
+            this.guna2Button18.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(63)))), ((int)(((byte)(143)))));
+            this.guna2Button18.HoverState.ForeColor = System.Drawing.Color.White;
+            this.guna2Button18.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button18.ImageOffset = new System.Drawing.Point(-5, 0);
+            this.guna2Button18.Location = new System.Drawing.Point(6, 97);
+            this.guna2Button18.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Button18.Name = "guna2Button18";
+            this.guna2Button18.Size = new System.Drawing.Size(208, 42);
+            this.guna2Button18.TabIndex = 48;
+            this.guna2Button18.Text = "Laporan Prakerin";
+            this.guna2Button18.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button18.UseTransparentBackground = true;
+            this.guna2Button18.Click += new System.EventHandler(this.guna2Button18_Click);
+            // 
+            // guna2Button19
+            // 
+            this.guna2Button19.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button19.BorderRadius = 8;
+            this.guna2Button19.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2Button19.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button19.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button19.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button19.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button19.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button19.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.guna2Button19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
+            this.guna2Button19.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(63)))), ((int)(((byte)(143)))));
+            this.guna2Button19.HoverState.ForeColor = System.Drawing.Color.White;
+            this.guna2Button19.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button19.ImageOffset = new System.Drawing.Point(-5, 0);
+            this.guna2Button19.Location = new System.Drawing.Point(6, 143);
+            this.guna2Button19.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Button19.Name = "guna2Button19";
+            this.guna2Button19.Size = new System.Drawing.Size(208, 42);
+            this.guna2Button19.TabIndex = 49;
+            this.guna2Button19.Text = "Laporan Jurnal";
+            this.guna2Button19.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button19.UseTransparentBackground = true;
+            this.guna2Button19.Click += new System.EventHandler(this.guna2Button19_Click);
+            // 
+            // guna2Button20
+            // 
+            this.guna2Button20.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button20.BorderRadius = 8;
+            this.guna2Button20.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2Button20.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button20.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button20.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button20.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button20.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button20.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.guna2Button20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
+            this.guna2Button20.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(63)))), ((int)(((byte)(143)))));
+            this.guna2Button20.HoverState.ForeColor = System.Drawing.Color.White;
+            this.guna2Button20.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button20.ImageOffset = new System.Drawing.Point(-5, 0);
+            this.guna2Button20.Location = new System.Drawing.Point(6, 189);
+            this.guna2Button20.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Button20.Name = "guna2Button20";
+            this.guna2Button20.Size = new System.Drawing.Size(208, 42);
+            this.guna2Button20.TabIndex = 50;
+            this.guna2Button20.Text = "Laporan Penilaian";
+            this.guna2Button20.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button20.UseTransparentBackground = true;
+            this.guna2Button20.Click += new System.EventHandler(this.guna2Button20_Click);
+            // 
             // FMaster
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -2021,5 +2133,9 @@
         private Guna.UI2.WinForms.Guna2Button BTNL;
         private System.Windows.Forms.FlowLayoutPanel PNLDropdown2;
         private Guna.UI2.WinForms.Guna2Button guna2Button16;
+        private Guna.UI2.WinForms.Guna2Button guna2Button17;
+        private Guna.UI2.WinForms.Guna2Button guna2Button18;
+        private Guna.UI2.WinForms.Guna2Button guna2Button19;
+        private Guna.UI2.WinForms.Guna2Button guna2Button20;
     }
 }

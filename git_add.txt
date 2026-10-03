@@ -1,0 +1,10 @@
+﻿git : warning: in the working copy of 
+'app_prakerin/Form/FormCRUDMonitoring.cs', LF will be replaced by CRLF the 
+next time Git touches it
+At line:1 char:1
++ git -C "e:\all\DesktopC#-12\Progress_V2\sistem-prakerin-master" add F ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (warning: in the... Git touches it 
+   :String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 

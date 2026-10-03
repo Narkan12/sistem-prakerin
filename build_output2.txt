@@ -1,0 +1,1 @@
+﻿e:\all\DesktopC#-12\Progress_V2\sistem-prakerin-master\Helper.cs(234,1): error CS1022: Type or namespace definition, or end-of-file expected [e:\all\DesktopC#-12\Progress_V2\sistem-prakerin-master\app_prakerin.csproj]
