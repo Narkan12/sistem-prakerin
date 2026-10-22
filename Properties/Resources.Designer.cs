@@ -63,6 +63,16 @@ namespace app_prakerin.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap banner_sekolah {
+            get {
+                object obj = ResourceManager.GetObject("banner_sekolah", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Error_48px {
             get {
                 object obj = ResourceManager.GetObject("Error_48px", resourceCulture);

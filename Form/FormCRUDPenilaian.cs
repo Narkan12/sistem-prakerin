@@ -330,5 +330,7 @@ namespace app_prakerin
             this.DialogResult = DialogResult.Cancel;
             this.Close();
         }
+
+       
     }
 }

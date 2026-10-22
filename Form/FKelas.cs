@@ -1,7 +1,15 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Windows.Forms;
 using app_prakerin.Config;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.IO;
+using CrystalDecisions.CrystalReports.Engine;
+using CrystalDecisions.Shared;
 
 namespace app_prakerin
 {
@@ -215,6 +223,18 @@ namespace app_prakerin
         {
             TampilData("");
             TXTSearch.Text = "";
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            ReportDocument rpt = new ReportDocument();
+            rpt.Load("RPresensi.rpt");
+
+            string pdfPath = Path.Combine(Path.GetTempPath(), "Laporan_Kelas.pdf");
+            rpt.ExportToDisk(ExportFormatType.PortableDocFormat, pdfPath);
+
+            System.Diagnostics.Process.Start(pdfPath);
+
         }
     }
 }

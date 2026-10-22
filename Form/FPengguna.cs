@@ -176,7 +176,7 @@ namespace app_prakerin
                 {
                     DataRow row = Koneksi.ds.Tables[0].Rows[0];
                     modal.Username = row["username"].ToString();
-                    modal.Password = "";   // dikosongkan agar hash lama tidak di-MD5 ulang
+                    modal.Password = "";  
                     modal.Role = row["nama_role"].ToString();
                     modal.Status = row["status"].ToString();
                 }

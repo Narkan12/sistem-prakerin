@@ -37,9 +37,9 @@ namespace app_prakerin
             this.label8 = new System.Windows.Forms.Label();
             this.TXTStatus = new Guna.UI2.WinForms.Guna2TextBox();
             this.pnlFooter = new System.Windows.Forms.Panel();
-            this.pnlFooterLine = new System.Windows.Forms.Panel();
-            this.BTNSimpan = new Guna.UI2.WinForms.Guna2Button();
             this.BTNBatal = new Guna.UI2.WinForms.Guna2Button();
+            this.BTNSimpan = new Guna.UI2.WinForms.Guna2Button();
+            this.pnlFooterLine = new System.Windows.Forms.Panel();
             this.guna2Panel1.SuspendLayout();
             this.pnlFooter.SuspendLayout();
             this.SuspendLayout();
@@ -64,7 +64,7 @@ namespace app_prakerin
             this.lblJudul.ForeColor = System.Drawing.Color.White;
             this.lblJudul.Location = new System.Drawing.Point(28, 20);
             this.lblJudul.Name = "lblJudul";
-            this.lblJudul.Size = new System.Drawing.Size(240, 28);
+            this.lblJudul.Size = new System.Drawing.Size(332, 41);
             this.lblJudul.TabIndex = 0;
             this.lblJudul.Text = "Tambah Data Penilaian";
             // 
@@ -75,7 +75,7 @@ namespace app_prakerin
             this.lblSub.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
             this.lblSub.Location = new System.Drawing.Point(30, 54);
             this.lblSub.Name = "lblSub";
-            this.lblSub.Size = new System.Drawing.Size(300, 15);
+            this.lblSub.Size = new System.Drawing.Size(492, 25);
             this.lblSub.TabIndex = 1;
             this.lblSub.Text = "Nilai akhir & predikat dihitung otomatis dari rata-rata kategori.";
             // 
@@ -106,7 +106,7 @@ namespace app_prakerin
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(65)))), ((int)(((byte)(85)))));
             this.label1.Location = new System.Drawing.Point(28, 110);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 17);
+            this.label1.Size = new System.Drawing.Size(142, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "Data Prakerin *";
             // 
@@ -118,12 +118,12 @@ namespace app_prakerin
             this.TXTIDPrakerin.BorderRadius = 10;
             this.TXTIDPrakerin.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.TXTIDPrakerin.DefaultText = "";
-            this.TXTIDPrakerin.FillColor = System.Drawing.Color.White;
             this.TXTIDPrakerin.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(99)))), ((int)(((byte)(235)))));
             this.TXTIDPrakerin.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.TXTIDPrakerin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             this.TXTIDPrakerin.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
             this.TXTIDPrakerin.Location = new System.Drawing.Point(28, 134);
+            this.TXTIDPrakerin.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.TXTIDPrakerin.Name = "TXTIDPrakerin";
             this.TXTIDPrakerin.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
             this.TXTIDPrakerin.PlaceholderText = "Ketik ID atau nama siswa...";
@@ -138,7 +138,7 @@ namespace app_prakerin
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(65)))), ((int)(((byte)(85)))));
             this.label2.Location = new System.Drawing.Point(28, 196);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(140, 17);
+            this.label2.Size = new System.Drawing.Size(155, 25);
             this.label2.TabIndex = 3;
             this.label2.Text = "Disiplin (0-100) *";
             // 
@@ -149,7 +149,7 @@ namespace app_prakerin
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(65)))), ((int)(((byte)(85)))));
             this.label3.Location = new System.Drawing.Point(288, 196);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(165, 17);
+            this.label3.Size = new System.Drawing.Size(187, 25);
             this.label3.TabIndex = 5;
             this.label3.Text = "Kerja Sama (0-100) *";
             // 
@@ -161,12 +161,12 @@ namespace app_prakerin
             this.TXTDisiplin.BorderRadius = 10;
             this.TXTDisiplin.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.TXTDisiplin.DefaultText = "";
-            this.TXTDisiplin.FillColor = System.Drawing.Color.White;
             this.TXTDisiplin.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(99)))), ((int)(((byte)(235)))));
             this.TXTDisiplin.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.TXTDisiplin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             this.TXTDisiplin.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
             this.TXTDisiplin.Location = new System.Drawing.Point(28, 220);
+            this.TXTDisiplin.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.TXTDisiplin.Name = "TXTDisiplin";
             this.TXTDisiplin.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
             this.TXTDisiplin.PlaceholderText = "0 - 100";
@@ -182,12 +182,12 @@ namespace app_prakerin
             this.TXTKerjasama.BorderRadius = 10;
             this.TXTKerjasama.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.TXTKerjasama.DefaultText = "";
-            this.TXTKerjasama.FillColor = System.Drawing.Color.White;
             this.TXTKerjasama.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(99)))), ((int)(((byte)(235)))));
             this.TXTKerjasama.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.TXTKerjasama.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             this.TXTKerjasama.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
             this.TXTKerjasama.Location = new System.Drawing.Point(288, 220);
+            this.TXTKerjasama.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.TXTKerjasama.Name = "TXTKerjasama";
             this.TXTKerjasama.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
             this.TXTKerjasama.PlaceholderText = "0 - 100";
@@ -202,7 +202,7 @@ namespace app_prakerin
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(65)))), ((int)(((byte)(85)))));
             this.label4.Location = new System.Drawing.Point(28, 282);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(195, 17);
+            this.label4.Size = new System.Drawing.Size(233, 25);
             this.label4.TabIndex = 7;
             this.label4.Text = "Tanggung Jawab (0-100) *";
             // 
@@ -213,7 +213,7 @@ namespace app_prakerin
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(65)))), ((int)(((byte)(85)))));
             this.label5.Location = new System.Drawing.Point(288, 282);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(150, 17);
+            this.label5.Size = new System.Drawing.Size(155, 25);
             this.label5.TabIndex = 9;
             this.label5.Text = "Inisiatif (0-100) *";
             // 
@@ -225,12 +225,12 @@ namespace app_prakerin
             this.TXTTanggungJawab.BorderRadius = 10;
             this.TXTTanggungJawab.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.TXTTanggungJawab.DefaultText = "";
-            this.TXTTanggungJawab.FillColor = System.Drawing.Color.White;
             this.TXTTanggungJawab.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(99)))), ((int)(((byte)(235)))));
             this.TXTTanggungJawab.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.TXTTanggungJawab.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             this.TXTTanggungJawab.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
             this.TXTTanggungJawab.Location = new System.Drawing.Point(28, 306);
+            this.TXTTanggungJawab.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.TXTTanggungJawab.Name = "TXTTanggungJawab";
             this.TXTTanggungJawab.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
             this.TXTTanggungJawab.PlaceholderText = "0 - 100";
@@ -246,12 +246,12 @@ namespace app_prakerin
             this.TXTInisiatif.BorderRadius = 10;
             this.TXTInisiatif.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.TXTInisiatif.DefaultText = "";
-            this.TXTInisiatif.FillColor = System.Drawing.Color.White;
             this.TXTInisiatif.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(99)))), ((int)(((byte)(235)))));
             this.TXTInisiatif.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.TXTInisiatif.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             this.TXTInisiatif.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
             this.TXTInisiatif.Location = new System.Drawing.Point(288, 306);
+            this.TXTInisiatif.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.TXTInisiatif.Name = "TXTInisiatif";
             this.TXTInisiatif.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
             this.TXTInisiatif.PlaceholderText = "0 - 100";
@@ -266,7 +266,7 @@ namespace app_prakerin
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(65)))), ((int)(((byte)(85)))));
             this.label6.Location = new System.Drawing.Point(28, 368);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(155, 17);
+            this.label6.Size = new System.Drawing.Size(165, 25);
             this.label6.TabIndex = 11;
             this.label6.Text = "Keahlian (0-100) *";
             // 
@@ -277,7 +277,7 @@ namespace app_prakerin
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(99)))), ((int)(((byte)(235)))));
             this.label7.Location = new System.Drawing.Point(288, 368);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(170, 17);
+            this.label7.Size = new System.Drawing.Size(196, 25);
             this.label7.TabIndex = 13;
             this.label7.Text = "Nilai Akhir (otomatis)";
             // 
@@ -289,12 +289,12 @@ namespace app_prakerin
             this.TXTKeahlian.BorderRadius = 10;
             this.TXTKeahlian.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.TXTKeahlian.DefaultText = "";
-            this.TXTKeahlian.FillColor = System.Drawing.Color.White;
             this.TXTKeahlian.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(99)))), ((int)(((byte)(235)))));
             this.TXTKeahlian.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.TXTKeahlian.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             this.TXTKeahlian.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
             this.TXTKeahlian.Location = new System.Drawing.Point(28, 392);
+            this.TXTKeahlian.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.TXTKeahlian.Name = "TXTKeahlian";
             this.TXTKeahlian.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
             this.TXTKeahlian.PlaceholderText = "0 - 100";
@@ -307,12 +307,15 @@ namespace app_prakerin
             this.TXTNilaiAkhir.BackColor = System.Drawing.Color.White;
             this.TXTNilaiAkhir.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(219)))), ((int)(((byte)(254)))));
             this.TXTNilaiAkhir.BorderRadius = 10;
+            this.TXTNilaiAkhir.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.TXTNilaiAkhir.DefaultText = "";
             this.TXTNilaiAkhir.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
             this.TXTNilaiAkhir.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXTNilaiAkhir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(64)))), ((int)(((byte)(175)))));
             this.TXTNilaiAkhir.Location = new System.Drawing.Point(288, 392);
+            this.TXTNilaiAkhir.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.TXTNilaiAkhir.Name = "TXTNilaiAkhir";
+            this.TXTNilaiAkhir.PlaceholderText = "";
             this.TXTNilaiAkhir.ReadOnly = true;
             this.TXTNilaiAkhir.SelectedText = "";
             this.TXTNilaiAkhir.Size = new System.Drawing.Size(244, 42);
@@ -326,7 +329,7 @@ namespace app_prakerin
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(99)))), ((int)(((byte)(235)))));
             this.label8.Location = new System.Drawing.Point(28, 454);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(170, 17);
+            this.label8.Size = new System.Drawing.Size(246, 25);
             this.label8.TabIndex = 15;
             this.label8.Text = "Status / Predikat (otomatis)";
             // 
@@ -335,12 +338,15 @@ namespace app_prakerin
             this.TXTStatus.BackColor = System.Drawing.Color.White;
             this.TXTStatus.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(243)))), ((int)(((byte)(208)))));
             this.TXTStatus.BorderRadius = 10;
+            this.TXTStatus.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.TXTStatus.DefaultText = "";
             this.TXTStatus.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(253)))), ((int)(((byte)(245)))));
             this.TXTStatus.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXTStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(95)))), ((int)(((byte)(70)))));
             this.TXTStatus.Location = new System.Drawing.Point(28, 478);
+            this.TXTStatus.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.TXTStatus.Name = "TXTStatus";
+            this.TXTStatus.PlaceholderText = "";
             this.TXTStatus.ReadOnly = true;
             this.TXTStatus.SelectedText = "";
             this.TXTStatus.Size = new System.Drawing.Size(504, 42);
@@ -359,31 +365,6 @@ namespace app_prakerin
             this.pnlFooter.Size = new System.Drawing.Size(560, 72);
             this.pnlFooter.TabIndex = 17;
             // 
-            // pnlFooterLine
-            // 
-            this.pnlFooterLine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
-            this.pnlFooterLine.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlFooterLine.Location = new System.Drawing.Point(0, 0);
-            this.pnlFooterLine.Name = "pnlFooterLine";
-            this.pnlFooterLine.Size = new System.Drawing.Size(560, 1);
-            this.pnlFooterLine.TabIndex = 2;
-            // 
-            // BTNSimpan
-            // 
-            this.BTNSimpan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
-            this.BTNSimpan.BorderRadius = 10;
-            this.BTNSimpan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BTNSimpan.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(99)))), ((int)(((byte)(235)))));
-            this.BTNSimpan.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTNSimpan.ForeColor = System.Drawing.Color.White;
-            this.BTNSimpan.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(78)))), ((int)(((byte)(216)))));
-            this.BTNSimpan.Location = new System.Drawing.Point(392, 15);
-            this.BTNSimpan.Name = "BTNSimpan";
-            this.BTNSimpan.Size = new System.Drawing.Size(140, 42);
-            this.BTNSimpan.TabIndex = 17;
-            this.BTNSimpan.Text = "Simpan";
-            this.BTNSimpan.Click += new System.EventHandler(this.BTNSimpan_Click);
-            // 
             // BTNBatal
             // 
             this.BTNBatal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
@@ -401,6 +382,31 @@ namespace app_prakerin
             this.BTNBatal.TabIndex = 18;
             this.BTNBatal.Text = "Batal";
             this.BTNBatal.Click += new System.EventHandler(this.BTNBatal_Click);
+            // 
+            // BTNSimpan
+            // 
+            this.BTNSimpan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.BTNSimpan.BorderRadius = 10;
+            this.BTNSimpan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BTNSimpan.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(99)))), ((int)(((byte)(235)))));
+            this.BTNSimpan.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNSimpan.ForeColor = System.Drawing.Color.White;
+            this.BTNSimpan.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(78)))), ((int)(((byte)(216)))));
+            this.BTNSimpan.Location = new System.Drawing.Point(392, 15);
+            this.BTNSimpan.Name = "BTNSimpan";
+            this.BTNSimpan.Size = new System.Drawing.Size(140, 42);
+            this.BTNSimpan.TabIndex = 17;
+            this.BTNSimpan.Text = "Simpan";
+            this.BTNSimpan.Click += new System.EventHandler(this.BTNSimpan_Click);
+            // 
+            // pnlFooterLine
+            // 
+            this.pnlFooterLine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
+            this.pnlFooterLine.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlFooterLine.Location = new System.Drawing.Point(0, 0);
+            this.pnlFooterLine.Name = "pnlFooterLine";
+            this.pnlFooterLine.Size = new System.Drawing.Size(560, 1);
+            this.pnlFooterLine.TabIndex = 2;
             // 
             // FormCRUDPenilaian
             // 
@@ -434,6 +440,7 @@ namespace app_prakerin
             this.pnlFooter.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion
