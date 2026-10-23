@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FKelas));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlPageHeader = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.pnlPageIcon = new Guna.UI2.WinForms.Guna2Panel();
             this.lblPageIcon = new System.Windows.Forms.Label();
             this.lblBreadcrumb = new System.Windows.Forms.Label();
@@ -60,7 +61,6 @@
             this.TXTNama = new Guna.UI2.WinForms.Guna2TextBox();
             this.TXTKeterangan = new Guna.UI2.WinForms.Guna2TextBox();
             this.CMBJurusan = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.pnlPageHeader.SuspendLayout();
             this.pnlPageIcon.SuspendLayout();
             this.panelTop.SuspendLayout();
@@ -72,7 +72,6 @@
             // 
             this.pnlPageHeader.BackColor = System.Drawing.Color.Transparent;
             this.pnlPageHeader.BorderRadius = 16;
-            this.pnlPageHeader.Controls.Add(this.guna2Button1);
             this.pnlPageHeader.Controls.Add(this.pnlPageIcon);
             this.pnlPageHeader.Controls.Add(this.lblBreadcrumb);
             this.pnlPageHeader.Controls.Add(this.lblPageTitle);
@@ -85,6 +84,26 @@
             this.pnlPageHeader.Name = "pnlPageHeader";
             this.pnlPageHeader.Size = new System.Drawing.Size(1024, 112);
             this.pnlPageHeader.TabIndex = 10;
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(213)))), ((int)(((byte)(225)))));
+            this.guna2Button1.BorderRadius = 10;
+            this.guna2Button1.BorderThickness = 1;
+            this.guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2Button1.FillColor = System.Drawing.Color.White;
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.5F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(65)))), ((int)(((byte)(85)))));
+            this.guna2Button1.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
+            this.guna2Button1.Location = new System.Drawing.Point(902, 294);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(112, 40);
+            this.guna2Button1.TabIndex = 100;
+            this.guna2Button1.Text = "🖨️  Cetak";
+            this.guna2Button1.UseTransparentBackground = true;
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // pnlPageIcon
             // 
@@ -327,6 +346,7 @@
             this.pnlTabel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
             this.pnlTabel.BorderRadius = 14;
             this.pnlTabel.BorderThickness = 1;
+            this.pnlTabel.Controls.Add(this.guna2Button1);
             this.pnlTabel.Controls.Add(this.DGVRole);
             this.pnlTabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlTabel.FillColor = System.Drawing.Color.White;
@@ -340,22 +360,22 @@
             // 
             this.DGVRole.AllowUserToAddRows = false;
             this.DGVRole.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
-            this.DGVRole.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.DGVRole.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.DGVRole.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DGVRole.BackgroundColor = System.Drawing.Color.White;
             this.DGVRole.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DGVRole.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DGVRole.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(64)))), ((int)(((byte)(175)))));
-            dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(14, 0, 12, 0);
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(64)))), ((int)(((byte)(175)))));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGVRole.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(64)))), ((int)(((byte)(175)))));
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(14, 0, 12, 0);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(64)))), ((int)(((byte)(175)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGVRole.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.DGVRole.ColumnHeadersHeight = 46;
             this.DGVRole.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.DGVRole.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -364,15 +384,15 @@
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.Column3});
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
-            dataGridViewCellStyle9.Padding = new System.Windows.Forms.Padding(14, 0, 12, 0);
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(58)))), ((int)(((byte)(138)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGVRole.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(14, 0, 12, 0);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(58)))), ((int)(((byte)(138)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGVRole.DefaultCellStyle = dataGridViewCellStyle3;
             this.DGVRole.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DGVRole.EnableHeadersVisualStyles = false;
             this.DGVRole.Font = new System.Drawing.Font("Segoe UI", 10F);
@@ -464,26 +484,6 @@
             this.CMBJurusan.Size = new System.Drawing.Size(10, 28);
             this.CMBJurusan.TabIndex = 93;
             this.CMBJurusan.DropDown += new System.EventHandler(this.CMBJurusan_DropDown);
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(213)))), ((int)(((byte)(225)))));
-            this.guna2Button1.BorderRadius = 10;
-            this.guna2Button1.BorderThickness = 1;
-            this.guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button1.FillColor = System.Drawing.Color.White;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.5F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(65)))), ((int)(((byte)(85)))));
-            this.guna2Button1.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
-            this.guna2Button1.Location = new System.Drawing.Point(556, 40);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(112, 40);
-            this.guna2Button1.TabIndex = 100;
-            this.guna2Button1.Text = "↻  Cetak";
-            this.guna2Button1.UseTransparentBackground = true;
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // FKelas
             // 

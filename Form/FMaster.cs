@@ -30,40 +30,6 @@ namespace app_prakerin
             "Jurnal Ditolak"
         };
 
-        // =====================================================================
-        // HAK AKSES MENU PER ROLE
-        // Kunci role = nama role (tidak peka huruf besar/kecil).
-        // Dashboard selalu bisa diakses semua role yang dikenali.
-        // Role yang tidak dikenal / kosong => hanya Dashboard (aman secara default).
-        //
-        // Admin      : semua menu.
-        // Guru       : guru pembimbing sekolah -> kelola penempatan prakerin siswa
-        //              bimbingannya, pantau jurnal & absensi, monitoring kunjungan,
-        //              penilaian, dan seluruh laporan. Tanpa Data Master.
-        // Pembimbing : pembimbing lapangan DU/DI -> verifikasi jurnal, cek absensi,
-        //              memberi penilaian, serta laporan jurnal/absensi/penilaian.
-        // Siswa      : mengisi jurnal harian dan absensi miliknya.
-        // =====================================================================
-        private static readonly Dictionary<string, string[]> AksesRole =
-            new Dictionary<string, string[]>(StringComparer.OrdinalIgnoreCase)
-        {
-            { "admin", new[] {
-                "pengguna", "role", "siswa", "guru", "kelas", "jurusan", "perusahaan", "pembimbing",
-                "prakerin", "jurnal", "absensi", "monitoring", "penilaian",
-                "lap_absensi", "lap_monitoring", "lap_prakerin", "lap_jurnal", "lap_penilaian" } },
-
-            { "guru", new[] {
-                "prakerin", "jurnal", "absensi", "monitoring", "penilaian",
-                "lap_absensi", "lap_monitoring", "lap_prakerin", "lap_jurnal", "lap_penilaian" } },
-
-            { "pembimbing", new[] {
-                "jurnal", "absensi", "penilaian",
-                "lap_absensi", "lap_jurnal", "lap_penilaian" } },
-
-            { "siswa", new[] {
-                "jurnal", "absensi" } }
-        };
-
         public FMaster()
         {
             InitializeComponent();
@@ -75,116 +41,6 @@ namespace app_prakerin
             _logAktivitas.Insert(0, new string[] { keterangan, "Oleh " + _userAktif, waktu });
             if (_logAktivitas.Count > 20)
                 _logAktivitas.RemoveAt(_logAktivitas.Count - 1);
-        }
-
-        // -------------------------------------------------------------------
-        // Pengecekan & penerapan hak akses
-        // -------------------------------------------------------------------
-        private string KunciRole()
-        {
-            string r = (Role ?? "").Trim();
-            if (r.Equals("administrator", StringComparison.OrdinalIgnoreCase))
-                r = "admin";
-            return r;
-        }
-
-        private bool PunyaAkses(string menu)
-        {
-            string[] daftar;
-            return AksesRole.TryGetValue(KunciRole(), out daftar)
-                   && Array.IndexOf(daftar, menu) >= 0;
-        }
-
-        // Atur satu tombol menu; mengembalikan 1 jika ditampilkan (untuk menghitung isi dropdown)
-        private int AturMenu(string menu, Control tombol)
-        {
-            bool boleh = PunyaAkses(menu);
-            tombol.Visible = boleh;
-            return boleh ? 1 : 0;
-        }
-
-        private void TerapkanAksesRole()
-        {
-            // Menu utama
-            AturMenu("prakerin", guna2Button10);
-            AturMenu("jurnal", guna2Button12);
-            AturMenu("absensi", guna2Button13);
-            AturMenu("monitoring", guna2Button14);
-            AturMenu("penilaian", guna2Button15);
-
-            // Dropdown Data Master
-            int jumlahMaster = 0;
-            jumlahMaster += AturMenu("pengguna", guna2Button3);
-            jumlahMaster += AturMenu("role", guna2Button4);
-            jumlahMaster += AturMenu("siswa", guna2Button7);
-            jumlahMaster += AturMenu("guru", guna2Button9);
-            jumlahMaster += AturMenu("kelas", guna2Button2);
-            jumlahMaster += AturMenu("jurusan", guna2Button5);
-            jumlahMaster += AturMenu("perusahaan", guna2Button8);
-            jumlahMaster += AturMenu("pembimbing", guna2Button11);
-
-            BTNDM.Visible = jumlahMaster > 0;
-            if (jumlahMaster == 0)
-                PNLDropdown.Visible = false;
-            else
-                PNLDropdown.Height = 6 + jumlahMaster * 38;   // padding 3+3, tiap item 34 + margin 4
-
-            // Dropdown Laporan
-            int jumlahLaporan = 0;
-            jumlahLaporan += AturMenu("lap_absensi", guna2Button16);
-            jumlahLaporan += AturMenu("lap_monitoring", guna2Button17);
-            jumlahLaporan += AturMenu("lap_prakerin", guna2Button18);
-            jumlahLaporan += AturMenu("lap_jurnal", guna2Button19);
-            jumlahLaporan += AturMenu("lap_penilaian", guna2Button20);
-
-            BTNL.Visible = jumlahLaporan > 0;
-            if (jumlahLaporan == 0)
-                PNLDropdown2.Visible = false;
-            else
-                PNLDropdown2.Height = 9 + jumlahLaporan * 46;  // padding 3+3, tiap item 42 + margin 4
-
-            // Tombol panah pada kartu dashboard mengikuti akses menu tujuannya
-            BTNPanahSiswa.Visible = PunyaAkses("siswa");
-            BTNPanahPembimbing.Visible = PunyaAkses("pembimbing");
-            BTNPanahJurnal.Visible = PunyaAkses("jurnal");
-            BTNPanahSetujui.Visible = PunyaAkses("jurnal");
-        }
-
-        private string KunciMenu(Form form)
-        {
-            if (form is FPengguna) return "pengguna";
-            if (form is FRole) return "role";
-            if (form is FSiswa) return "siswa";
-            if (form is FGuru) return "guru";
-            if (form is FKelas) return "kelas";
-            if (form is FJurusan) return "jurusan";
-            if (form is FPerusahaan) return "perusahaan";
-            if (form is FPembimbing) return "pembimbing";
-            if (form is FPrakerin) return "prakerin";
-            if (form is FJurnal) return "jurnal";
-            if (form is FAbsensi) return "absensi";
-            if (form is FMonitoring) return "monitoring";
-            if (form is FPenilaian) return "penilaian";
-            if (form is FlaporanPresensi) return "lap_absensi";
-            if (form is FLaporanMonitoring) return "lap_monitoring";
-            if (form is FLaporanPrakerin) return "lap_prakerin";
-            if (form is FLaporanJurnal) return "lap_jurnal";
-            if (form is FLaporanPenilaian) return "lap_penilaian";
-            return null;
-        }
-
-        // Penjaga tambahan: menutup jalur lain menuju form (mis. tombol panah di kartu dashboard)
-        private bool CekAkses(Form form)
-        {
-            string kunci = KunciMenu(form);
-            if (kunci == null || PunyaAkses(kunci))
-                return true;
-
-            CatatAktivitas("Akses ditolak: " + kunci);
-            MessageBox.Show(
-                "Role Anda tidak memiliki akses ke halaman ini.",
-                "Akses Ditolak", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            return false;
         }
 
         private void FDashboard_Load(object sender, EventArgs e)
@@ -813,6 +669,128 @@ namespace app_prakerin
         private void PMenu_Click(object sender, EventArgs e)
         {
             PNLSidebar.Visible = !PNLSidebar.Visible;
+        }
+
+        private bool BolehAkses(string menu)
+        {
+            string role = (Role ?? "").Trim().ToLower();
+
+            if (role == "admin" || role == "administrator")
+            {
+                return true;
+            }
+
+            if (role == "guru")
+            {
+                return menu == "prakerin" || menu == "jurnal" || menu == "absensi"
+                    || menu == "monitoring" || menu == "penilaian" || menu.StartsWith("lap_");
+            }
+
+            if (role == "pembimbing")
+            {
+                return menu == "jurnal" || menu == "absensi" || menu == "penilaian"
+                    || menu == "lap_absensi" || menu == "lap_jurnal" || menu == "lap_penilaian";
+            }
+
+            if (role == "siswa")
+            {
+                return menu == "jurnal" || menu == "absensi";
+            }
+
+            return false;
+        }
+
+        private void TerapkanAksesRole()
+        {
+            guna2Button10.Visible = BolehAkses("prakerin");
+            guna2Button12.Visible = BolehAkses("jurnal");
+            guna2Button13.Visible = BolehAkses("absensi");
+            guna2Button14.Visible = BolehAkses("monitoring");
+            guna2Button15.Visible = BolehAkses("penilaian");
+
+            guna2Button3.Visible = BolehAkses("pengguna");
+            guna2Button4.Visible = BolehAkses("role");
+            guna2Button7.Visible = BolehAkses("siswa");
+            guna2Button9.Visible = BolehAkses("guru");
+            guna2Button2.Visible = BolehAkses("kelas");
+            guna2Button5.Visible = BolehAkses("jurusan");
+            guna2Button8.Visible = BolehAkses("perusahaan");
+            guna2Button11.Visible = BolehAkses("pembimbing");
+
+            guna2Button16.Visible = BolehAkses("lap_absensi");
+            guna2Button17.Visible = BolehAkses("lap_monitoring");
+            guna2Button18.Visible = BolehAkses("lap_prakerin");
+            guna2Button19.Visible = BolehAkses("lap_jurnal");
+            guna2Button20.Visible = BolehAkses("lap_penilaian");
+
+            string[] menuMaster = { "pengguna", "role", "siswa", "guru", "kelas", "jurusan", "perusahaan", "pembimbing" };
+            int jumlahMaster = 0;
+            foreach (string menu in menuMaster)
+            {
+                if (BolehAkses(menu))
+                    jumlahMaster++;
+            }
+
+            BTNDM.Visible = jumlahMaster > 0;
+            if (jumlahMaster == 0)
+                PNLDropdown.Visible = false;
+            else
+                PNLDropdown.Height = 6 + jumlahMaster * 38;
+
+            string[] menuLaporan = { "lap_absensi", "lap_monitoring", "lap_prakerin", "lap_jurnal", "lap_penilaian" };
+            int jumlahLaporan = 0;
+            foreach (string menu in menuLaporan)
+            {
+                if (BolehAkses(menu))
+                    jumlahLaporan++;
+            }
+
+            BTNL.Visible = jumlahLaporan > 0;
+            if (jumlahLaporan == 0)
+                PNLDropdown2.Visible = false;
+            else
+                PNLDropdown2.Height = 9 + jumlahLaporan * 46;
+
+            BTNPanahSiswa.Visible = BolehAkses("siswa");
+            BTNPanahPembimbing.Visible = BolehAkses("pembimbing");
+            BTNPanahJurnal.Visible = BolehAkses("jurnal");
+            BTNPanahSetujui.Visible = BolehAkses("jurnal");
+        }
+
+        private string KunciMenu(Form form)
+        {
+            if (form is FPengguna) return "pengguna";
+            if (form is FRole) return "role";
+            if (form is FSiswa) return "siswa";
+            if (form is FGuru) return "guru";
+            if (form is FKelas) return "kelas";
+            if (form is FJurusan) return "jurusan";
+            if (form is FPerusahaan) return "perusahaan";
+            if (form is FPembimbing) return "pembimbing";
+            if (form is FPrakerin) return "prakerin";
+            if (form is FJurnal) return "jurnal";
+            if (form is FAbsensi) return "absensi";
+            if (form is FMonitoring) return "monitoring";
+            if (form is FPenilaian) return "penilaian";
+            if (form is FlaporanPresensi) return "lap_absensi";
+            if (form is FLaporanMonitoring) return "lap_monitoring";
+            if (form is FLaporanPrakerin) return "lap_prakerin";
+            if (form is FLaporanJurnal) return "lap_jurnal";
+            if (form is FLaporanPenilaian) return "lap_penilaian";
+            return null;
+        }
+
+        private bool CekAkses(Form form)
+        {
+            string kunci = KunciMenu(form);
+            if (kunci == null || BolehAkses(kunci))
+                return true;
+
+            CatatAktivitas("Akses ditolak: " + kunci);
+            MessageBox.Show(
+                "Role Anda tidak memiliki akses ke halaman ini.",
+                "Akses Ditolak", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            return false;
         }
     }
 }

@@ -227,13 +227,7 @@ namespace app_prakerin
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            ReportDocument rpt = new ReportDocument();
-            rpt.Load("RPresensi.rpt");
-
-            string pdfPath = Path.Combine(Path.GetTempPath(), "Laporan_Kelas.pdf");
-            rpt.ExportToDisk(ExportFormatType.PortableDocFormat, pdfPath);
-
-            System.Diagnostics.Process.Start(pdfPath);
+            new FCobaReport().ShowDialog();
 
         }
     }

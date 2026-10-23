@@ -229,6 +229,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Config\Koneksi.cs" />
+    <Compile Include="FCobaReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCobaReport.Designer.cs">
+      <DependentUpon>FCobaReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\FLaporanJurnal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -448,6 +454,9 @@
     <Compile Include="UCAlert.Designer.cs">
       <DependentUpon>UCAlert.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FCobaReport.resx">
+      <DependentUpon>FCobaReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\FLaporanJurnal.resx">
       <DependentUpon>FLaporanJurnal.cs</DependentUpon>
     </EmbeddedResource>

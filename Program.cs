@@ -16,7 +16,7 @@ namespace app_prakerin
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FMaster());
+            Application.Run(new FormCRUDPengguna());
         }
     }
 }
